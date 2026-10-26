@@ -1,0 +1,2003 @@
+{
+ "startedAt": "2026-10-26T10:20:55.341Z",
+ "finishedAt": "2026-10-26T10:21:30.694Z",
+ "freeze": {
+  "promptVersion": "cause-v1",
+  "systemPromptSha256": "ce8ca4d9a68130c6c42141c83b97d970444e8ebd83fe79c50dac64f41c3c4f5c",
+  "outputSchemaSha256": "8e888fc07013d104d99d552ef7a2b9fc94225578e751996d989264b23d2a0cec",
+  "modelId": "claude-sonnet-5-5",
+  "llmParams": {
+   "sdk": "ai",
+   "provider": "@ai-sdk/anthropic",
+   "model": "claude-sonnet-5-5",
+   "maxOutputTokens": {
+    "cause": 2000
+   },
+   "timeoutMs": 30000,
+   "maxRetries": 0,
+   "temperature": "unsupported (dropped by the SDK)",
+   "thinking": "provider default (not set by us; reasoning tokens count inside the 2,000 output cap)",
+   "effort": "provider default",
+   "structuredOutput": "Output.object(zod)"
+  },
+  "b1Md5": "294eed4b40c9f97fa6f90e2a03deed14",
+  "productSources": {
+   "lib/cause/categories.ts": "e8a464f0d1d2e1e2f9d0c36df59e532a77661e57a87e5371e45934cb5042b503",
+   "lib/cause/cause.ts": "b46ac1595587c38dd3937932fb007c4bc61711edb1f5effecbffbdd714b5272c",
+   "lib/cause/checks.ts": "2d0d8e7942bc4807cce444668094855db28f03a364b0966a5b7dcb4faa3e5b67",
+   "lib/cause/diff.ts": "c5501c2ec03731425fab2a583e914752cf07dda09d1bc8075a26977f7d43f1f8",
+   "lib/cause/hygiene.ts": "579f2f90a09d2444a313629786fa9eef4a959da84a09cb70781630932560aa51",
+   "lib/cause/input.ts": "6a43a2faca78df7318bfd4c5e4295ba83b89e7f9512a1a6e89cbacaa20ec6b57",
+   "lib/cause/lines.ts": "eef7cadad0870b2d991a29f4201bae14e837a2e13939e22d52d9862c7695d408",
+   "lib/cause/prompt.ts": "28098cc41cf6ad95aecaf83961d33c181200219937b0413b7c727f510e757343",
+   "lib/core/llm.ts": "a1208c5b362e7c8201b1a64c057c789393c26e1d8776925759cc54db385389cf",
+   "eval/harness/case.ts": "1597cbdacde2636597de35429ea874f6a6302725065b1590b3f35889cc63d244",
+   "eval/harness/freeze.ts": "b8ae1d56a726e1ef24cc23ca7341307ea2f46f4c4258ec001eeedeaf4d294d1a",
+   "eval/harness/run.ts": "70382241fe80ee3c9a569ff67ff35ce84ec33b6bf827f9950d3b6ffe21417c82",
+   "eval/harness/score.ts": "95b9fd11c122b3a82b942a4d5a6a8d8e1966dd489816badb219c10f455b7d347",
+   "eval/harness/seal.ts": "ee6baf0815609e19af1b7d090161cd7b1ca6abfed1a5f5a3eeb7d0adc9999a6b",
+   "eval/harness/sets.ts": "d8cdaa3343fe591122d5be2f5f86ba92639c33b36f32a1b616a7ae09e569a2f2"
+  },
+  "packages": {
+   "ai": "7.0.143",
+   "@ai-sdk/anthropic": "4.0.82"
+  }
+ },
+ "llmParams": {
+  "sdk": "ai",
+  "provider": "@ai-sdk/anthropic",
+  "model": "claude-sonnet-5-5",
+  "maxOutputTokens": {
+   "cause": 2000
+  },
+  "timeoutMs": 30000,
+  "maxRetries": 0,
+  "temperature": "unsupported (dropped by the SDK)",
+  "thinking": "provider default (not set by us; reasoning tokens count inside the 2,000 output cap)",
+  "effort": "provider default",
+  "structuredOutput": "Output.object(zod)"
+ },
+ "sealed": true,
+ "summary": {
+  "set": "hb-original-run",
+  "cases": 12,
+  "runsPerCase": 3,
+  "productCorrectMean": 11.67,
+  "productCorrectMeanCategoryOnly": 11.67,
+  "casesCorrectInAllRuns": 11,
+  "shownWrong": 0,
+  "shownNotRight": 0,
+  "outcomes": {
+   "proposed": 35,
+   "not_proven:model_abstained": 1
+  },
+  "infraFirstAttemptFailures": 0,
+  "infraRetriesMade": 0,
+  "B1": {
+   "category": 1,
+   "both": 1
+  },
+  "spendUsd": 0.9067,
+  "tokens": {
+   "in": 401910,
+   "out": 10292,
+   "reasoning": 7808
+  }
+ },
+ "perCase": [
+  {
+   "case": "hb-2070b5bd",
+   "label": "OTHER_CODE_CHANGE",
+   "tags": {
+    "ai_attributed_commit": true,
+    "stack": "net/http + htmx"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-21a9afb8",
+   "label": "RAW_BODY_ALTERED",
+   "tags": {
+    "ai_attributed_commit": true,
+    "stack": "Fastify"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "WRONG_WEBHOOK_ID",
+    "evidence_line": "const verified = await d.paypal.verifyWebhookSignature(headers, o.webhookId, rawEvent, uuidv5(`verify:${headers.transmission_id}`, WITNESS_NAMESPACE));",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-3d31dd39",
+   "label": "RAW_BODY_ALTERED",
+   "tags": {
+    "ai_attributed_commit": true,
+    "stack": "axum service"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "WRONG_WEBHOOK_ID",
+    "evidence_line": "\"{{\\\"auth_algo\\\":{},\\\"cert_url\\\":{},\\\"transmission_id\\\":{},\\\"transmission_sig\\\":{},\\\"transmission_time\\\":{},\\\"webhook_id\\\":{},\\\"webhook_event\\\":{}}}\",",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-53d31865",
+   "label": "OTHER_CODE_CHANGE",
+   "tags": {
+    "ai_attributed_commit": true,
+    "stack": "WordPress plugin"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-5bb61345",
+   "label": "EVENT_TYPE_DROPPED",
+   "tags": {
+    "ai_attributed_commit": true,
+    "stack": "WordPress plugin"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "EVENT_TYPE_DROPPED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "EVENT_TYPE_DROPPED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "EVENT_TYPE_DROPPED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-7e9b4b56",
+   "label": "RAW_BODY_ALTERED",
+   "tags": {
+    "ai_attributed_commit": false,
+    "stack": "Laravel package"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-82a0002c",
+   "label": "OTHER_CODE_CHANGE",
+   "tags": {
+    "ai_attributed_commit": false,
+    "stack": "Shopware plugin"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-891006a6",
+   "label": "RAW_BODY_ALTERED",
+   "tags": {
+    "ai_attributed_commit": false,
+    "stack": "Maho (Magento fork)"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "WRONG_WEBHOOK_ID",
+    "evidence_line": "'body' => self::buildVerificationRequest($headers, $webhookId, $body),",
+    "score": {
+     "cat": false,
+     "pointer": true,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-8a47a496",
+   "label": "OTHER_CODE_CHANGE",
+   "tags": {
+    "ai_attributed_commit": false,
+    "stack": "CiviCRM"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "OTHER_CODE_CHANGE",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-8a9a5e4f",
+   "label": "RAW_BODY_ALTERED",
+   "tags": {
+    "ai_attributed_commit": true,
+    "stack": "Servlet"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "not_proven",
+     "reason": "model_abstained",
+     "cat": false,
+     "pointer": false,
+     "both": false
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  },
+  {
+   "case": "hb-8e294b4e",
+   "label": "EVENT_TYPE_DROPPED",
+   "tags": {
+    "ai_attributed_commit": false,
+    "stack": "Laravel"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "EVENT_TYPE_DROPPED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "EVENT_TYPE_DROPPED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "EVENT_TYPE_DROPPED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "EVENT_TYPE_DROPPED",
+    "evidence_line": "if ($body['event_type'] === 'BILLING.SUBSCRIPTION.CREATED' && isset($body['resource']['custom_id'])) {",
+    "score": {
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   }
+  },
+  {
+   "case": "hb-d11e7b63",
+   "label": "RAW_BODY_ALTERED",
+   "tags": {
+    "ai_attributed_commit": false,
+    "stack": "FOSSBilling"
+   },
+   "runs": [
+    {
+     "run": 0,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 1,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    },
+    {
+     "run": 2,
+     "status": "proposed",
+     "category": "RAW_BODY_ALTERED",
+     "cat": true,
+     "pointer": true,
+     "both": true
+    }
+   ],
+   "B1": {
+    "category": "NOT_IN_DIFF",
+    "evidence_line": "",
+    "score": {
+     "cat": false,
+     "pointer": false,
+     "both": false
+    }
+   }
+  }
+ ],
+ "records": [
+  {
+   "case": "hb-2070b5bd",
+   "run": 0,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "api/htmx/paypal.go",
+    "lines": [
+     "\tif err != nil || time.Since(transmittedAt) > paypalWebhookMaxAge || time.Until(transmittedAt) > 5*time.Minute {",
+     "\tif err != nil || time.Since(transmittedAt) > 5*time.Minute || time.Until(transmittedAt) > 5*time.Minute {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 11246,
+    "outputTokens": 267,
+    "reasoningTokens": 206
+   },
+   "usd": 0.025162,
+   "ms": 3512,
+   "requestHash": "739e40d187d038749ba045a1084a1764dbff32515c032d70ee8cd9415af1b081",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "api/htmx/paypal.go",
+    "lineIds": [
+     "L7",
+     "L8"
+    ],
+    "hunkId": "H2"
+   }
+  },
+  {
+   "case": "hb-2070b5bd",
+   "run": 1,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "api/htmx/paypal.go",
+    "lines": [
+     "\tif err != nil || time.Since(transmittedAt) > paypalWebhookMaxAge || time.Until(transmittedAt) > 5*time.Minute {",
+     "\tif err != nil || time.Since(transmittedAt) > 5*time.Minute || time.Until(transmittedAt) > 5*time.Minute {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 11246,
+    "outputTokens": 266,
+    "reasoningTokens": 205
+   },
+   "usd": 0.025152,
+   "ms": 3637,
+   "requestHash": "739e40d187d038749ba045a1084a1764dbff32515c032d70ee8cd9415af1b081",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "api/htmx/paypal.go",
+    "lineIds": [
+     "L7",
+     "L8"
+    ],
+    "hunkId": "H2"
+   }
+  },
+  {
+   "case": "hb-2070b5bd",
+   "run": 2,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "api/htmx/paypal.go",
+    "lines": [
+     "\tif err != nil || time.Since(transmittedAt) > paypalWebhookMaxAge || time.Until(transmittedAt) > 5*time.Minute {",
+     "\tif err != nil || time.Since(transmittedAt) > 5*time.Minute || time.Until(transmittedAt) > 5*time.Minute {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 11246,
+    "outputTokens": 289,
+    "reasoningTokens": 228
+   },
+   "usd": 0.025382,
+   "ms": 3714,
+   "requestHash": "739e40d187d038749ba045a1084a1764dbff32515c032d70ee8cd9415af1b081",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "api/htmx/paypal.go",
+    "lineIds": [
+     "L7",
+     "L8"
+    ],
+    "hunkId": "H2"
+   }
+  },
+  {
+   "case": "hb-21a9afb8",
+   "run": 0,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "apps/api/src/app.ts",
+    "lines": [
+     "    const rawEvent = (req as FastifyRequest & { rawBody?: string }).rawBody ?? JSON.stringify(event);",
+     "    const verified = await d.paypal.verifyWebhookSignature(headers, o.webhookId, rawEvent, uuidv5(`verify:${headers.transmission_id}`, WITNESS_NAMESPACE));",
+     "    const verified = await d.paypal.verifyWebhookSignature(headers, o.webhookId, event, uuidv5(`verify:${headers.transmission_id}`, WITNESS_NAMESPACE));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 10381,
+    "outputTokens": 313,
+    "reasoningTokens": 250
+   },
+   "usd": 0.023892,
+   "ms": 4734,
+   "requestHash": "e2f388027ab8af4f14fc848e66610007d6852d38c107194550b2cfcb35c63a23",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "apps/api/src/app.ts",
+    "lineIds": [
+     "L16",
+     "L17",
+     "L18"
+    ],
+    "hunkId": "H2"
+   }
+  },
+  {
+   "case": "hb-21a9afb8",
+   "run": 1,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "apps/api/src/app.ts",
+    "lines": [
+     "    const rawEvent = (req as FastifyRequest & { rawBody?: string }).rawBody ?? JSON.stringify(event);",
+     "    const verified = await d.paypal.verifyWebhookSignature(headers, o.webhookId, event, uuidv5(`verify:${headers.transmission_id}`, WITNESS_NAMESPACE));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 10381,
+    "outputTokens": 245,
+    "reasoningTokens": 185
+   },
+   "usd": 0.023212,
+   "ms": 4160,
+   "requestHash": "e2f388027ab8af4f14fc848e66610007d6852d38c107194550b2cfcb35c63a23",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "apps/api/src/app.ts",
+    "lineIds": [
+     "L16",
+     "L18"
+    ],
+    "hunkId": "H2"
+   }
+  },
+  {
+   "case": "hb-21a9afb8",
+   "run": 2,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "apps/api/src/app.ts",
+    "lines": [
+     "    const rawEvent = (req as FastifyRequest & { rawBody?: string }).rawBody ?? JSON.stringify(event);",
+     "    const verified = await d.paypal.verifyWebhookSignature(headers, o.webhookId, event, uuidv5(`verify:${headers.transmission_id}`, WITNESS_NAMESPACE));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 10381,
+    "outputTokens": 317,
+    "reasoningTokens": 257
+   },
+   "usd": 0.023932,
+   "ms": 4094,
+   "requestHash": "e2f388027ab8af4f14fc848e66610007d6852d38c107194550b2cfcb35c63a23",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "apps/api/src/app.ts",
+    "lineIds": [
+     "L16",
+     "L18"
+    ],
+    "hunkId": "H2"
+   }
+  },
+  {
+   "case": "hb-3d31dd39",
+   "run": 0,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "crates/homelab-core/src/clients/paypal.rs",
+    "lines": [
+     "    pub async fn verify_webhook(&self, headers: &WebhookHeaders, body: &Value) -> Result<bool> {",
+     "                    \"webhook_event\": body,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 17215,
+    "outputTokens": 69,
+    "reasoningTokens": 0
+   },
+   "usd": 0.03512,
+   "ms": 2167,
+   "requestHash": "f15dedad03063aa78b2e064bbc7ab0edcc2be52cdf94039f95a734a56e9b5881",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "crates/homelab-core/src/clients/paypal.rs",
+    "lineIds": [
+     "L6",
+     "L51"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-3d31dd39",
+   "run": 1,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "crates/homelab-core/src/clients/paypal.rs",
+    "lines": [
+     "    pub async fn verify_webhook(&self, headers: &WebhookHeaders, body: &Value) -> Result<bool> {",
+     "                    \"webhook_event\": body,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 17215,
+    "outputTokens": 69,
+    "reasoningTokens": 0
+   },
+   "usd": 0.03512,
+   "ms": 1908,
+   "requestHash": "f15dedad03063aa78b2e064bbc7ab0edcc2be52cdf94039f95a734a56e9b5881",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "crates/homelab-core/src/clients/paypal.rs",
+    "lineIds": [
+     "L6",
+     "L51"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-3d31dd39",
+   "run": 2,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "crates/homelab-core/src/clients/paypal.rs",
+    "lines": [
+     "    pub async fn verify_webhook(&self, headers: &WebhookHeaders, body: &Value) -> Result<bool> {",
+     "                    \"webhook_event\": body,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 17215,
+    "outputTokens": 69,
+    "reasoningTokens": 0
+   },
+   "usd": 0.03512,
+   "ms": 1841,
+   "requestHash": "f15dedad03063aa78b2e064bbc7ab0edcc2be52cdf94039f95a734a56e9b5881",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "crates/homelab-core/src/clients/paypal.rs",
+    "lineIds": [
+     "L6",
+     "L51"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-53d31865",
+   "run": 0,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "inc/gateways/class-paypal-gateway.php",
+    "lines": [
+     "\t\t\t$membership = wu_get_payment(absint($custom[1]));",
+     "\t\t\t$customer   = wu_get_payment(absint($custom[2]));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 25578,
+    "outputTokens": 366,
+    "reasoningTokens": 298
+   },
+   "usd": 0.054816,
+   "ms": 6090,
+   "requestHash": "7b99c0e90796c74d3786996d5ecf78de2169fa5dd6ab8a0608f09351b213dcdf",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "inc/gateways/class-paypal-gateway.php",
+    "lineIds": [
+     "L6",
+     "L7"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-53d31865",
+   "run": 1,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "inc/gateways/class-paypal-gateway.php",
+    "lines": [
+     "\t\t\t$membership = wu_get_payment(absint($custom[1]));",
+     "\t\t\t$customer   = wu_get_payment(absint($custom[2]));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 25578,
+    "outputTokens": 273,
+    "reasoningTokens": 205
+   },
+   "usd": 0.053886,
+   "ms": 5431,
+   "requestHash": "7b99c0e90796c74d3786996d5ecf78de2169fa5dd6ab8a0608f09351b213dcdf",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "inc/gateways/class-paypal-gateway.php",
+    "lineIds": [
+     "L6",
+     "L7"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-53d31865",
+   "run": 2,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "inc/gateways/class-paypal-gateway.php",
+    "lines": [
+     "\t\t\t$membership = wu_get_payment(absint($custom[1]));",
+     "\t\t\t$customer   = wu_get_payment(absint($custom[2]));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 25578,
+    "outputTokens": 294,
+    "reasoningTokens": 226
+   },
+   "usd": 0.054096,
+   "ms": 7207,
+   "requestHash": "7b99c0e90796c74d3786996d5ecf78de2169fa5dd6ab8a0608f09351b213dcdf",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "inc/gateways/class-paypal-gateway.php",
+    "lineIds": [
+     "L6",
+     "L7"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-5bb61345",
+   "run": 0,
+   "status": "proposed",
+   "category": "EVENT_TYPE_DROPPED",
+   "shown": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "includes/Builder/Methods/PayPal/PayPal.php",
+    "lines": [
+     "            && $paymentStatusRaw != 'Refunded' && $paymentStatusRaw != 'Reversed') {",
+     "        if ($txnType != 'web_accept' && $txnType != 'cart' && $paymentStatusRaw != 'Refunded') {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 12456,
+    "outputTokens": 73,
+    "reasoningTokens": 0
+   },
+   "usd": 0.025642,
+   "ms": 2222,
+   "requestHash": "4f76e1b93016fda97d5ef0ce0d2108cd0cfd7e907cb366cedba85fd6594527ff",
+   "raw": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "includes/Builder/Methods/PayPal/PayPal.php",
+    "lineIds": [
+     "L5",
+     "L6"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-5bb61345",
+   "run": 1,
+   "status": "proposed",
+   "category": "EVENT_TYPE_DROPPED",
+   "shown": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "includes/Builder/Methods/PayPal/PayPal.php",
+    "lines": [
+     "            && $paymentStatusRaw != 'Refunded' && $paymentStatusRaw != 'Reversed') {",
+     "        if ($txnType != 'web_accept' && $txnType != 'cart' && $paymentStatusRaw != 'Refunded') {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 12456,
+    "outputTokens": 222,
+    "reasoningTokens": 149
+   },
+   "usd": 0.027132,
+   "ms": 2921,
+   "requestHash": "4f76e1b93016fda97d5ef0ce0d2108cd0cfd7e907cb366cedba85fd6594527ff",
+   "raw": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "includes/Builder/Methods/PayPal/PayPal.php",
+    "lineIds": [
+     "L5",
+     "L6"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-5bb61345",
+   "run": 2,
+   "status": "proposed",
+   "category": "EVENT_TYPE_DROPPED",
+   "shown": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "includes/Builder/Methods/PayPal/PayPal.php",
+    "lines": [
+     "        if ($txnType != 'web_accept' && $txnType != 'cart'",
+     "            && $paymentStatusRaw != 'Refunded' && $paymentStatusRaw != 'Reversed') {",
+     "        if ($txnType != 'web_accept' && $txnType != 'cart' && $paymentStatusRaw != 'Refunded') {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 12456,
+    "outputTokens": 76,
+    "reasoningTokens": 0
+   },
+   "usd": 0.025672,
+   "ms": 2120,
+   "requestHash": "4f76e1b93016fda97d5ef0ce0d2108cd0cfd7e907cb366cedba85fd6594527ff",
+   "raw": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "includes/Builder/Methods/PayPal/PayPal.php",
+    "lineIds": [
+     "L4",
+     "L5",
+     "L6"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-7e9b4b56",
+   "run": 0,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/Traits/PayPalVerifyIPN.php",
+    "lines": [
+     "        $params = json_decode($request->getContent());",
+     "            'webhook_event' => $params,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 6138,
+    "outputTokens": 251,
+    "reasoningTokens": 183
+   },
+   "usd": 0.014786,
+   "ms": 3951,
+   "requestHash": "09f014b2e4fc59d567f0f10335263605668a8cfe41560d2fd0ab689b3d53e623",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/Traits/PayPalVerifyIPN.php",
+    "lineIds": [
+     "L35",
+     "L40"
+    ],
+    "hunkId": "H3"
+   }
+  },
+  {
+   "case": "hb-7e9b4b56",
+   "run": 1,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/Traits/PayPalVerifyIPN.php",
+    "lines": [
+     "        $params = json_decode($request->getContent());",
+     "            'webhook_event' => $params,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 6138,
+    "outputTokens": 68,
+    "reasoningTokens": 0
+   },
+   "usd": 0.012956,
+   "ms": 2259,
+   "requestHash": "09f014b2e4fc59d567f0f10335263605668a8cfe41560d2fd0ab689b3d53e623",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/Traits/PayPalVerifyIPN.php",
+    "lineIds": [
+     "L35",
+     "L40"
+    ],
+    "hunkId": "H3"
+   }
+  },
+  {
+   "case": "hb-7e9b4b56",
+   "run": 2,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/Traits/PayPalVerifyIPN.php",
+    "lines": [
+     "        $params = json_decode($request->getContent());",
+     "            'webhook_event' => $params,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 6138,
+    "outputTokens": 280,
+    "reasoningTokens": 212
+   },
+   "usd": 0.015076,
+   "ms": 3335,
+   "requestHash": "09f014b2e4fc59d567f0f10335263605668a8cfe41560d2fd0ab689b3d53e623",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/Traits/PayPalVerifyIPN.php",
+    "lineIds": [
+     "L35",
+     "L40"
+    ],
+    "hunkId": "H3"
+   }
+  },
+  {
+   "case": "hb-82a0002c",
+   "run": 0,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "src/Webhook/Handler/VaultPaymentTokenCreated.php",
+    "lines": [
+     "        $criteria->addFilter(new EqualsFilter('customFields.' . SwagPayPal::ORDER_TRANSACTION_CUSTOM_FIELDS_PAYPAL_ORDER_ID, $resource->getId()));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 4131,
+    "outputTokens": 237,
+    "reasoningTokens": 164
+   },
+   "usd": 0.010632,
+   "ms": 2709,
+   "requestHash": "b60f3b2b7238520bfef8f9a20dd4d7d9b40f3e5cccfa09bdb368acddd1b78133",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "src/Webhook/Handler/VaultPaymentTokenCreated.php",
+    "lineIds": [
+     "L2"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-82a0002c",
+   "run": 1,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "src/Webhook/Handler/VaultPaymentTokenCreated.php",
+    "lines": [
+     "        $criteria->addFilter(new EqualsFilter('customFields.' . SwagPayPal::ORDER_TRANSACTION_CUSTOM_FIELDS_PAYPAL_ORDER_ID, $resource->getId()));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 4131,
+    "outputTokens": 227,
+    "reasoningTokens": 154
+   },
+   "usd": 0.010532,
+   "ms": 2812,
+   "requestHash": "b60f3b2b7238520bfef8f9a20dd4d7d9b40f3e5cccfa09bdb368acddd1b78133",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "src/Webhook/Handler/VaultPaymentTokenCreated.php",
+    "lineIds": [
+     "L2"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-82a0002c",
+   "run": 2,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "src/Webhook/Handler/VaultPaymentTokenCreated.php",
+    "lines": [
+     "        $criteria->addFilter(new EqualsFilter('customFields.' . SwagPayPal::ORDER_TRANSACTION_CUSTOM_FIELDS_PAYPAL_ORDER_ID, $resource->getId()));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 4131,
+    "outputTokens": 232,
+    "reasoningTokens": 159
+   },
+   "usd": 0.010582,
+   "ms": 2650,
+   "requestHash": "b60f3b2b7238520bfef8f9a20dd4d7d9b40f3e5cccfa09bdb368acddd1b78133",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "src/Webhook/Handler/VaultPaymentTokenCreated.php",
+    "lineIds": [
+     "L2"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-891006a6",
+   "run": 0,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "app/code/core/Maho/Paypal/Model/Api/Client.php",
+    "lines": [
+     "            'webhook_event' => Mage::helper('core')->jsonDecode($body),",
+     "            'body' => self::buildVerificationRequest($headers, $webhookId, $body),",
+     "            'json' => $verifyBody,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 9319,
+    "outputTokens": 220,
+    "reasoningTokens": 143
+   },
+   "usd": 0.020838,
+   "ms": 3086,
+   "requestHash": "689c693f24a1fbfb6f78841237fe9ee8bfd5383b252da6d5bbfe4155463b917f",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "app/code/core/Maho/Paypal/Model/Api/Client.php",
+    "lineIds": [
+     "L13",
+     "L15",
+     "L16"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-891006a6",
+   "run": 1,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "app/code/core/Maho/Paypal/Model/Api/Client.php",
+    "lines": [
+     "            'webhook_event' => Mage::helper('core')->jsonDecode($body),",
+     "            'body' => self::buildVerificationRequest($headers, $webhookId, $body),",
+     "            'json' => $verifyBody,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 9319,
+    "outputTokens": 188,
+    "reasoningTokens": 111
+   },
+   "usd": 0.020518,
+   "ms": 2488,
+   "requestHash": "689c693f24a1fbfb6f78841237fe9ee8bfd5383b252da6d5bbfe4155463b917f",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "app/code/core/Maho/Paypal/Model/Api/Client.php",
+    "lineIds": [
+     "L13",
+     "L15",
+     "L16"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-891006a6",
+   "run": 2,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "app/code/core/Maho/Paypal/Model/Api/Client.php",
+    "lines": [
+     "            'webhook_event' => Mage::helper('core')->jsonDecode($body),",
+     "            'body' => self::buildVerificationRequest($headers, $webhookId, $body),",
+     "            'json' => $verifyBody,"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 9319,
+    "outputTokens": 169,
+    "reasoningTokens": 92
+   },
+   "usd": 0.020328,
+   "ms": 2615,
+   "requestHash": "689c693f24a1fbfb6f78841237fe9ee8bfd5383b252da6d5bbfe4155463b917f",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "app/code/core/Maho/Paypal/Model/Api/Client.php",
+    "lineIds": [
+     "L13",
+     "L15",
+     "L16"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8a47a496",
+   "run": 0,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "CRM/Core/Payment/PayPalIPN.php",
+    "lines": [
+     "      $component = $this->retrieve('module', 'String');",
+     "    $input['invoice'] = $this->retrieve('invoice', 'String', TRUE);"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 10115,
+    "outputTokens": 423,
+    "reasoningTokens": 353
+   },
+   "usd": 0.02446,
+   "ms": 4952,
+   "requestHash": "86a8b2b7318c6838f13a9d0511f28fc20ed02e790c13d9e376b85428937299f3",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "CRM/Core/Payment/PayPalIPN.php",
+    "lineIds": [
+     "L2",
+     "L4"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8a47a496",
+   "run": 1,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "CRM/Core/Payment/PayPalIPN.php",
+    "lines": [
+     "      $component = $this->retrieve('module', 'String');",
+     "    $input['invoice'] = $this->retrieve('invoice', 'String', TRUE);"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 10115,
+    "outputTokens": 374,
+    "reasoningTokens": 304
+   },
+   "usd": 0.02397,
+   "ms": 4284,
+   "requestHash": "86a8b2b7318c6838f13a9d0511f28fc20ed02e790c13d9e376b85428937299f3",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "CRM/Core/Payment/PayPalIPN.php",
+    "lineIds": [
+     "L2",
+     "L4"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8a47a496",
+   "run": 2,
+   "status": "proposed",
+   "category": "OTHER_CODE_CHANGE",
+   "shown": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "CRM/Core/Payment/PayPalIPN.php",
+    "lines": [
+     "      $component = $this->retrieve('module', 'String');",
+     "    $input['invoice'] = $this->retrieve('invoice', 'String', TRUE);"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 10115,
+    "outputTokens": 570,
+    "reasoningTokens": 500
+   },
+   "usd": 0.02593,
+   "ms": 5861,
+   "requestHash": "86a8b2b7318c6838f13a9d0511f28fc20ed02e790c13d9e376b85428937299f3",
+   "raw": {
+    "category": "OTHER_CODE_CHANGE",
+    "file": "CRM/Core/Payment/PayPalIPN.php",
+    "lineIds": [
+     "L2",
+     "L4"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8a9a5e4f",
+   "run": 0,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "dsg_src/java/org/pente/subscriptions/PaypalIPNListenerServlet.java",
+    "lines": [
+     "        request.setCharacterEncoding(\"windows-1252\");"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 11061,
+    "outputTokens": 444,
+    "reasoningTokens": 364
+   },
+   "usd": 0.026562,
+   "ms": 5189,
+   "requestHash": "3ca844998354c72e2a7ea5ca9bb1ff0459fe14592c529223531a1e124ef15d52",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "dsg_src/java/org/pente/subscriptions/PaypalIPNListenerServlet.java",
+    "lineIds": [
+     "L12"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8a9a5e4f",
+   "run": 1,
+   "status": "not_proven",
+   "reason": "model_abstained",
+   "shown": {
+    "category": null,
+    "file": null,
+    "lines": [],
+    "abstained": true
+   },
+   "score": {
+    "cat": false,
+    "pointer": false,
+    "both": false
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 11061,
+    "outputTokens": 673,
+    "reasoningTokens": 635
+   },
+   "usd": 0.028852,
+   "ms": 6436,
+   "requestHash": "3ca844998354c72e2a7ea5ca9bb1ff0459fe14592c529223531a1e124ef15d52",
+   "raw": {
+    "category": "NOT_IN_DIFF",
+    "file": "",
+    "lineIds": [],
+    "hunkId": ""
+   }
+  },
+  {
+   "case": "hb-8a9a5e4f",
+   "run": 2,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "dsg_src/java/org/pente/subscriptions/PaypalIPNListenerServlet.java",
+    "lines": [
+     "        request.setCharacterEncoding(\"windows-1252\");"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 11061,
+    "outputTokens": 345,
+    "reasoningTokens": 265
+   },
+   "usd": 0.025572,
+   "ms": 3644,
+   "requestHash": "3ca844998354c72e2a7ea5ca9bb1ff0459fe14592c529223531a1e124ef15d52",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "dsg_src/java/org/pente/subscriptions/PaypalIPNListenerServlet.java",
+    "lineIds": [
+     "L12"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8e294b4e",
+   "run": 0,
+   "status": "proposed",
+   "category": "EVENT_TYPE_DROPPED",
+   "shown": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "extensions/Gateways/PayPal/PayPal.php",
+    "lines": [
+     "        if ($body['event_type'] === 'BILLING.SUBSCRIPTION.CREATED' && isset($body['resource']['custom_id'])) {",
+     "        if ($body['event_type'] === 'BILLING.SUBSCRIPTION.ACTIVATED' && isset($body['resource']['custom_id'])) {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 6730,
+    "outputTokens": 442,
+    "reasoningTokens": 371
+   },
+   "usd": 0.01788,
+   "ms": 4252,
+   "requestHash": "88e18724c35d26824fe9ffe6fea98120e880ac9da53603e2258439adcf4d0f04",
+   "raw": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "extensions/Gateways/PayPal/PayPal.php",
+    "lineIds": [
+     "L1",
+     "L2"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8e294b4e",
+   "run": 1,
+   "status": "proposed",
+   "category": "EVENT_TYPE_DROPPED",
+   "shown": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "extensions/Gateways/PayPal/PayPal.php",
+    "lines": [
+     "        if ($body['event_type'] === 'BILLING.SUBSCRIPTION.CREATED' && isset($body['resource']['custom_id'])) {",
+     "        if ($body['event_type'] === 'BILLING.SUBSCRIPTION.ACTIVATED' && isset($body['resource']['custom_id'])) {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 6730,
+    "outputTokens": 438,
+    "reasoningTokens": 367
+   },
+   "usd": 0.01784,
+   "ms": 4867,
+   "requestHash": "88e18724c35d26824fe9ffe6fea98120e880ac9da53603e2258439adcf4d0f04",
+   "raw": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "extensions/Gateways/PayPal/PayPal.php",
+    "lineIds": [
+     "L1",
+     "L2"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-8e294b4e",
+   "run": 2,
+   "status": "proposed",
+   "category": "EVENT_TYPE_DROPPED",
+   "shown": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "extensions/Gateways/PayPal/PayPal.php",
+    "lines": [
+     "        if ($body['event_type'] === 'BILLING.SUBSCRIPTION.CREATED' && isset($body['resource']['custom_id'])) {",
+     "        if ($body['event_type'] === 'BILLING.SUBSCRIPTION.ACTIVATED' && isset($body['resource']['custom_id'])) {"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 6730,
+    "outputTokens": 489,
+    "reasoningTokens": 418
+   },
+   "usd": 0.01835,
+   "ms": 5158,
+   "requestHash": "88e18724c35d26824fe9ffe6fea98120e880ac9da53603e2258439adcf4d0f04",
+   "raw": {
+    "category": "EVENT_TYPE_DROPPED",
+    "file": "extensions/Gateways/PayPal/PayPal.php",
+    "lineIds": [
+     "L1",
+     "L2"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-d11e7b63",
+   "run": 0,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/library/Payment/Adapter/PayPalEmail.php",
+    "lines": [
+     "            $value = urlencode(stripslashes($value));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 9600,
+    "outputTokens": 282,
+    "reasoningTokens": 214
+   },
+   "usd": 0.02202,
+   "ms": 3641,
+   "requestHash": "3bcc080c19c8724c75b1b4afff27d5df1b41c85acad8183222d6769024be0c74",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/library/Payment/Adapter/PayPalEmail.php",
+    "lineIds": [
+     "L5"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-d11e7b63",
+   "run": 1,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/library/Payment/Adapter/PayPalEmail.php",
+    "lines": [
+     "            $value = urlencode(stripslashes($value));",
+     "            $value = urlencode((string) $value);"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 9600,
+    "outputTokens": 362,
+    "reasoningTokens": 291
+   },
+   "usd": 0.02282,
+   "ms": 3839,
+   "requestHash": "3bcc080c19c8724c75b1b4afff27d5df1b41c85acad8183222d6769024be0c74",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/library/Payment/Adapter/PayPalEmail.php",
+    "lineIds": [
+     "L5",
+     "L4"
+    ],
+    "hunkId": "H1"
+   }
+  },
+  {
+   "case": "hb-d11e7b63",
+   "run": 2,
+   "status": "proposed",
+   "category": "RAW_BODY_ALTERED",
+   "shown": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/library/Payment/Adapter/PayPalEmail.php",
+    "lines": [
+     "            $value = urlencode((string) $value);",
+     "            $value = urlencode(stripslashes($value));"
+    ],
+    "abstained": false
+   },
+   "score": {
+    "cat": true,
+    "pointer": true,
+    "both": true
+   },
+   "attempts": 1,
+   "firstAttemptFailed": false,
+   "usage": {
+    "inputTokens": 9600,
+    "outputTokens": 370,
+    "reasoningTokens": 299
+   },
+   "usd": 0.0229,
+   "ms": 3882,
+   "requestHash": "3bcc080c19c8724c75b1b4afff27d5df1b41c85acad8183222d6769024be0c74",
+   "raw": {
+    "category": "RAW_BODY_ALTERED",
+    "file": "src/library/Payment/Adapter/PayPalEmail.php",
+    "lineIds": [
+     "L4",
+     "L5"
+    ],
+    "hunkId": "H1"
+   }
+  }
+ ]
+}

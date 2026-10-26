@@ -1,0 +1,13 @@
+{
+  "category": "WRONG_WEBHOOK_ID",
+  "file": "app/api/paypal/webhook/route.ts",
+  "lines": [
+    "const WEBHOOK_ID = process.env.PAYPAL_CLIENT_ID!;"
+  ],
+  "altLines": [
+    "const WEBHOOK_ID = process.env.PAYPAL_WEBHOOK_ID!;"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "next"
+}

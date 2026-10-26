@@ -1,0 +1,393 @@
+{
+  "at": "2026-10-19T07:16:15.678Z",
+  "refs": [
+    {
+      "mode": "bad_body",
+      "tids": [
+        "9221a752",
+        "a070aced"
+      ]
+    },
+    {
+      "mode": "ack_then_drop",
+      "tids": [
+        "94b1046d",
+        "9c56b869"
+      ]
+    },
+    {
+      "mode": "last_write_wins",
+      "tids": [
+        "c98d0a7a",
+        "ac12a69a"
+      ]
+    }
+  ],
+  "summary": {
+    "replayWindowHours": 4,
+    "confirmed": "9/9",
+    "byMode": {
+      "bad_body": "3/3",
+      "ack_then_drop": "3/3",
+      "last_write_wins": "3/3"
+    },
+    "outsideWindow": {
+      "checked": 6,
+      "shownAsRecorded": 6,
+      "verifyCallsMade": 0
+    },
+    "forcedReplayOutsideWindow": {
+      "ageHours": 4.73,
+      "verdict": "CONFIRMED BY REPLAY",
+      "good": {
+        "statuses": [
+          200,
+          200
+        ],
+        "book": "refunded"
+      },
+      "bad": {
+        "statuses": [
+          401,
+          401
+        ],
+        "book": null
+      }
+    }
+  },
+  "log": [
+    {
+      "mode": "bad_body",
+      "run": 1,
+      "result": {
+        "mode": "bad_body",
+        "ranAt": 1792394144254,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.REFUNDED"
+          ],
+          "ids": [
+            "WH-4D669182B5385532J-21K655575T999184M",
+            "WH-2G256235BF806141B-6VL338609Y7291831"
+          ]
+        },
+        "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            401,
+            401
+          ],
+          "book": null
+        }
+      },
+      "ageHours": 1.59,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "ack_then_drop",
+      "run": 1,
+      "result": {
+        "mode": "ack_then_drop",
+        "ranAt": 1792394148001,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.REFUNDED"
+          ],
+          "ids": [
+            "WH-54112502TY247564A-63756306JM3352023",
+            "WH-7C9085383R196130T-47F6908373075621L"
+          ]
+        },
+        "expectation": "Both builds answer 200; the good build books the events, the bad build books nothing.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": null
+        }
+      },
+      "ageHours": 1.59,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "last_write_wins",
+      "run": 1,
+      "result": {
+        "mode": "last_write_wins",
+        "ranAt": 1792394150775,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.COMPLETED"
+          ],
+          "ids": [
+            "WH-45W97943CV565620K-85D47668E8514093T",
+            "WH-5YF04438PK066832N-82V270692B2358747"
+          ]
+        },
+        "expectation": "Both builds answer 200 to a refund followed by a late payment; the good build keeps the order refunded, the bad build overwrites it with paid.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "paid"
+        }
+      },
+      "ageHours": 1.82,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "bad_body",
+      "run": 2,
+      "result": {
+        "mode": "bad_body",
+        "ranAt": 1792394153995,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.REFUNDED"
+          ],
+          "ids": [
+            "WH-4D669182B5385532J-21K655575T999184M",
+            "WH-2G256235BF806141B-6VL338609Y7291831"
+          ]
+        },
+        "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            401,
+            401
+          ],
+          "book": null
+        }
+      },
+      "ageHours": 1.59,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "ack_then_drop",
+      "run": 2,
+      "result": {
+        "mode": "ack_then_drop",
+        "ranAt": 1792394157066,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.REFUNDED"
+          ],
+          "ids": [
+            "WH-54112502TY247564A-63756306JM3352023",
+            "WH-7C9085383R196130T-47F6908373075621L"
+          ]
+        },
+        "expectation": "Both builds answer 200; the good build books the events, the bad build books nothing.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": null
+        }
+      },
+      "ageHours": 1.59,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "last_write_wins",
+      "run": 2,
+      "result": {
+        "mode": "last_write_wins",
+        "ranAt": 1792394160256,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.COMPLETED"
+          ],
+          "ids": [
+            "WH-45W97943CV565620K-85D47668E8514093T",
+            "WH-5YF04438PK066832N-82V270692B2358747"
+          ]
+        },
+        "expectation": "Both builds answer 200 to a refund followed by a late payment; the good build keeps the order refunded, the bad build overwrites it with paid.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "paid"
+        }
+      },
+      "ageHours": 1.82,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "bad_body",
+      "run": 3,
+      "result": {
+        "mode": "bad_body",
+        "ranAt": 1792394163234,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.REFUNDED"
+          ],
+          "ids": [
+            "WH-4D669182B5385532J-21K655575T999184M",
+            "WH-2G256235BF806141B-6VL338609Y7291831"
+          ]
+        },
+        "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            401,
+            401
+          ],
+          "book": null
+        }
+      },
+      "ageHours": 1.6,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "ack_then_drop",
+      "run": 3,
+      "result": {
+        "mode": "ack_then_drop",
+        "ranAt": 1792394165833,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.REFUNDED"
+          ],
+          "ids": [
+            "WH-54112502TY247564A-63756306JM3352023",
+            "WH-7C9085383R196130T-47F6908373075621L"
+          ]
+        },
+        "expectation": "Both builds answer 200; the good build books the events, the bad build books nothing.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": null
+        }
+      },
+      "ageHours": 1.6,
+      "verifyCalls": 4
+    },
+    {
+      "mode": "last_write_wins",
+      "run": 3,
+      "result": {
+        "mode": "last_write_wins",
+        "ranAt": 1792394168671,
+        "events": {
+          "types": [
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.COMPLETED"
+          ],
+          "ids": [
+            "WH-45W97943CV565620K-85D47668E8514093T",
+            "WH-5YF04438PK066832N-82V270692B2358747"
+          ]
+        },
+        "expectation": "Both builds answer 200 to a refund followed by a late payment; the good build keeps the order refunded, the bad build overwrites it with paid.",
+        "verdict": "CONFIRMED BY REPLAY",
+        "basis": "replayed",
+        "good": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "refunded"
+        },
+        "bad": {
+          "statuses": [
+            200,
+            200
+          ],
+          "book": "paid"
+        }
+      },
+      "ageHours": 1.82,
+      "verifyCalls": 4
+    }
+  ]
+}

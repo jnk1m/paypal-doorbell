@@ -1,0 +1,277 @@
+{
+ "at": "2026-10-21T08:12:21.634Z",
+ "base": "main 5f13c23 (S6 branch s6-live)",
+ "method": "commands per poll: lib/run/poll-cost.ts, the real RedisShopStore, limiter and snapshot code on an in-memory Redis that counts every command (a call is 1, each pipelined command is 1; an EVAL is 1), 20 polls of a 3-order session. Polls per 10 minutes: the lane's own pollDelayMs replayed on a timeline (a model, not a measured session). Nothing was sent to Redis or PayPal. The server's own count (an EVAL counts the commands inside it) is not re-measured here: docs/measurements/s5-poll-cost.json has 6.35 per poll on the real database (10-19).",
+ "perPoll": {
+  "polls": 20,
+  "wrapperCommands": 7,
+  "wrapperByName": {
+   "eval": 1,
+   "hgetall": 4,
+   "mget": 2
+  },
+  "serverCommands": 6.35,
+  "serverCommandsNote": "from docs/measurements/s5-poll-cost.json, not re-measured"
+ },
+ "plan": 60,
+ "tenMinutes": {
+  "idle": {
+   "note": "a session is opened and nothing is done; the tab stays open and visible",
+   "before": {
+    "polls": 32,
+    "commands": 224,
+    "at": [
+     0,
+     5,
+     15,
+     35,
+     55,
+     75,
+     95,
+     115,
+     135,
+     155,
+     175,
+     195,
+     215,
+     235,
+     255,
+     275,
+     295,
+     315,
+     335,
+     355,
+     375,
+     395,
+     415,
+     435,
+     455,
+     475,
+     495,
+     515,
+     535,
+     555,
+     575,
+     595
+    ]
+   },
+   "after": {
+    "polls": 7,
+    "commands": 49,
+    "at": [
+     0,
+     5,
+     15,
+     35,
+     75,
+     155,
+     315
+    ]
+   }
+  },
+  "active": {
+   "note": "a visit in the judge's five steps (model timeline below), then quiet until minute 10",
+   "timeline": {
+    "acts": [
+     {
+      "t": 17,
+      "what": "the judge places an order"
+     },
+     {
+      "t": 82,
+      "what": "turns on a bug"
+     },
+     {
+      "t": 101,
+      "what": "refunds the order"
+     },
+     {
+      "t": 250,
+      "what": "switches to the working handler"
+     },
+     {
+      "t": 272,
+      "what": "presses Ring again"
+     }
+    ],
+    "snapshots": [
+     {
+      "t": 0,
+      "pace": "idle",
+      "what": "the session opens: no orders"
+     },
+     {
+      "t": 17,
+      "pace": "waiting",
+      "what": "the order is placed: the books are given time to settle"
+     },
+     {
+      "t": 29,
+      "pace": "waiting",
+      "what": "the payment event is heard and the shop booked it"
+     },
+     {
+      "t": 62,
+      "pace": "idle",
+      "what": "the row is tied"
+     },
+     {
+      "t": 82,
+      "pace": "idle",
+      "what": "the bug is on"
+     },
+     {
+      "t": 101,
+      "pace": "waiting",
+      "what": "the refund is asked for: the row is too new to call"
+     },
+     {
+      "t": 113,
+      "pace": "waiting",
+      "what": "the refund event is heard; the shop answered 200 and booked nothing"
+     },
+     {
+      "t": 148,
+      "pace": "waiting",
+      "what": "the gap is found; PayPal has not listed the refund event yet"
+     },
+     {
+      "t": 230,
+      "pace": "idle",
+      "what": "PayPal lists the event: Ring again is on, the judge's turn"
+     },
+     {
+      "t": 250,
+      "pace": "idle",
+      "what": "the working handler is on"
+     },
+     {
+      "t": 272,
+      "pace": "moving",
+      "what": "Ring again: the resend is on its way"
+     },
+     {
+      "t": 275,
+      "pace": "moving",
+      "what": "the resend arrived; the books are checked"
+     },
+     {
+      "t": 290,
+      "pace": "idle",
+      "what": "the row is tied"
+     }
+    ]
+   },
+   "before": {
+    "polls": 47,
+    "commands": 329,
+    "at": [
+     0,
+     5,
+     15,
+     17,
+     35,
+     40,
+     50,
+     70,
+     75,
+     82,
+     85,
+     95,
+     101,
+     115,
+     120,
+     130,
+     150,
+     155,
+     165,
+     185,
+     205,
+     225,
+     245,
+     250,
+     250,
+     260,
+     272,
+     280,
+     283,
+     289,
+     301,
+     306,
+     316,
+     336,
+     356,
+     376,
+     396,
+     416,
+     436,
+     456,
+     476,
+     496,
+     516,
+     536,
+     556,
+     576,
+     596
+    ]
+   },
+   "after": {
+    "polls": 38,
+    "commands": 266,
+    "at": [
+     0,
+     5,
+     15,
+     17,
+     22,
+     32,
+     37,
+     47,
+     67,
+     72,
+     82,
+     87,
+     97,
+     101,
+     106,
+     116,
+     121,
+     131,
+     151,
+     156,
+     166,
+     186,
+     206,
+     226,
+     246,
+     250,
+     255,
+     265,
+     272,
+     275,
+     278,
+     284,
+     296,
+     301,
+     311,
+     331,
+     371,
+     451
+    ]
+   }
+  }
+ },
+ "criterion": {
+  "problem": "A13 item 9 says 'at most 60 Redis commands per session per 10 minutes'. One poll is 7 commands, so 60 is 8 polls. A lane that is waiting for PayPal (its event list takes 80 to 163 s, its own retries about 163 s) polls every 5 to 20 s, which is 10 to 30 polls in those minutes: 60 cannot hold for a session that does anything, whatever the pace, without the page going stale.",
+  "kept": "an idle session (open, nothing done) costs at most 60 in 10 minutes: 49 now, 224 before",
+  "proposal": "Keep 60 for an idle session. For a session that is used, replace it with (a) one poll is at most 7 commands, pinned by lib/run/poll-cost.test.ts, and (b) the hourly caps already in lib/limits.ts: 300 polls per session per hour (2,100 commands) and 600 for all sessions (4,200 commands). The modelled five-step visit costs about 270 commands in its 10 minutes, and a judge's visit is one such session. The owner decides.",
+  "notDone": "Reading less per poll (a version counter written by every write, read first by the poll) would cut an unchanged poll to 2 or 3 commands, but the waits are on PayPal's clock, which no Redis key shows, so the full scan would still run every 5 to 20 s while a gap waits. It changes the store's layout and is not done here."
+ },
+ "fitsInPlan": {
+  "idleBefore": false,
+  "idleAfter": true,
+  "activeAfter": false,
+  "pollsThatFitInSixty": 8,
+  "note": "60 commands is 8 polls. The idle lane makes 7. An active visit needs the lane to poll while PayPal's clock is awaited, which is many more than 8; no pace keeps that inside 60 without making the page unusable (lib/limits.ts says the same). See criterion."
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "at": "2026-10-20T09:13:39.306Z",
+ "base": "https://paypal-doorbell.vercel.app",
+ "scenarios": [
+  {
+   "id": "cause_not_in_code",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "a95e7774",
+     "valid": true,
+     "seconds": 334,
+     "steps": [
+      {
+       "at": "2026-10-20T09:12:11.546Z",
+       "title": "PayPal sent each refund 3 times; the shop answered 401 on all three tries. The last deploy changed only a comment, so no cause is proven."
+      },
+      {
+       "at": "2026-10-20T09:12:16.432Z",
+       "title": "The fix is deployed: the shop checks signatures against its own webhook ID again. The gaps stay until PayPal sends the messages again."
+      },
+      {
+       "at": "2026-10-20T09:12:26.108Z",
+       "title": "Ring again: PayPal accepted a resend for each row (HTTP 202). 0 of 2 have already reached the shop; 0 rows are tied again."
+      },
+      {
+       "at": "2026-10-20T09:13:39.304Z",
+       "title": "All 2 rows are tied again: the resent messages reached the shop and the books changed (2 needed more than one resend)."
+      }
+     ],
+     "notes": [
+      "heals: [{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":2,\"sentAt\":[1792487540720,1792487605295],\"arrivedAt\":1792487607894,\"arrivalSeconds\":2.6,\"answer\":200}},{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":2,\"sentAt\":[1792487542462,1792487608080],\"arrivedAt\":1792487611087,\"arrivalSeconds\":3,\"answer\":200}}]"
+     ]
+    }
+   ]
+  }
+ ]
+}

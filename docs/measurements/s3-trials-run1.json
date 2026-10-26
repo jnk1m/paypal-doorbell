@@ -1,0 +1,1723 @@
+{
+  "summary": {
+    "attempts": 13,
+    "tally": {
+      "valid": 13,
+      "invalid": 0,
+      "invalidRate": 0,
+      "verdict": "stable"
+    },
+    "a4": {
+      "validTrials": 9,
+      "ofPlanned": 9,
+      "behavedAsExpected": 5,
+      "expectedClassSeen": 9,
+      "confirmedWrong": 0,
+      "absenceClaimsBeforeSixMinutes": 0,
+      "scansThatHeldAnAbsenceClaimBack": 95,
+      "finalSeconds": [
+        {
+          "mode": "ack_then_drop",
+          "afterD": 14,
+          "afterGap": 14
+        },
+        {
+          "mode": "ack_then_drop",
+          "afterD": 14.7,
+          "afterGap": 14.7
+        },
+        {
+          "mode": "ack_then_drop",
+          "afterD": 13.1,
+          "afterGap": 13.1
+        },
+        {
+          "mode": "bad_body",
+          "afterD": 3.2,
+          "afterGap": 3.2
+        },
+        {
+          "mode": "bad_body",
+          "afterD": 3.8,
+          "afterGap": 3.8
+        },
+        {
+          "mode": "bad_body",
+          "afterD": 3.9,
+          "afterGap": 3.9
+        },
+        {
+          "mode": "last_write_wins",
+          "afterD": 60.3,
+          "afterGap": 12.7
+        },
+        {
+          "mode": "last_write_wins",
+          "afterD": 39.8,
+          "afterGap": 12.5
+        },
+        {
+          "mode": "last_write_wins",
+          "afterD": 31,
+          "afterGap": 14.8
+        }
+      ]
+    },
+    "a5": {
+      "healed": 5,
+      "ofValidFixTrials": 12,
+      "arrivalSecondsAfter202": [
+        2.2,
+        3.1,
+        2.6,
+        2.9,
+        2.2
+      ],
+      "arrivalMax": 3.1,
+      "sendsPerHeal": [
+        1,
+        3,
+        3,
+        2,
+        2
+      ],
+      "timeFromDetectionToTiedSeconds": [
+        25.7,
+        166.5,
+        129.7,
+        68.6,
+        88.2
+      ],
+      "earlyRings": 13,
+      "earlyRingsNotListed": 11,
+      "earlyRingsRefusedWithZeroSends": 11,
+      "earlyRingStates": {
+        "not_listed": 11,
+        "SENT": 2
+      }
+    }
+  },
+  "trials": [
+    {
+      "mode": "ack_then_drop",
+      "label": "ack_then_drop #1",
+      "session": "fcb03258",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 6,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 84,
+      "polls": [
+        {
+          "t": 6.4,
+          "at": 1792386296240,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 23.7,
+          "at": 1792386313331,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 27.2,
+          "at": 1792386317035,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 41.5,
+          "at": 1792386331234,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 50.9,
+          "at": 1792386340739,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 83.5,
+          "at": 1792386373372,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        }
+      ],
+      "ids": {
+        "capture": "0KT640475W709691A",
+        "refund": "94W36513KK243762H",
+        "refundEid": "WH-6PC44927JY048674D-0RG43679BK1925156"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 14,
+        "secondsAfterGapCreated": 14,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "failure": "the ring was refused although the state was ready (not_listed)"
+    },
+    {
+      "mode": "ack_then_drop",
+      "label": "ack_then_drop #2",
+      "session": "d0577069",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 9,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": true,
+      "seconds": 91,
+      "polls": [
+        {
+          "t": 6.2,
+          "at": 1792386296065,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 36.8,
+          "at": 1792386326689,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 39.9,
+          "at": 1792386329692,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 54.1,
+          "at": 1792386343894,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 65.5,
+          "at": 1792386354516,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 83.5,
+          "at": 1792386373415,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 85.2,
+          "at": 1792386375091,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 89.9,
+          "at": 1792386379773,
+          "status": "TIED",
+          "heal": "healed/1",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "0YG36577SR5595724",
+        "refund": "71Y80710PC378600U",
+        "refundEid": "WH-62C42496UF182945A-7Y169280XK2653730"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 14.7,
+        "secondsAfterGapCreated": 14.7,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "heal": {
+        "readyAfterRefundS": 46.5,
+        "ringed": true,
+        "sends": 1,
+        "state": "healed",
+        "arrivalSeconds": 2.2,
+        "answer": 200,
+        "timeToTiedAfterDetectionS": 25.7,
+        "timeToTiedAfterRingS": 5.3,
+        "rowTied": true,
+        "paypal": "REFUNDED",
+        "books": "refunded"
+      }
+    },
+    {
+      "mode": "ack_then_drop",
+      "label": "ack_then_drop #3",
+      "session": "94226b50",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 6,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": true,
+      "seconds": 218,
+      "polls": [
+        {
+          "t": 5.9,
+          "at": 1792386295770,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 22.5,
+          "at": 1792386312347,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 26.4,
+          "at": 1792386315490,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 40.7,
+          "at": 1792386330596,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 50.3,
+          "at": 1792386340161,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 83.4,
+          "at": 1792386373229,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 85.1,
+          "at": 1792386375020,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 146.8,
+          "at": 1792386436737,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 211.6,
+          "at": 1792386501490,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/3",
+          "books": "paid"
+        },
+        {
+          "t": 216.2,
+          "at": 1792386506161,
+          "status": "TIED",
+          "heal": "healed/3",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "1P243655J2053713R",
+        "refund": "8XM252444Y137792K",
+        "refundEid": "WH-2W592607FD482073Y-8B247378GK445573E"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 13.1,
+        "secondsAfterGapCreated": 13.1,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "heal": {
+        "readyAfterRefundS": 60.5,
+        "ringed": true,
+        "sends": 3,
+        "state": "healed",
+        "arrivalSeconds": 3.1,
+        "answer": 200,
+        "timeToTiedAfterDetectionS": 166.5,
+        "timeToTiedAfterRingS": 131.7,
+        "rowTied": true,
+        "paypal": "REFUNDED",
+        "books": "refunded"
+      }
+    },
+    {
+      "mode": "bad_body",
+      "label": "bad_body #1",
+      "session": "a5e545b9",
+      "valid": true,
+      "expected": "HANDLER_REJECTING",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 7,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 347,
+      "polls": [
+        {
+          "t": 5.6,
+          "at": 1792386295478,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 19.9,
+          "at": 1792386309744,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 24.6,
+          "at": 1792386314454,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 39.5,
+          "at": 1792386329411,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 73.7,
+          "at": 1792386363577,
+          "status": "TIED",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "9HR672616G853710S",
+        "refund": "19586446UD6770015",
+        "refundEid": "WH-2VV01941TE7624941-30W54734W6719724T"
+      },
+      "seen": {
+        "cls": "HANDLER_REJECTING",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 3.2,
+        "secondsAfterGapCreated": 3.2,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "failure": "Ring again never became ready in 300 s (last ring state undefined)"
+    },
+    {
+      "mode": "bad_body",
+      "label": "bad_body #2",
+      "session": "ae1b0cd8",
+      "valid": true,
+      "expected": "HANDLER_REJECTING",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 7,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 347,
+      "polls": [
+        {
+          "t": 6.2,
+          "at": 1792386296118,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 21.9,
+          "at": 1792386311701,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 25.3,
+          "at": 1792386314965,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 40.3,
+          "at": 1792386330050,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 69,
+          "at": 1792386358890,
+          "status": "TIED",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "66N34882FJ8137702",
+        "refund": "5FH16864050605335",
+        "refundEid": "WH-3D544080S8411424S-2XF53137FP298283H"
+      },
+      "seen": {
+        "cls": "HANDLER_REJECTING",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 3.8,
+        "secondsAfterGapCreated": 3.8,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "failure": "Ring again never became ready in 300 s (last ring state undefined)"
+    },
+    {
+      "mode": "bad_body",
+      "label": "bad_body #3",
+      "session": "61ed9a66",
+      "valid": true,
+      "expected": "HANDLER_REJECTING",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 7,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 346,
+      "polls": [
+        {
+          "t": 5.9,
+          "at": 1792386295821,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 20.6,
+          "at": 1792386310172,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 26.4,
+          "at": 1792386315775,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 41.7,
+          "at": 1792386331353,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 67.1,
+          "at": 1792386355929,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "retries_pending",
+          "books": "paid"
+        },
+        {
+          "t": 77.4,
+          "at": 1792386367328,
+          "status": "TIED",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "4WY53531T6651752L",
+        "refund": "5KH20335GH1346422",
+        "refundEid": "WH-9EB99830W47683109-5H7155827T625835U"
+      },
+      "seen": {
+        "cls": "HANDLER_REJECTING",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 3.9,
+        "secondsAfterGapCreated": 3.9,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "failure": "Ring again never became ready in 300 s (last ring state undefined)"
+    },
+    {
+      "mode": "last_write_wins",
+      "label": "last_write_wins #1",
+      "session": "bb0fa687",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED+OUT_OF_ORDER",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 6,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": true,
+      "seconds": 228,
+      "polls": [
+        {
+          "t": 6.1,
+          "at": 1792386296032,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 20.6,
+          "at": 1792386310339,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 26.4,
+          "at": 1792386315318,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 40.5,
+          "at": 1792386330378,
+          "status": "TIED",
+          "books": "refunded"
+        },
+        {
+          "t": 87.1,
+          "at": 1792386377024,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 97.3,
+          "at": 1792386387199,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 99.5,
+          "at": 1792386389384,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 161.3,
+          "at": 1792386451258,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 222,
+          "at": 1792386511899,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/3",
+          "books": "paid"
+        },
+        {
+          "t": 226.6,
+          "at": 1792386516454,
+          "status": "TIED",
+          "heal": "healed/3",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "1EY64534TC9259914",
+        "refund": "0G993515VC956361J",
+        "completedEid": "WH-1SP03604U9862860M-5J170985VU219515W",
+        "refundEid": "WH-33996406XS125233C-2ML41172KA190232D"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "flag": "OUT_OF_ORDER",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 60.3,
+        "secondsAfterGapCreated": 12.7,
+        "gapCreatedBy": "the late payment event reached the shop (the witness is not asked to hear a resend)",
+        "viaTrigger": [
+          {
+            "accepted": true,
+            "refusals": 5,
+            "acceptedAt": 1792386371757
+          }
+        ]
+      },
+      "earlyRing": [
+        {
+          "state": "SENT",
+          "sent": true
+        }
+      ],
+      "heal": {
+        "readyAfterRefundS": 77.6,
+        "ringed": true,
+        "sends": 3,
+        "state": "healed",
+        "arrivalSeconds": 2.6,
+        "answer": 200,
+        "timeToTiedAfterDetectionS": 129.7,
+        "timeToTiedAfterRingS": 127.7,
+        "rowTied": true,
+        "paypal": "REFUNDED",
+        "books": "refunded"
+      }
+    },
+    {
+      "mode": "last_write_wins",
+      "label": "last_write_wins #2",
+      "session": "ae191452",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED+OUT_OF_ORDER",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 10,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": true,
+      "seconds": 167,
+      "polls": [
+        {
+          "t": 5.7,
+          "at": 1792386295626,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 39.9,
+          "at": 1792386329769,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 43.1,
+          "at": 1792386332938,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 57.5,
+          "at": 1792386347348,
+          "status": "TIED",
+          "books": "refunded"
+        },
+        {
+          "t": 87,
+          "at": 1792386376909,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 97.2,
+          "at": 1792386386989,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 99.4,
+          "at": 1792386389227,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 123,
+          "at": 1792386412884,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "not_listed",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 127.8,
+          "at": 1792386417708,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 160.6,
+          "at": 1792386450486,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 165.2,
+          "at": 1792386455141,
+          "status": "TIED",
+          "heal": "healed/2",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "7WP46585HE898182P",
+        "refund": "88H2691410368134H",
+        "completedEid": "WH-0KV60233GL323634T-30930457DB916723M",
+        "refundEid": "WH-3G324778D69240457-4G9593645G9932538"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "flag": "OUT_OF_ORDER",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 39.8,
+        "secondsAfterGapCreated": 12.5,
+        "gapCreatedBy": "the late payment event reached the shop (the witness is not asked to hear a resend)",
+        "viaTrigger": [
+          {
+            "accepted": true,
+            "refusals": 3,
+            "acceptedAt": 1792386371669
+          }
+        ]
+      },
+      "earlyRing": [
+        {
+          "state": "SENT",
+          "sent": true
+        }
+      ],
+      "heal": {
+        "readyAfterRefundS": 58.2,
+        "ringed": true,
+        "sends": 2,
+        "state": "healed",
+        "arrivalSeconds": 2.9,
+        "answer": 200,
+        "timeToTiedAfterDetectionS": 68.6,
+        "timeToTiedAfterRingS": 66.7,
+        "rowTied": true,
+        "paypal": "REFUNDED",
+        "books": "refunded"
+      }
+    },
+    {
+      "mode": "last_write_wins",
+      "label": "last_write_wins #3",
+      "session": "c0d83091",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED+OUT_OF_ORDER",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 6,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": true,
+      "seconds": 158,
+      "polls": [
+        {
+          "t": 6.4,
+          "at": 1792386296259,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 23.3,
+          "at": 1792386313019,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 27.2,
+          "at": 1792386317045,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 41.5,
+          "at": 1792386331183,
+          "status": "TIED",
+          "books": "refunded"
+        },
+        {
+          "t": 57.1,
+          "at": 1792386346880,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 69.1,
+          "at": 1792386358985,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 89.5,
+          "at": 1792386379382,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 90.9,
+          "at": 1792386380857,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 152.3,
+          "at": 1792386442206,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "flag": "OUT_OF_ORDER",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 156.8,
+          "at": 1792386446746,
+          "status": "TIED",
+          "heal": "healed/2",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "88J9508635767150X",
+        "refund": "4UD84307M6948225H",
+        "completedEid": "WH-81H96658DP769591G-08J79314EV4025733",
+        "refundEid": "WH-88G30226TY8982635-5MU23822VF6159810"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "flag": "OUT_OF_ORDER",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 31,
+        "secondsAfterGapCreated": 14.8,
+        "gapCreatedBy": "the late payment event reached the shop (the witness is not asked to hear a resend)",
+        "viaTrigger": [
+          {
+            "accepted": true,
+            "refusals": 1,
+            "acceptedAt": 1792386341286
+          }
+        ]
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "heal": {
+        "readyAfterRefundS": 65.5,
+        "ringed": true,
+        "sends": 2,
+        "state": "healed",
+        "arrivalSeconds": 2.2,
+        "answer": 200,
+        "timeToTiedAfterDetectionS": 88.2,
+        "timeToTiedAfterRingS": 66.5,
+        "rowTied": true,
+        "paypal": "REFUNDED",
+        "books": "refunded"
+      }
+    },
+    {
+      "mode": "ack_then_drop",
+      "label": "ack_then_drop control (no fix)",
+      "session": "0c28bcac",
+      "valid": true,
+      "expected": "ACKED_BUT_NOT_APPLIED",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 6,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "unchanged",
+      "pass": true,
+      "seconds": 223,
+      "polls": [
+        {
+          "t": 5.3,
+          "at": 1792386295102,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 19.8,
+          "at": 1792386309702,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 24.6,
+          "at": 1792386314397,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 39.2,
+          "at": 1792386328933,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 48.7,
+          "at": 1792386338549,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 83.6,
+          "at": 1792386373520,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 85.2,
+          "at": 1792386375118,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 146.9,
+          "at": 1792386436871,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 207.5,
+          "at": 1792386497436,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/3",
+          "books": "paid"
+        },
+        {
+          "t": 212,
+          "at": 1792386501959,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "settling",
+          "ring": "wait",
+          "heal": "arrived/3",
+          "books": "paid"
+        },
+        {
+          "t": 221.2,
+          "at": 1792386511168,
+          "status": "GAP",
+          "cls": "ACKED_BUT_NOT_APPLIED",
+          "final": true,
+          "ring": "ready",
+          "heal": "unchanged/3",
+          "books": "paid"
+        }
+      ],
+      "ids": {
+        "capture": "1VL17661382759248",
+        "refund": "0AU499036D760660W",
+        "refundEid": "WH-89G5624466966640R-92J39761BG4898309"
+      },
+      "seen": {
+        "cls": "ACKED_BUT_NOT_APPLIED",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 12,
+        "secondsAfterGapCreated": 12,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "heal": {
+        "readyAfterRefundS": 63.4,
+        "ringed": true,
+        "sends": 3,
+        "state": "unchanged",
+        "arrivalSeconds": 3.4,
+        "answer": 200,
+        "timeToTiedAfterDetectionS": 173.1,
+        "timeToTiedAfterRingS": 136.7,
+        "rowTied": false,
+        "paypal": "REFUNDED",
+        "books": "paid"
+      }
+    },
+    {
+      "mode": "bad_body",
+      "label": "bad_body+raw resend #1",
+      "session": "9c9ceed0",
+      "valid": true,
+      "expected": "HANDLER_REJECTING",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 11,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 399,
+      "polls": [
+        {
+          "t": 6.3,
+          "at": 1792386296134,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 41.2,
+          "at": 1792386331025,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 44.4,
+          "at": 1792386334318,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 60.9,
+          "at": 1792386350776,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 112.9,
+          "at": 1792386402853,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "retries_pending",
+          "books": "paid"
+        },
+        {
+          "t": 214.2,
+          "at": 1792386504155,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 216.6,
+          "at": 1792386506513,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 276.5,
+          "at": 1792386566394,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 337,
+          "at": 1792386626909,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/3",
+          "books": "paid"
+        },
+        {
+          "t": 397.3,
+          "at": 1792386687181,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "ready",
+          "heal": "lost/3",
+          "books": "paid"
+        }
+      ],
+      "ids": {
+        "capture": "75914038B8679611D",
+        "refund": "1F703403YK476271H",
+        "refundEid": "WH-18305739LE0886139-6K1864836X369340N"
+      },
+      "seen": {
+        "cls": "HANDLER_REJECTING",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 4.9,
+        "secondsAfterGapCreated": 4.9,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "rawResend": {
+        "accepted": true,
+        "refusals": 3,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "retries_pending"
+      },
+      "heal": {
+        "readyAfterRefundS": 173.4,
+        "ringed": true,
+        "sends": 3,
+        "state": "lost",
+        "timeToTiedAfterDetectionS": 336.9,
+        "timeToTiedAfterRingS": 181.1,
+        "rowTied": false,
+        "paypal": "REFUNDED",
+        "books": "paid"
+      },
+      "failure": "heal NOT as expected (lost, row GAP, books paid); absence claims before 6 minutes 0; wrong final classes []; PayPal says REFUNDED"
+    },
+    {
+      "mode": "bad_body",
+      "label": "bad_body+raw resend #2",
+      "session": "df46d863",
+      "valid": true,
+      "expected": "HANDLER_REJECTING",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 7,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 431,
+      "polls": [
+        {
+          "t": 5.2,
+          "at": 1792386295022,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 20,
+          "at": 1792386309896,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 25.1,
+          "at": 1792386314806,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 40.1,
+          "at": 1792386329978,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 84,
+          "at": 1792386373842,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "retries_pending",
+          "books": "paid"
+        },
+        {
+          "t": 87.6,
+          "at": 1792386377515,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 88.2,
+          "at": 1792386378170,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "retries_pending",
+          "books": "paid"
+        },
+        {
+          "t": 126.4,
+          "at": 1792386416293,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 127.3,
+          "at": 1792386417222,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "retries_pending",
+          "books": "paid"
+        },
+        {
+          "t": 196.9,
+          "at": 1792386486799,
+          "status": "TIED",
+          "books": "refunded"
+        }
+      ],
+      "ids": {
+        "capture": "9TL192103S967423A",
+        "refund": "37A35548LX851360U",
+        "refundEid": "WH-1MV464821B9918330-53545089UV9573931"
+      },
+      "seen": {
+        "cls": "HANDLER_REJECTING",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 3.5,
+        "secondsAfterGapCreated": 3.5,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "rawResend": {
+        "accepted": true,
+        "refusals": 2,
+        "arrivedWhileRetrying": {
+          "status": 401,
+          "secondsAfterAccepted": 2.4
+        },
+        "productRingStateAtTheTime": "not_listed"
+      },
+      "failure": "Ring again never became ready in 300 s (last ring state undefined)"
+    },
+    {
+      "mode": "bad_body",
+      "label": "bad_body+raw resend #3",
+      "session": "2625d9b7",
+      "valid": true,
+      "expected": "HANDLER_REJECTING",
+      "wrongFinal": [],
+      "absence": {
+        "scansHoldingBack": 7,
+        "claimsBeforeSixMinutes": 0,
+        "claimsAfterSixMinutes": 0
+      },
+      "expectedHeal": "healed",
+      "pass": false,
+      "seconds": 389,
+      "polls": [
+        {
+          "t": 6.2,
+          "at": 1792386296096,
+          "status": "UNVERIFIED",
+          "waiting": "absence_window"
+        },
+        {
+          "t": 22.6,
+          "at": 1792386312350,
+          "status": "TIED",
+          "books": "paid"
+        },
+        {
+          "t": 26.4,
+          "at": 1792386315791,
+          "status": "UNVERIFIED",
+          "cls": "UNVERIFIED",
+          "final": false,
+          "waiting": "absence_window",
+          "ring": "wait",
+          "books": "paid"
+        },
+        {
+          "t": 41.8,
+          "at": 1792386331606,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "not_listed",
+          "books": "paid"
+        },
+        {
+          "t": 108.1,
+          "at": 1792386398047,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "retries_pending",
+          "books": "paid"
+        },
+        {
+          "t": 203.9,
+          "at": 1792386493819,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "ready",
+          "books": "paid"
+        },
+        {
+          "t": 206.1,
+          "at": 1792386496073,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/1",
+          "books": "paid"
+        },
+        {
+          "t": 266.4,
+          "at": 1792386556278,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/2",
+          "books": "paid"
+        },
+        {
+          "t": 326.9,
+          "at": 1792386616863,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "in_progress",
+          "heal": "sent/3",
+          "books": "paid"
+        },
+        {
+          "t": 387.2,
+          "at": 1792386677084,
+          "status": "GAP",
+          "cls": "HANDLER_REJECTING",
+          "final": true,
+          "ring": "ready",
+          "heal": "lost/3",
+          "books": "paid"
+        }
+      ],
+      "ids": {
+        "capture": "5S19329700164543L",
+        "refund": "4FW42486LS912335G",
+        "refundEid": "WH-2VV01941TE7624941-18N36755XW1149832"
+      },
+      "seen": {
+        "cls": "HANDLER_REJECTING",
+        "final": true
+      },
+      "classOk": true,
+      "detection": {
+        "secondsAfterDReceipt": 4.4,
+        "secondsAfterGapCreated": 4.4,
+        "gapCreatedBy": "the witness heard the refund"
+      },
+      "earlyRing": [
+        {
+          "state": "not_listed",
+          "sent": false
+        }
+      ],
+      "rawResend": {
+        "accepted": true,
+        "refusals": 5,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "retries_pending"
+      },
+      "heal": {
+        "readyAfterRefundS": 181.7,
+        "ringed": true,
+        "sends": 3,
+        "state": "lost",
+        "timeToTiedAfterDetectionS": 346.1,
+        "timeToTiedAfterRingS": 181.6,
+        "rowTied": false,
+        "paypal": "REFUNDED",
+        "books": "paid"
+      },
+      "failure": "heal NOT as expected (lost, row GAP, books paid); absence claims before 6 minutes 0; wrong final classes []; PayPal says REFUNDED"
+    }
+  ]
+}

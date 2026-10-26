@@ -1,0 +1,1522 @@
+{
+ "id": "dispute_never_heard",
+ "plantedMode": "none",
+ "title": "A customer's bank disputed an order at PayPal and the shop was never told",
+ "capturedAt": 1792492949401,
+ "steps": [
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792492949401,
+   "step": {
+    "index": 1,
+    "of": 4,
+    "title": "3 of 3 orders are tied: the books agree with PayPal."
+   },
+   "session": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492914163
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "2LU7296797415470R",
+      "captureId": "6XH14210FN889670H",
+      "invoiceId": "MM-ab2da832-1",
+      "at": 1792492914403,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "heard": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "received": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "1YB01089839807159",
+      "captureId": "9B34728640971000X",
+      "invoiceId": "MM-ab2da832-2",
+      "at": 1792492918272,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "heard": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "received": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "85287143U8906523W",
+      "captureId": "32U58051SU351580D",
+      "invoiceId": "MM-ab2da832-3",
+      "at": 1792492921977,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "heard": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "received": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792492947688
+   },
+   "scan": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good"
+    },
+    "at": 1792492947688,
+    "durationMs": 1712,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "6XH14210FN889670H",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "d": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "s": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "listed": false,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "9B34728640971000X",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "d": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "s": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925055,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "32U58051SU351580D",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "d": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "s": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "listed": false,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 3,
+     "gaps": 0,
+     "unverified": 0,
+     "byClass": {}
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 3
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 0,
+     "retries": 0
+    },
+    "disputeReads": {
+     "asked": 3,
+     "unreadable": 0
+    },
+    "resendsUsed": 0
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "green",
+    "stampText": "Tied on 3/3 of what we can see",
+    "header": "Checked 3 of 3 captures (100%).",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 3,
+     "gaps": 0,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "0.00",
+     "refundsNotInBooks": 0,
+     "byClass": {},
+     "disputes": {
+      "open": 0,
+      "notInBooks": 0,
+      "unverified": 0,
+      "unsubscribed": 0,
+      "noWebhook": 0,
+      "moneyNotInBooks": "0.00",
+      "unreadable": 0
+     }
+    },
+    "limits": [
+     "3 rows are inside PayPal's event-list lag (median about 80 s, up to 163 s measured): an event missing from the list proves nothing yet."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "Your books match PayPal on 3 of 3 orders.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792492947688,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492937030,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 11 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792492991544,
+   "step": {
+    "index": 2,
+    "of": 4,
+    "title": "PayPal lists a $48.00 dispute on order #2. The shop's books have none, and no webhook of this app subscribes to dispute events."
+   },
+   "session": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492914163
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "2LU7296797415470R",
+      "captureId": "6XH14210FN889670H",
+      "invoiceId": "MM-ab2da832-1",
+      "at": 1792492914403,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "heard": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "received": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "1YB01089839807159",
+      "captureId": "9B34728640971000X",
+      "invoiceId": "MM-ab2da832-2",
+      "at": 1792492918272,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "heard": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "received": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "85287143U8906523W",
+      "captureId": "32U58051SU351580D",
+      "invoiceId": "MM-ab2da832-3",
+      "at": 1792492921977,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "heard": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "received": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792492990007
+   },
+   "scan": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good"
+    },
+    "at": 1792492990007,
+    "durationMs": 1537,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "6XH14210FN889670H",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "d": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "s": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492920887,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "9B34728640971000X",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "d": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "s": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925055,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ],
+      "disputes": [
+       {
+        "disputeId": "PP-R-JLV-10193723",
+        "paypalStatus": "OPEN",
+        "amount": "48.00",
+        "createdAt": 1792492951000,
+        "sellerResponseDueAt": null,
+        "dueDateSource": "not_set_yet",
+        "webhooks": {
+         "shop": false,
+         "any": false
+        },
+        "status": "GAP",
+        "finding": {
+         "cls": "NO_REPORT",
+         "flag": "UNSUBSCRIBED_EVENT_TYPE",
+         "final": true,
+         "why": "PayPal lists this dispute as open and the shop's webhook is not subscribed to CUSTOMER.DISPUTE.CREATED, so the shop was never going to be told."
+        },
+        "ring": {
+         "state": "cannot_heal",
+         "label": "Nothing to resend: no webhook of this app subscribes to dispute events, so PayPal made no event to send again. Subscribing the shop's webhook to CUSTOMER.DISPUTE.CREATED would tell it about the next dispute."
+        }
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "32U58051SU351580D",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "d": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "s": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "listed": false,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 2,
+     "gaps": 1,
+     "unverified": 0,
+     "byClass": {}
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 13
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 0,
+     "retries": 0
+    },
+    "disputeReads": {
+     "asked": 3,
+     "unreadable": 0
+    },
+    "resendsUsed": 0
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "1 gap · Tied on 2/3",
+    "header": "1 of 3 captures did not match PayPal · 1 open dispute on PayPal that the books do not show ($48.00) · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 2,
+     "gaps": 1,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "0.00",
+     "refundsNotInBooks": 0,
+     "byClass": {},
+     "disputes": {
+      "open": 1,
+      "notInBooks": 1,
+      "unverified": 0,
+      "unsubscribed": 1,
+      "noWebhook": 1,
+      "moneyNotInBooks": "48.00",
+      "unreadable": 0
+     }
+    },
+    "limits": [
+     "3 rows are inside PayPal's event-list lag (median about 80 s, up to 163 s measured): an event missing from the list proves nothing yet.",
+     "1 dispute: no webhook of this app subscribes to dispute events, so whether PayPal would have sent an event cannot be proven from here (in our one test it listed none in 8 minutes).",
+     "A Sandbox dispute's response-due date is the one the test call that made it asked for, not a deadline that PayPal's own rules produced."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "PayPal lists 1 open dispute on your orders that your books do not show. That is $48.00 under dispute.",
+     "Your shop's webhook is not set up to hear about disputes, so PayPal would not have told it.",
+     "These need your attention: your books and PayPal disagree.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792492990007,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492937030,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 53 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792493171656,
+   "step": {
+    "index": 3,
+    "of": 4,
+    "title": "The capture now shows PENDING at PayPal. PayPal's response-due date is 2026-10-31 03:59 UTC, the one our Sandbox test call asked for."
+   },
+   "session": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492914163
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "2LU7296797415470R",
+      "captureId": "6XH14210FN889670H",
+      "invoiceId": "MM-ab2da832-1",
+      "at": 1792492914403,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "heard": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "received": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "1YB01089839807159",
+      "captureId": "9B34728640971000X",
+      "invoiceId": "MM-ab2da832-2",
+      "at": 1792492918272,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "heard": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "received": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "85287143U8906523W",
+      "captureId": "32U58051SU351580D",
+      "invoiceId": "MM-ab2da832-3",
+      "at": 1792492921977,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "heard": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "received": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792493169998
+   },
+   "scan": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good"
+    },
+    "at": 1792493169998,
+    "durationMs": 1658,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "6XH14210FN889670H",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "d": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "s": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492920887,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "9B34728640971000X",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": null,
+      "paypalStatus": "PENDING",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "d": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "s": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925055,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ],
+      "disputes": [
+       {
+        "disputeId": "PP-R-JLV-10193723",
+        "paypalStatus": "WAITING_FOR_SELLER_RESPONSE",
+        "amount": "48.00",
+        "createdAt": 1792492951000,
+        "sellerResponseDueAt": 1793419199000,
+        "dueDateSource": "sandbox_test",
+        "webhooks": {
+         "shop": false,
+         "any": false
+        },
+        "status": "GAP",
+        "finding": {
+         "cls": "NO_REPORT",
+         "flag": "UNSUBSCRIBED_EVENT_TYPE",
+         "final": true,
+         "why": "PayPal lists this dispute as open and the shop's webhook is not subscribed to CUSTOMER.DISPUTE.CREATED, so the shop was never going to be told."
+        },
+        "ring": {
+         "state": "cannot_heal",
+         "label": "Nothing to resend: no webhook of this app subscribes to dispute events, so PayPal made no event to send again. Subscribing the shop's webhook to CUSTOMER.DISPUTE.CREATED would tell it about the next dispute."
+        }
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "32U58051SU351580D",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "d": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "s": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492928973,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 2,
+     "gaps": 1,
+     "unverified": 0,
+     "byClass": {}
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 18
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 0,
+     "retries": 0
+    },
+    "disputeReads": {
+     "asked": 3,
+     "unreadable": 0
+    },
+    "resendsUsed": 0
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "1 gap · Tied on 2/3",
+    "header": "1 of 3 captures did not match PayPal · 1 open dispute on PayPal that the books do not show ($48.00) · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 2,
+     "gaps": 1,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "0.00",
+     "refundsNotInBooks": 0,
+     "byClass": {},
+     "disputes": {
+      "open": 1,
+      "notInBooks": 1,
+      "unverified": 0,
+      "unsubscribed": 1,
+      "noWebhook": 1,
+      "moneyNotInBooks": "48.00",
+      "unreadable": 0
+     }
+    },
+    "limits": [
+     "1 dispute: no webhook of this app subscribes to dispute events, so whether PayPal would have sent an event cannot be proven from here (in our one test it listed none in 8 minutes).",
+     "A Sandbox dispute's response-due date is the one the test call that made it asked for, not a deadline that PayPal's own rules produced."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "PayPal lists 1 open dispute on your orders that your books do not show. That is $48.00 under dispute.",
+     "Your shop's webhook is not set up to hear about disputes, so PayPal would not have told it.",
+     "These need your attention: your books and PayPal disagree.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792493169998,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492937030,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 4 min ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792493175012,
+   "step": {
+    "index": 4,
+    "of": 4,
+    "title": "Ring again: nothing was sent. No webhook of this app subscribes to dispute events, so Doorbell has no event to ask PayPal to send again."
+   },
+   "session": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492914163
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "2LU7296797415470R",
+      "captureId": "6XH14210FN889670H",
+      "invoiceId": "MM-ab2da832-1",
+      "at": 1792492914403,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "heard": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "received": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "1YB01089839807159",
+      "captureId": "9B34728640971000X",
+      "invoiceId": "MM-ab2da832-2",
+      "at": 1792492918272,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "heard": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "received": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "85287143U8906523W",
+      "captureId": "32U58051SU351580D",
+      "invoiceId": "MM-ab2da832-3",
+      "at": 1792492921977,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "heard": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "received": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792493173244
+   },
+   "scan": {
+    "session": {
+     "id": "ab2da8324fff877ac403a49381a0b4f7",
+     "mode": "good"
+    },
+    "at": 1792493173244,
+    "durationMs": 1768,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "6XH14210FN889670H",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+       "at": 1792492929329
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "6XH14210FN889670H",
+        "eid": "WH-32E62779MP9441509-9S4690259P0406915",
+        "d": {
+         "at": 1792492928363,
+         "slot": "D",
+         "tid": "e43e6b9a-cc72-11f1-8c96-8d336d419a4a"
+        },
+        "s": [
+         {
+          "tid": "e43b5dff-cc72-11f1-ab13-530be1d2dc49",
+          "attempt": "a2dc8339331e",
+          "state": "responded",
+          "receivedAt": 1792492928683,
+          "status": 200,
+          "respondedAt": 1792492929334
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492920887,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "9B34728640971000X",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": null,
+      "paypalStatus": "PENDING",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-1KS60361PW5628225-495200414T312560T",
+       "at": 1792492931875
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "9B34728640971000X",
+        "eid": "WH-1KS60361PW5628225-495200414T312560T",
+        "d": {
+         "at": 1792492931275,
+         "slot": "D",
+         "tid": "e66df574-cc72-11f1-ab13-bbe359e30d6d"
+        },
+        "s": [
+         {
+          "tid": "e66b3653-cc72-11f1-ab13-5bb467cd1c5c",
+          "attempt": "6f3043d09c20",
+          "state": "responded",
+          "receivedAt": 1792492931531,
+          "status": 200,
+          "respondedAt": 1792492931880
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925055,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ],
+      "disputes": [
+       {
+        "disputeId": "PP-R-JLV-10193723",
+        "paypalStatus": "WAITING_FOR_SELLER_RESPONSE",
+        "amount": "48.00",
+        "createdAt": 1792492951000,
+        "sellerResponseDueAt": 1793419199000,
+        "dueDateSource": "sandbox_test",
+        "webhooks": {
+         "shop": false,
+         "any": false
+        },
+        "status": "GAP",
+        "finding": {
+         "cls": "NO_REPORT",
+         "flag": "UNSUBSCRIBED_EVENT_TYPE",
+         "final": true,
+         "why": "PayPal lists this dispute as open and the shop's webhook is not subscribed to CUSTOMER.DISPUTE.CREATED, so the shop was never going to be told."
+        },
+        "ring": {
+         "state": "cannot_heal",
+         "label": "Nothing to resend: no webhook of this app subscribes to dispute events, so PayPal made no event to send again. Subscribing the shop's webhook to CUSTOMER.DISPUTE.CREATED would tell it about the next dispute."
+        }
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "32U58051SU351580D",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-67X272220J962193N-1P94057588747863M",
+       "at": 1792492939214
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "32U58051SU351580D",
+        "eid": "WH-67X272220J962193N-1P94057588747863M",
+        "d": {
+         "at": 1792492937030,
+         "slot": "D",
+         "tid": "e9e40980-cc72-11f1-ab13-251e6d860152"
+        },
+        "s": [
+         {
+          "tid": "e9e0fc85-cc72-11f1-8c96-eb8be2c2eba1",
+          "attempt": "96ca6b53b585",
+          "state": "responded",
+          "receivedAt": 1792492937090,
+          "status": 200,
+          "respondedAt": 1792492939217
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492928973,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 2,
+     "gaps": 1,
+     "unverified": 0,
+     "byClass": {}
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 18
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 0,
+     "retries": 0
+    },
+    "disputeReads": {
+     "asked": 3,
+     "unreadable": 0
+    },
+    "resendsUsed": 0
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "1 gap · Tied on 2/3",
+    "header": "1 of 3 captures did not match PayPal · 1 open dispute on PayPal that the books do not show ($48.00) · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 2,
+     "gaps": 1,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "0.00",
+     "refundsNotInBooks": 0,
+     "byClass": {},
+     "disputes": {
+      "open": 1,
+      "notInBooks": 1,
+      "unverified": 0,
+      "unsubscribed": 1,
+      "noWebhook": 1,
+      "moneyNotInBooks": "48.00",
+      "unreadable": 0
+     }
+    },
+    "limits": [
+     "1 dispute: no webhook of this app subscribes to dispute events, so whether PayPal would have sent an event cannot be proven from here (in our one test it listed none in 8 minutes).",
+     "A Sandbox dispute's response-due date is the one the test call that made it asked for, not a deadline that PayPal's own rules produced."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "PayPal lists 1 open dispute on your orders that your books do not show. That is $48.00 under dispute.",
+     "Your shop's webhook is not set up to hear about disputes, so PayPal would not have told it.",
+     "These need your attention: your books and PayPal disagree.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792493173244,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492937030,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 4 min ago · events list shows 0 the witness missed"
+   }
+  }
+ ],
+ "paypalIds": [
+  "1YB01089839807159",
+  "2LU7296797415470R",
+  "32U58051SU351580D",
+  "6XH14210FN889670H",
+  "85287143U8906523W",
+  "9B34728640971000X",
+  "PP-R-JLV-10193723",
+  "WH-1KS60361PW5628225-495200414T312560T",
+  "WH-32E62779MP9441509-9S4690259P0406915",
+  "WH-67X272220J962193N-1P94057588747863M"
+ ]
+}

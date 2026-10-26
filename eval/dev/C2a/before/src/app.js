@@ -1,0 +1,19 @@
+import express from "express";
+import { logger } from "./logger.js";
+import checkout from "./payments/checkout.js";
+import paypalWebhook from "./payments/paypal-webhook.js";
+import adminRoutes from "./admin.js";
+
+export const app = express();
+app.disable("x-powered-by");
+
+// The webhook route needs the untouched request bytes, so it is mounted before the JSON parser.
+app.use(paypalWebhook);
+app.use(express.json());
+app.use("/api/checkout", checkout);
+app.use("/api/admin", adminRoutes);
+
+app.use((err, _req, res, _next) => {
+  logger.error({ err }, "unhandled error");
+  res.sendStatus(500);
+});

@@ -1,0 +1,9 @@
+{
+  "name": "shop-web",
+  "dependencies": {
+    "buffer-crc32": "^0.2.13",
+    "next": "^15.0.3",
+    "postgres": "^3.4.4",
+    "pino": "^9.1.0"
+  }
+}

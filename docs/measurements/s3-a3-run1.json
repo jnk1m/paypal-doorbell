@@ -1,0 +1,86 @@
+{
+  "session": "6d347453",
+  "refundedAt": 1792386075442,
+  "heardAll": true,
+  "runs": [
+    {
+      "run": 1,
+      "clientMs": 4631,
+      "serverMs": 3213,
+      "deadlineHit": false,
+      "found": 12,
+      "falseAlarms": 0,
+      "classes": {
+        "ACKED_BUT_NOT_APPLIED": 12
+      },
+      "calls": {
+        "captures": 24,
+        "refunds": 12,
+        "retries": 0
+      },
+      "tied": 12,
+      "unverified": 0,
+      "listing": {
+        "asked": true,
+        "read": true,
+        "events": 27
+      }
+    },
+    {
+      "run": 2,
+      "clientMs": 3165,
+      "serverMs": 2878,
+      "deadlineHit": false,
+      "found": 12,
+      "falseAlarms": 0,
+      "classes": {
+        "ACKED_BUT_NOT_APPLIED": 12
+      },
+      "calls": {
+        "captures": 24,
+        "refunds": 12,
+        "retries": 0
+      },
+      "tied": 12,
+      "unverified": 0,
+      "listing": {
+        "asked": true,
+        "read": true,
+        "events": 27
+      }
+    },
+    {
+      "run": 3,
+      "clientMs": 3127,
+      "serverMs": 2757,
+      "deadlineHit": false,
+      "found": 12,
+      "falseAlarms": 0,
+      "classes": {
+        "ACKED_BUT_NOT_APPLIED": 12
+      },
+      "calls": {
+        "captures": 24,
+        "refunds": 12,
+        "retries": 0
+      },
+      "tied": 12,
+      "unverified": 0,
+      "listing": {
+        "asked": true,
+        "read": true,
+        "events": 28
+      }
+    }
+  ],
+  "mocked": {
+    "failedReads": 5,
+    "rowsUnverified": 5,
+    "tiedAmongFailed": 0,
+    "othersTied": 9,
+    "othersGap": 10,
+    "retries": 10,
+    "serverMs": 10002,
+    "cleanLocalScanMs": 10001
+  }
+}

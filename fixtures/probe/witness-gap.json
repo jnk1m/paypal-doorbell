@@ -1,0 +1,174 @@
+{
+ "source": "Gate 3 probe logs, Sandbox dev app, 2026-10-18 (gate3/doorbell/out/: regwin.json, wire-log.json, events-seen.json). Times are epoch ms. Event ids and transmission ids are PayPal Sandbox ids; no body, no header and no signature is kept.",
+ "what": "F6: a webhook registered at regAt got only 3 of the 7 payment events its subscription covers. The 4 others are in PayPal's event list and were never delivered to it (E+5s, E+35s, E+125s, E+185s). Webhook E is treated here as the witness: the heartbeat must show 4 of 4.",
+ "witness": {
+  "slot": "E",
+  "webhookId": "6RX260067U264241R",
+  "subscribedTypes": [
+   "PAYMENT.CAPTURE.COMPLETED"
+  ],
+  "registeredAt": 1792334692200
+ },
+ "checkedAt": 1792335609495,
+ "listed": [
+  {
+   "eid": "WH-4MP33951WB740312N-7AS74400SF737624N",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792334703813,
+   "listLagS": 115
+  },
+  {
+   "eid": "WH-5CJ39134LY152260J-2GD439618W985963Y",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792334709263,
+   "listLagS": 78
+  },
+  {
+   "eid": "WH-47D009331V072251G-7X429009FH768710U",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792334734293,
+   "listLagS": 53
+  },
+  {
+   "eid": "WH-1G979155UY5005841-7LS69426653572910",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792334739674,
+   "listLagS": 79
+  },
+  {
+   "eid": "WH-9VJ90300GS405043A-4K982337NX2153644",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792334764270,
+   "listLagS": 116
+  },
+  {
+   "eid": "WH-47X970011E884993W-97C247817E4797314",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792334768653,
+   "listLagS": 81
+  },
+  {
+   "eid": "WH-6HN99006YM865135X-2SL528821V6262301",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792334823986,
+   "listLagS": 87
+  },
+  {
+   "eid": "WH-1BC83014341618423-1TL98757WE479892U",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792334834508,
+   "listLagS": 46
+  },
+  {
+   "eid": "WH-4TU14015LM4862606-0AD66225ST779500W",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792334884653,
+   "listLagS": 26
+  },
+  {
+   "eid": "WH-7DD4702974540331J-38D402970L154040M",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792334888541,
+   "listLagS": 22
+  },
+  {
+   "eid": "WH-5U327559YW818073X-5AR34012S98937938",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792335003970,
+   "listLagS": 31
+  },
+  {
+   "eid": "WH-5MF22398ND094272B-4C686328P6367445D",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792335008198,
+   "listLagS": 26
+  },
+  {
+   "eid": "WH-8JS855138L942691X-9HW07519A63154630",
+   "type": "PAYMENT.CAPTURE.COMPLETED",
+   "createTime": 1792335185182,
+   "listLagS": 96
+  },
+  {
+   "eid": "WH-9LN449394B966715W-8NF06552P5233283U",
+   "type": "PAYMENT.CAPTURE.REFUNDED",
+   "createTime": 1792335187510,
+   "listLagS": 63
+  }
+ ],
+ "heard": [
+  {
+   "eid": "WH-9VJ90300GS405043A-4K982337NX2153644",
+   "tid": "ab420669-cb02-11f1-9883-39603f69c108",
+   "at": 1792334777555
+  },
+  {
+   "eid": "WH-5U327559YW818073X-5AR34012S98937938",
+   "tid": "39e5fc93-cb03-11f1-9883-01729257ef99",
+   "at": 1792335017574
+  },
+  {
+   "eid": "WH-8JS855138L942691X-9HW07519A63154630",
+   "tid": "a534fee2-cb03-11f1-9883-c3410ba271a6",
+   "at": 1792335196486
+  },
+  {
+   "eid": "WH-4S395211776620507-3TV298357W558512Y",
+   "tid": "0a1bd5c2-cb04-11f1-ab13-bd73a8a74feb",
+   "at": 1792335366489
+  }
+ ],
+ "probeTable": {
+  "E+5s": "-",
+  "E+35s": "-",
+  "E+65s": "Y",
+  "E+125s": "-",
+  "E+185s": "-",
+  "E+305s": "Y",
+  "E+485s": "Y"
+ },
+ "orders": {
+  "E+5s": {
+   "offset": 5,
+   "captureId": "1TF33625HR671031E",
+   "madeAt": "2026-10-18T14:45:05.621Z"
+  },
+  "E+35s": {
+   "offset": 35,
+   "captureId": "36W29289F39092046",
+   "madeAt": "2026-10-18T14:45:35.441Z"
+  },
+  "E+65s": {
+   "offset": 65,
+   "captureId": "9S635113YU748225M",
+   "madeAt": "2026-10-18T14:46:04.820Z"
+  },
+  "E+125s": {
+   "offset": 125,
+   "captureId": "8TF39200F69986723",
+   "madeAt": "2026-10-18T14:47:04.867Z"
+  },
+  "E+185s": {
+   "offset": 185,
+   "captureId": "2PR207340G573490A",
+   "madeAt": "2026-10-18T14:48:05.069Z"
+  },
+  "E+305s": {
+   "offset": 305,
+   "captureId": "16J58993AG182520Y",
+   "madeAt": "2026-10-18T14:50:04.006Z"
+  },
+  "E+485s": {
+   "offset": 485,
+   "captureId": "03L654707T332482W",
+   "madeAt": "2026-10-18T14:53:04.482Z"
+  }
+ },
+ "expectedMissed": [
+  "WH-4MP33951WB740312N-7AS74400SF737624N",
+  "WH-47D009331V072251G-7X429009FH768710U",
+  "WH-6HN99006YM865135X-2SL528821V6262301",
+  "WH-4TU14015LM4862606-0AD66225ST779500W"
+ ],
+ "notVisibleToTheHeartbeat": "The probe also saw 4 events 12-31 s after the first webhook of the app was registered that were neither delivered nor ever listed (NO_EVENT_FOUND kind). The heartbeat compares the witness with PayPal's list, so it cannot see those; the gap finder reports them as NO_EVENT_FOUND."
+}

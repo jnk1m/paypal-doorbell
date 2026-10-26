@@ -1,0 +1,355 @@
+{
+ "source": "Gate 3 probe logs, Sandbox dev app, 2026-10-18 (gate3/doorbell/out/wire-log.json, p4-orders.json, regwin.json, p1-orders.json). Times are epoch ms.",
+ "cases": [
+  {
+   "label": "2b out of order",
+   "source": "probe order 2b, shop = slot A, witness = slot B",
+   "kind": "refunded",
+   "truth": "refunded",
+   "actionAt": 1792334445905,
+   "eid": "WH-2LK61329PE522200N-0P8794888B533904W",
+   "d": {
+    "at": 1792334456128
+   },
+   "listed": {
+    "createTime": 1792334449030
+   },
+   "listingRead": true,
+   "attempts": [
+    {
+     "tid": "eb5ea414-cb01-11f1-9e4a-b954c35ebe2d",
+     "receivedAt": 1792334455656,
+     "status": 200
+    }
+   ],
+   "sNoted": true,
+   "subscribed": true,
+   "books": {
+    "state": "paid",
+    "amount": "0.00",
+    "eid": "WH-7M864074GP456414V-7DL08178SM225661P",
+    "at": 1792334458103
+   },
+   "checks": [
+    {
+     "now": 1792334461103,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "settling"
+     }
+    },
+    {
+     "now": 1792334470103,
+     "expect": {
+      "cls": "ACKED_BUT_NOT_APPLIED",
+      "flag": "OUT_OF_ORDER",
+      "final": true
+     }
+    },
+    {
+     "now": 1792335429773,
+     "expect": {
+      "cls": "ACKED_BUT_NOT_APPLIED",
+      "flag": "OUT_OF_ORDER",
+      "final": true
+     }
+    }
+   ]
+  },
+  {
+   "label": "E+5s no report",
+   "source": "registration window, order E+5s, witness = slot A, shop = slot E (a webhook registered 13 s earlier)",
+   "kind": "completed",
+   "truth": "paid",
+   "actionAt": 1792334705621,
+   "eid": "WH-4MP33951WB740312N-7AS74400SF737624N",
+   "d": {
+    "at": 1792334716537
+   },
+   "listed": {
+    "createTime": 1792334703813
+   },
+   "listingRead": true,
+   "attempts": null,
+   "sNoted": false,
+   "subscribed": true,
+   "books": null,
+   "checks": [
+    {
+     "now": 1792334763813,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "absence_window"
+     }
+    },
+    {
+     "now": 1792335062813,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "absence_window"
+     }
+    },
+    {
+     "now": 1792335063813,
+     "expect": {
+      "cls": "NO_REPORT",
+      "final": true
+     }
+    },
+    {
+     "now": 1792335609495,
+     "expect": {
+      "cls": "NO_REPORT",
+      "final": true
+     }
+    }
+   ]
+  },
+  {
+   "label": "2c unsubscribed",
+   "source": "probe order 2c, shop = slot A (not subscribed to PAYMENT.CAPTURE.REFUNDED), witness = slot B",
+   "kind": "refunded",
+   "truth": "refunded",
+   "actionAt": 1792334609000,
+   "eid": "WH-84N7050529123610R-9EP64521PU189530V",
+   "d": {
+    "at": 1792334617596
+   },
+   "listed": null,
+   "listingRead": true,
+   "attempts": null,
+   "sNoted": false,
+   "subscribed": false,
+   "books": {
+    "state": "paid",
+    "amount": "0.00",
+    "eid": "WH-98V68012E53757541-5P563240DA2243437",
+    "at": 1792334613492
+   },
+   "checks": [
+    {
+     "now": 1792334618596,
+     "expect": {
+      "cls": "NO_REPORT",
+      "flag": "UNSUBSCRIBED_EVENT_TYPE",
+      "final": true
+     }
+    },
+    {
+     "now": 1792334647596,
+     "expect": {
+      "cls": "NO_REPORT",
+      "flag": "UNSUBSCRIBED_EVENT_TYPE",
+      "final": true
+     }
+    }
+   ]
+  },
+  {
+   "label": "P1-2 no event found",
+   "source": "first minutes after the first webhook registration (F6): PayPal never listed the payment and called no webhook",
+   "kind": "completed",
+   "truth": "paid",
+   "actionAt": 1792333197046,
+   "eid": null,
+   "d": null,
+   "listed": null,
+   "listingRead": true,
+   "attempts": null,
+   "sNoted": false,
+   "subscribed": true,
+   "books": null,
+   "checks": [
+    {
+     "now": 1792333227046,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "absence_window"
+     }
+    },
+    {
+     "now": 1792333377046,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "absence_window"
+     }
+    },
+    {
+     "now": 1792333556046,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "absence_window"
+     }
+    },
+    {
+     "now": 1792333557046,
+     "expect": {
+      "cls": "NO_EVENT_FOUND",
+      "final": true
+     }
+    },
+    {
+     "now": 1792335599322,
+     "expect": {
+      "cls": "NO_EVENT_FOUND",
+      "final": true
+     }
+    },
+    {
+     "now": 1792333377046,
+     "listingRead": false,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "listing_unavailable"
+     }
+    },
+    {
+     "now": 1792333797046,
+     "listingRead": false,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "listing_unavailable"
+     }
+    }
+   ]
+  },
+  {
+   "label": "1b handler rejecting",
+   "source": "probe order 1b, shop = slot C (simulated outage: HTTP 500), witness = slot B",
+   "kind": "refunded",
+   "truth": "refunded",
+   "actionAt": 1792334210000,
+   "eid": "WH-113757019W738992X-4ND35571W4569921S",
+   "d": {
+    "at": 1792334220390
+   },
+   "listed": null,
+   "listingRead": true,
+   "attempts": [
+    {
+     "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+     "receivedAt": 1792334220908,
+     "status": 500
+    },
+    {
+     "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+     "receivedAt": 1792334251425,
+     "status": 500
+    },
+    {
+     "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+     "receivedAt": 1792334381201,
+     "status": 500
+    }
+   ],
+   "sNoted": true,
+   "subscribed": true,
+   "books": null,
+   "checks": [
+    {
+     "now": 1792334221908,
+     "attempts": [
+      {
+       "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+       "receivedAt": 1792334220908,
+       "status": 500
+      }
+     ],
+     "expect": {
+      "cls": "HANDLER_REJECTING",
+      "final": true
+     },
+     "retriesPending": true
+    },
+    {
+     "now": 1792334252425,
+     "attempts": [
+      {
+       "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+       "receivedAt": 1792334220908,
+       "status": 500
+      },
+      {
+       "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+       "receivedAt": 1792334251425,
+       "status": 500
+      }
+     ],
+     "expect": {
+      "cls": "HANDLER_REJECTING",
+      "final": true
+     },
+     "retriesPending": true
+    },
+    {
+     "now": 1792334382201,
+     "expect": {
+      "cls": "HANDLER_REJECTING",
+      "final": true
+     },
+     "retriesPending": false
+    },
+    {
+     "now": 1792334420908,
+     "attempts": [
+      {
+       "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+       "receivedAt": 1792334220908,
+       "status": 500
+      },
+      {
+       "tid": "5f291656-cb01-11f1-ab13-9f71d86d7ba1",
+       "receivedAt": 1792334251425,
+       "status": 500
+      }
+     ],
+     "expect": {
+      "cls": "HANDLER_REJECTING",
+      "final": true
+     },
+     "retriesPending": false
+    }
+   ]
+  },
+  {
+   "label": "1b ack then drop",
+   "source": "probe order 1b, shop = slot A (mode drop: answers 200, writes nothing), witness = slot B",
+   "kind": "refunded",
+   "truth": "refunded",
+   "actionAt": 1792334210000,
+   "eid": "WH-113757019W738992X-4ND35571W4569921S",
+   "d": {
+    "at": 1792334220390
+   },
+   "listed": null,
+   "listingRead": true,
+   "attempts": [
+    {
+     "tid": "5f23e635-cb01-11f1-ab13-f3803bb497a1",
+     "receivedAt": 1792334220721,
+     "status": 200
+    }
+   ],
+   "sNoted": true,
+   "subscribed": true,
+   "books": null,
+   "checks": [
+    {
+     "now": 1792334223721,
+     "expect": {
+      "cls": "UNVERIFIED",
+      "waiting": "settling"
+     }
+    },
+    {
+     "now": 1792334231721,
+     "expect": {
+      "cls": "ACKED_BUT_NOT_APPLIED",
+      "final": true
+     },
+     "retriesPending": false
+    }
+   ]
+  }
+ ]
+}

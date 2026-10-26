@@ -1,0 +1,3 @@
+{"at":"2026-10-20T09:59:40.843Z","kind":"fix","caseId":"ack_then_drop","usage":{"inputTokens":2557,"outputTokens":485,"reasoningTokens":275},"hash":"e69774df2631","usd":0.009964}
+{"at":"2026-10-20T09:59:42.866Z","kind":"fix","caseId":"bad_body","usage":{"inputTokens":2738,"outputTokens":51,"reasoningTokens":0},"hash":"074bc57f3525","usd":0.005986}
+{"at":"2026-10-20T09:59:48.169Z","kind":"fix","caseId":"last_write_wins","usage":{"inputTokens":2531,"outputTokens":513,"reasoningTokens":379},"hash":"d62c746760ba","usd":0.010192}

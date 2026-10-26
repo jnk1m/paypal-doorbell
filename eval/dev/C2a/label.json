@@ -1,0 +1,13 @@
+{
+  "category": "WRONG_WEBHOOK_ID",
+  "file": "src/config.js",
+  "lines": [
+    "webhookId: process.env.PAYPAL_WEBHOOK_ID_LIVE,"
+  ],
+  "altLines": [
+    "webhookId: process.env.PAYPAL_WEBHOOK_ID,"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "express"
+}

@@ -1,0 +1,26 @@
+{
+ "mode": "RECORDED RUN",
+ "recordedAt": 1792396800000,
+ "step": null,
+ "session": {
+  "session": {
+   "id": "sample-session-0",
+   "mode": "good",
+   "planted": false,
+   "plantedLabel": "planted by us",
+   "file": "handlers/good.ts",
+   "at": 1792396800000
+  },
+  "orders": [],
+  "now": 1792396830000
+ },
+ "scan": null,
+ "causes": [],
+ "certificate": null,
+ "heartbeat": {
+  "lastDeliveryAt": 1792396680000,
+  "listedMissedByWitness": 0,
+  "state": "ok",
+  "text": "Witness: last delivery 150 s ago · events list shows 0 the witness missed"
+ }
+}

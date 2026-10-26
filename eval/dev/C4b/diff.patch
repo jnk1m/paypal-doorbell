@@ -1,0 +1,35 @@
+diff --git a/app/api/paypal/webhook/route.ts b/app/api/paypal/webhook/route.ts
+--- a/app/api/paypal/webhook/route.ts
++++ b/app/api/paypal/webhook/route.ts
+@@ -51,7 +51,7 @@
+ export async function POST(req: Request) {
+   const raw = await req.text();
+   if (!(await verify(req, raw))) {
+-    log.warn({ transmissionId: req.headers.get("paypal-transmission-id") }, "paypal webhook signature rejected");
++    log.warn({ transmissionId: req.headers.get("paypal-transmission-id") }, "paypal webhook signature rejected for transmission");
+     return NextResponse.json({ error: "bad signature" }, { status: 401 });
+   }
+   const event = JSON.parse(raw) as PayPalEvent;
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,7 @@
+   "name": "shop-web",
+   "dependencies": {
+     "buffer-crc32": "^0.2.13",
+-    "next": "^15.0.3",
++    "next": "^15.1.6",
+     "postgres": "^3.4.4",
+     "pino": "^9.1.0"
+   }
+diff --git a/scripts/register-webhook.mjs b/scripts/register-webhook.mjs
+--- a/scripts/register-webhook.mjs
++++ b/scripts/register-webhook.mjs
+@@ -3,7 +3,6 @@
+ const URL_ = "https://shop.example.com/api/paypal/webhook";
+ const EVENT_TYPES = [
+   { name: "PAYMENT.CAPTURE.COMPLETED" },
+-  { name: "PAYMENT.CAPTURE.REFUNDED" },
+   { name: "PAYMENT.CAPTURE.DENIED" },
+ ];
+ const token = process.env.PAYPAL_ACCESS_TOKEN;

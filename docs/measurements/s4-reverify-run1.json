@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-19T07:15Z",
+  "question": "Does a stored real signature still verify with PayPal's verify endpoint hours later? (plan assumption 6 / F15; the replay window of 5.4 #3 is 24 h; only 0.96 h was confirmed before S4)",
+  "stored": "251 first deliveries in the witness record (db:w:att:*), transmission times 2026-10-19 02:26:43Z to 05:5xZ, one cert, slots D and D-dev",
+  "firstRunWithOneWebhookId": {
+    "script": "scripts/reverify-stored.ts --webhook-id 95S68045X9784900W --limit 400 (the script as it was)",
+    "result": { "SUCCESS": 163, "FAILURE": 88 },
+    "age": { "youngestHours": 0.56, "oldestHours": 3.79 },
+    "bySlotAndTypeAndAge": "every delivery older than about 3 h failed and every younger one passed, which looked like a 3 h expiry",
+    "whatItWas": "not age. Deliveries stored before 2026-10-19 03:59:13Z under slot D were signed for the DEV app's witness webhook (7N5964230U472033D); the demo app's webhook (95S68045X9784900W) took the slot over at S2. Checked against the wrong webhook id they fail whatever their age.",
+    "howItWasFound": "the failures were a block of all deliveries before one absolute time, not a moving age line: a delivery at 2.94 h passed (monitor) while one at 2.92 h failed earlier; re-verifying all 251 against the dev app's id made the old block pass (88 SUCCESS, including the 4.67 h one)"
+  },
+  "withBothKnownWebhookIds": {
+    "script": "scripts/reverify-stored.ts --webhook-id 95S68045X9784900W --dev-webhook-id 7N5964230U472033D (the script now tries the slot's own id, then the other)",
+    "result": { "SUCCESS": 251, "FAILURE": 0 },
+    "successUnderSlotD": 163,
+    "successUnderSlotDDev": 88,
+    "age": { "youngestHours": 1.52, "oldestHours": 4.75 },
+    "oldestThatVerified": 4.75
+  },
+  "lastCheck": { "at": "2026-10-19T07:23Z", "result": { "SUCCESS": 251, "FAILURE": 0 }, "age": { "youngestHours": 1.67, "oldestHours": 4.9 }, "oldestThatVerified": 4.9 },
+  "monitor": "three deliveries re-verified every 90 s while they aged from 2.35 h to 2.94 h (06:24Z to 07:00Z): SUCCESS every time",
+  "forcedReplayOutsideWindow": "a replay of a 4.73 h old stored pair through both builds still gave 401 / 200 and books unchanged / refunded (docs/measurements/s4-a25-run1.json)",
+  "conclusion": {
+    "verifiedUpToHours": 4.9,
+    "confirmedAt24h": false,
+    "why": "the oldest stored delivery is 4.75 h old; Redis keeps them 4 days, so the oldest reaches 24 h at 2026-10-20 02:26Z (11:26 KST). Run scripts/reverify-stored.ts then; if the oldest still verify, raise REPLAY_WINDOW_MS (lib/cause/replay.ts) from 4 h to 24 h.",
+    "replayWindowSetTo": "4 h (measured), not 24 h"
+  }
+}

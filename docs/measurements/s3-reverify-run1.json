@@ -1,0 +1,39 @@
+{
+  "tid": "27da9155",
+  "type": "PAYMENT.CAPTURE.REFUNDED",
+  "ringBefore": 1,
+  "resolved": true,
+  "ringAfter": 0,
+  "scans": [
+    {
+      "afterS": 63.3,
+      "reverify": {
+        "skipped": "ran less than 30 s ago on this instance"
+      },
+      "ring": 1,
+      "attempts": 0
+    },
+    {
+      "afterS": 73.7,
+      "reverify": {
+        "skipped": "ran less than 30 s ago on this instance"
+      },
+      "ring": 1,
+      "attempts": 0
+    },
+    {
+      "afterS": 83.1,
+      "reverify": {
+        "checked": 1,
+        "verified": 1,
+        "rejected": 0,
+        "stillUnavailable": 0,
+        "unrecoverable": 0,
+        "stoppedByBudget": false
+      },
+      "ring": 0,
+      "attempts": 1,
+      "rv": 1792386283967
+    }
+  ]
+}

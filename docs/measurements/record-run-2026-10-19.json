@@ -1,0 +1,105 @@
+{
+ "at": "2026-10-19T12:31:57.182Z",
+ "base": "https://paypal-doorbell.vercel.app",
+ "scenarios": [
+  {
+   "id": "refund_never_booked",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "15bc8934",
+     "valid": true,
+     "seconds": 345,
+     "steps": [
+      {
+       "at": "2026-10-19T12:28:43.224Z",
+       "title": "PayPal refunded two orders. The shop's books still say paid."
+      },
+      {
+       "at": "2026-10-19T12:28:44.924Z",
+       "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+      },
+      {
+       "at": "2026-10-19T12:29:18.486Z",
+       "title": "Ring again: PayPal accepted the resend. The shop is waiting for it to arrive."
+      },
+      {
+       "at": "2026-10-19T12:31:30.421Z",
+       "title": "The resent messages arrived and the books changed: the rows are tied again."
+      }
+     ],
+     "notes": [
+      "heals: [{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":1,\"arrivalSeconds\":3.3,\"answer\":200}},{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":3,\"arrivalSeconds\":2.9,\"answer\":200}}]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "late_payment_overwrites",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "f93e9e3f",
+     "valid": true,
+     "seconds": 265,
+     "steps": [
+      {
+       "at": "2026-10-19T12:29:52.166Z",
+       "title": "A late payment message arrived after the refund and overwrote it. The books say paid again."
+      },
+      {
+       "at": "2026-10-19T12:29:54.674Z",
+       "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+      },
+      {
+       "at": "2026-10-19T12:30:00.691Z",
+       "title": "Ring again: PayPal accepted the resend. The shop is waiting for it to arrive."
+      },
+      {
+       "at": "2026-10-19T12:30:10.189Z",
+       "title": "The resent messages arrived and the books changed: the rows are tied again."
+      }
+     ],
+     "notes": [
+      "heals: [{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":1,\"arrivalSeconds\":2.3,\"answer\":200}},{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":1,\"arrivalSeconds\":3.6,\"answer\":200}}]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "signature_rejected",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "a2379a5b",
+     "valid": true,
+     "seconds": 372,
+     "steps": [
+      {
+       "at": "2026-10-19T12:29:37.521Z",
+       "title": "PayPal sent each refund 3 times; the shop answered 401 every time."
+      },
+      {
+       "at": "2026-10-19T12:29:39.423Z",
+       "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+      },
+      {
+       "at": "2026-10-19T12:29:44.594Z",
+       "title": "Ring again: PayPal accepted the resend. The shop is waiting for it to arrive."
+      },
+      {
+       "at": "2026-10-19T12:31:57.181Z",
+       "title": "1 of 2 resent messages arrived and changed the books; 1 resend was accepted and not delivered."
+      }
+     ],
+     "notes": [
+      "heals: [{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":3,\"arrivalSeconds\":2.9,\"answer\":200}},{\"status\":\"GAP\",\"heal\":{\"state\":\"lost\",\"sends\":2}}]"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "category": "RAW_BODY_ALTERED",
+  "file": "app/api/paypal/webhook/route.ts",
+  "lines": [
+    "const canonical = JSON.stringify(event);",
+    "if (!(await verify(req, canonical))) {"
+  ],
+  "hard": true,
+  "tail": false,
+  "stack": "next"
+}

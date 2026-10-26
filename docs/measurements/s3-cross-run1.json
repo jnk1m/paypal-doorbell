@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "what": "A's capture id",
+      "status": 403,
+      "body": "{\"error\":{\"message\":\"Forbidden.\",\"id\":\"cf5d498c-bcde-4317-bd11-6866ee7503b4\"}}"
+    },
+    {
+      "what": "A's refund id",
+      "status": 403,
+      "body": "{\"error\":{\"message\":\"Forbidden.\",\"id\":\"6e49d6f5-12c6-4863-a12f-b5dce9bba003\"}}"
+    },
+    {
+      "what": "A's order id",
+      "status": 403,
+      "body": "{\"error\":{\"message\":\"Forbidden.\",\"id\":\"7f0bad73-8044-415f-a23a-4b70f0367809\"}}"
+    },
+    {
+      "what": "A's payment event id",
+      "status": 403,
+      "body": "{\"error\":{\"message\":\"Forbidden.\",\"id\":\"657161f7-7f15-45b0-9572-016044368cb9\"}}"
+    },
+    {
+      "what": "A's refund event id",
+      "status": 403,
+      "body": "{\"error\":{\"message\":\"Forbidden.\",\"id\":\"5bf5ab99-6b6b-4271-8986-9ba7d234d1e3\"}}"
+    }
+  ],
+  "statuses": [
+    403,
+    403,
+    403,
+    403,
+    403
+  ],
+  "resendsUsedA": 0,
+  "resendsUsedB": 0,
+  "sameBody": true
+}

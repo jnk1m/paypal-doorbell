@@ -1,0 +1,10 @@
+{
+  "category": "ENDPOINT_PATH_CHANGED",
+  "file": "next.config.js",
+  "lines": [
+    "trailingSlash: true,"
+  ],
+  "hard": true,
+  "tail": false,
+  "stack": "next"
+}

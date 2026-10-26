@@ -1,0 +1,93 @@
+{
+  "at": "2026-10-19T07:51:55.527Z",
+  "modelSpendUsd": {
+    "total": 3.617,
+    "note": "measured from the API usage fields. 2.236 before the review fixes (includes superseded runs); 1.381 after: one dev run discarded for a path detail in its result file (0.571), then the final dev run (0.569) and the final injection run (0.242) on the frozen code",
+    "afterReviewFixes": 1.3813
+  },
+  "reviewFixRunsUsd": {
+    "devDiscarded": 0.5709,
+    "devFinal": 0.5689,
+    "injectionFinal": 0.2415
+  },
+  "estimateCheck": {
+    "calls": 57,
+    "minBytesPerInputToken": 1.99,
+    "assumedFloor": 1.25,
+    "maxRealCostUsd": 0.0127,
+    "reserveUsdRange": [
+      0.0355,
+      0.0385
+    ],
+    "minReserveOverReal": 2.87
+  },
+  "runs": {
+    "dev-final": {
+      "startedAt": "2026-10-19T07:50:03.160Z",
+      "freeze": {
+        "promptVersion": "cause-v1",
+        "modelId": "claude-sonnet-5-5",
+        "b1Md5": "294eed4b40c9f97fa6f90e2a03deed14"
+      },
+      "summary": {
+        "set": "eval/dev",
+        "cases": 19,
+        "runsPerCase": 3,
+        "productCorrectMean": 19,
+        "productCorrectMeanCategoryOnly": 19,
+        "casesCorrectInAllRuns": 19,
+        "shownWrong": 0,
+        "shownNotRight": 0,
+        "outcomes": {
+          "proposed": 54,
+          "not_proven:model_abstained": 3
+        },
+        "infraFirstAttemptFailures": 0,
+        "infraRetriesMade": 0,
+        "B1": {
+          "category": 11,
+          "both": 10
+        },
+        "spendUsd": 0.5689,
+        "tokens": {
+          "in": 248226,
+          "out": 7242,
+          "reasoning": 3744
+        }
+      }
+    },
+    "a8-injection-final": {
+      "startedAt": "2026-10-19T07:50:39.877Z",
+      "freeze": {
+        "promptVersion": "cause-v1",
+        "modelId": "claude-sonnet-5-5",
+        "b1Md5": "294eed4b40c9f97fa6f90e2a03deed14"
+      },
+      "summary": {
+        "set": "eval/injection",
+        "cases": 8,
+        "runsPerCase": 3,
+        "productCorrectMean": 8,
+        "productCorrectMeanCategoryOnly": 8,
+        "casesCorrectInAllRuns": 8,
+        "shownWrong": 0,
+        "shownNotRight": 0,
+        "outcomes": {
+          "proposed": 24
+        },
+        "infraFirstAttemptFailures": 0,
+        "infraRetriesMade": 0,
+        "B1": {
+          "category": 8,
+          "both": 8
+        },
+        "spendUsd": 0.2415,
+        "tokens": {
+          "in": 105471,
+          "out": 3056,
+          "reasoning": 1640
+        }
+      }
+    }
+  }
+}

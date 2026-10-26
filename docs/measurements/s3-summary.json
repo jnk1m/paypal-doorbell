@@ -1,0 +1,213 @@
+{
+  "attempts": 30,
+  "tally": {
+    "valid": 23,
+    "invalid": 7,
+    "invalidRate": 0.23333333333333334,
+    "verdict": "stable"
+  },
+  "invalidReasons": [
+    "r2 bad_body #1: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)",
+    "r2 bad_body #1: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)",
+    "r2 bad_body #1: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)",
+    "r2 bad_body #3: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)",
+    "r2 bad_body #3: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)",
+    "r2 bad_body+raw resend #2: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)",
+    "r2 bad_body+raw resend #2: PayPal accepted 3 resends of an event it lists (HTTP 202) and none reached the shop within 60 s each (PayPal-side loss of the resend, the same kind as F6)"
+  ],
+  "a4": {
+    "plannedTrials": 9,
+    "validTrials": 9,
+    "withTheExpectedClass": 9,
+    "confirmedWrong": 0,
+    "absenceClaimsBeforeSixMinutes": 0,
+    "scansThatHeldAnAbsenceClaimBack": 247,
+    "finalSecondsAfterD": [
+      {
+        "mode": "ack_then_drop",
+        "afterDReceipt": 14,
+        "afterGapCreated": 14
+      },
+      {
+        "mode": "ack_then_drop",
+        "afterDReceipt": 14.7,
+        "afterGapCreated": 14.7
+      },
+      {
+        "mode": "ack_then_drop",
+        "afterDReceipt": 13.1,
+        "afterGapCreated": 13.1
+      },
+      {
+        "mode": "bad_body",
+        "afterDReceipt": 3.2,
+        "afterGapCreated": 3.2
+      },
+      {
+        "mode": "bad_body",
+        "afterDReceipt": 3.8,
+        "afterGapCreated": 3.8
+      },
+      {
+        "mode": "bad_body",
+        "afterDReceipt": 3.9,
+        "afterGapCreated": 3.9
+      },
+      {
+        "mode": "last_write_wins",
+        "afterDReceipt": 60.3,
+        "afterGapCreated": 12.7
+      },
+      {
+        "mode": "last_write_wins",
+        "afterDReceipt": 39.8,
+        "afterGapCreated": 12.5
+      },
+      {
+        "mode": "last_write_wins",
+        "afterDReceipt": 31,
+        "afterGapCreated": 14.8
+      }
+    ]
+  },
+  "a5": {
+    "validFixTrials": 22,
+    "healed": 15,
+    "arrivalSecondsAfter202": [
+      2.2,
+      3.1,
+      2.6,
+      2.9,
+      2.2,
+      2.4,
+      2.7,
+      2.2,
+      3,
+      3.4,
+      2.5,
+      2.3,
+      2.5,
+      2.4,
+      3.2
+    ],
+    "arrivalMax": 3.4,
+    "sendsPerHeal": [
+      1,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      1,
+      1,
+      2,
+      2
+    ],
+    "timeFromDetectionToTiedSeconds": [
+      25.7,
+      166.5,
+      129.7,
+      68.6,
+      88.2,
+      89.1,
+      56.4,
+      17.8,
+      285.2,
+      287.2,
+      172.1,
+      6.9,
+      22.5,
+      233.3,
+      247.1
+    ],
+    "timeFromRingToTiedSeconds": [
+      5.3,
+      131.7,
+      127.7,
+      66.7,
+      66.5,
+      5.5,
+      5.3,
+      5.3,
+      125.7,
+      128.7,
+      126.7,
+      5.1,
+      5.4,
+      65.3,
+      67.1
+    ],
+    "sendsInAllTrials": 59,
+    "sendsThatArrived": 16,
+    "ringRefusedAfterReady": 0,
+    "earlyRings": 30,
+    "earlyRingsNotListed": 27,
+    "earlyRingsThatSentSomething": 3,
+    "earlyRingStates": {
+      "not_listed": 27,
+      "SENT": 3
+    },
+    "controlNoFix": [
+      {
+        "state": "unchanged",
+        "rowTied": false,
+        "books": "paid"
+      }
+    ],
+    "resendWhilePayPalRetries": [
+      {
+        "accepted": true,
+        "refusals": 3,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "retries_pending"
+      },
+      {
+        "accepted": true,
+        "refusals": 2,
+        "arrivedWhileRetrying": {
+          "status": 401,
+          "secondsAfterAccepted": 2.4
+        },
+        "productRingStateAtTheTime": "not_listed"
+      },
+      {
+        "accepted": true,
+        "refusals": 5,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "retries_pending"
+      },
+      {
+        "accepted": true,
+        "refusals": 11,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "ready"
+      },
+      {
+        "accepted": true,
+        "refusals": 8,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "retries_pending"
+      },
+      {
+        "accepted": true,
+        "refusals": 0,
+        "arrivedWhileRetrying": {
+          "status": 401,
+          "secondsAfterAccepted": 2.6
+        },
+        "productRingStateAtTheTime": "retries_pending"
+      },
+      {
+        "accepted": true,
+        "refusals": 12,
+        "arrivedWhileRetrying": null,
+        "productRingStateAtTheTime": "ready"
+      }
+    ]
+  }
+}

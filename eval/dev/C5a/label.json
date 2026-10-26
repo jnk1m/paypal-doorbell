@@ -1,0 +1,20 @@
+{
+  "category": "APP_OR_ENV_MISMATCH",
+  "file": "src/config.js",
+  "lines": [
+    "clientId: process.env.PAYPAL_CLIENT_ID_V2,",
+    "clientSecret: process.env.PAYPAL_CLIENT_SECRET_V2,"
+  ],
+  "altFiles": [
+    "deploy/env.production.keys"
+  ],
+  "altLines": [
+    "clientId: process.env.PAYPAL_CLIENT_ID,",
+    "clientSecret: process.env.PAYPAL_CLIENT_SECRET,",
+    "PAYPAL_CLIENT_ID_V2",
+    "PAYPAL_CLIENT_SECRET_V2"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "express"
+}

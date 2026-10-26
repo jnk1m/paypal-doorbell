@@ -1,0 +1,10 @@
+{
+  "category": "OTHER_CODE_CHANGE",
+  "file": "src/payments/paypal-webhook.js",
+  "lines": [
+    "router.post(\"/api/paypal/webhook\", express.raw({ type: \"application/json\", limit: \"2kb\" }), async (req, res) => {"
+  ],
+  "hard": false,
+  "tail": true,
+  "stack": "express"
+}

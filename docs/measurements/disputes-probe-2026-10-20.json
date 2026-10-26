@@ -1,0 +1,1129 @@
+{
+  "app": "dev (Default Application)",
+  "date": "2026-10-20",
+  "steps": {
+    "a_setup": {
+      "startedAt": "2026-10-20T08:06:48.164Z",
+      "devWebhooksBefore": [
+        {
+          "id": "7N5964230U472033D",
+          "url": "https://paypal-doorbell.vercel.app/api/witness",
+          "types": [
+            "CHECKOUT.ORDER.APPROVED",
+            "CHECKOUT.ORDER.COMPLETED",
+            "CHECKOUT.ORDER.DECLINED",
+            "CHECKOUT.ORDER.SAVED",
+            "CHECKOUT.ORDER.VOIDED",
+            "PAYMENT.AUTHORIZATION.CREATED",
+            "PAYMENT.AUTHORIZATION.VOIDED",
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.DECLINED",
+            "PAYMENT.CAPTURE.DENIED",
+            "PAYMENT.CAPTURE.PENDING",
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.REVERSED"
+          ]
+        }
+      ],
+      "eventTypes": {
+        "status": 200,
+        "count": 205,
+        "hasWildcardEntry": false,
+        "disputeTypes": [
+          "CUSTOMER.DISPUTE.CREATED",
+          "CUSTOMER.DISPUTE.RESOLVED",
+          "CUSTOMER.DISPUTE.UPDATED"
+        ],
+        "captureTypes": [
+          "PAYMENT.CAPTURE.COMPLETED",
+          "PAYMENT.CAPTURE.DECLINED",
+          "PAYMENT.CAPTURE.DENIED",
+          "PAYMENT.CAPTURE.PENDING",
+          "PAYMENT.CAPTURE.REFUNDED",
+          "PAYMENT.CAPTURE.REVERSED"
+        ],
+        "sampleEntryKeys": [
+          "name",
+          "description",
+          "resource_versions",
+          "status"
+        ],
+        "names": [
+          "CUSTOMER.ACCOUNT-ENTITIES.CAPABILITY-UPDATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.REQUIREMENTS-UPDATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.STAKEHOLDERS.CREATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.STAKEHOLDERS.REMOVED",
+          "CUSTOMER.ACCOUNT-ENTITIES.STAKEHOLDERS.UPDATED",
+          "CUSTOMER.DISPUTE.CREATED",
+          "CUSTOMER.DISPUTE.RESOLVED",
+          "CUSTOMER.DISPUTE.UPDATED",
+          "CUSTOMER.FUNDS-RESERVE.RELEASED",
+          "BILLING.PLAN.ACTIVATED",
+          "BILLING.PLAN.CREATED",
+          "BILLING.PLAN.DEACTIVATED",
+          "BILLING.PLAN.PRICING-CHANGE.ACTIVATED",
+          "BILLING.PLAN.PRICING-CHANGE.INPROGRESS",
+          "BILLING.PLAN.UPDATED",
+          "BILLING.SMART-DUNNING.RETRY-NOW",
+          "BILLING.SUBSCRIPTION.ACTIVATED",
+          "BILLING.SUBSCRIPTION.CANCELLED",
+          "BILLING.SUBSCRIPTION.CREATED",
+          "BILLING.SUBSCRIPTION.EXPIRED",
+          "BILLING.SUBSCRIPTION.PAYMENT.FAILED",
+          "BILLING.SUBSCRIPTION.RE-ACTIVATED",
+          "BILLING.SUBSCRIPTION.RENEWED",
+          "BILLING.SUBSCRIPTION.SUSPENDED",
+          "BILLING.SUBSCRIPTION.UPDATED",
+          "CATALOG.PRODUCT.CREATED",
+          "CATALOG.PRODUCT.UPDATED",
+          "CHECKOUT.CHECKOUT.BUYER-APPROVED",
+          "CHECKOUT.ORDER.APPROVED",
+          "CHECKOUT.ORDER.COMPLETED",
+          "CHECKOUT.ORDER.DECLINED",
+          "CHECKOUT.ORDER.SAVED",
+          "CHECKOUT.ORDER.VOIDED",
+          "CHECKOUT.PAYMENT-RESOURCE.CREATED",
+          "CHECKOUT.PAYMENT-RESOURCE.DELETED",
+          "CHECKOUT.PAYMENT-RESOURCE.PAYMENT-COMPLETED",
+          "CHECKOUT.PAYMENT-RESOURCE.PAYMENT-ON-HOLD",
+          "USAGE-BILLING.SUBSCRIPTION.TRAIL.ENDED",
+          "USAGE-BILLING.SUBSCRIPTION.UPDATED",
+          "CUSTOMER.MERCHANT-INTEGRATION.CAPABILITY-UPDATED",
+          "CUSTOMER.MERCHANT-INTEGRATION.PRODUCT-SUBSCRIPTION-UPDATED",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-ALREADY-INTEGRATED",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-CONSENT-GRANTED",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-EMAIL-CONFIRMED",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-ERROR-BAD-REQUEST",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-ERROR-INTERNAL-SERVER-ERROR",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-ONBOARDING-INITIATED",
+          "CUSTOMER.MERCHANT-INTEGRATION.SELLER-ONBOARDING-STARTED",
+          "CUSTOMER.MERCHANT-MIGRATION.BILLING-AGREEMENT-MIGRATION.ACCEPTED",
+          "CHECKOUT.PAYMENT-RESOURCE.UPDATED",
+          "COLLECTION.ACTIVITY.EXECUTED",
+          "COMMERCE.APPROVAL-TOKEN.ORDER.APPROVAL-FAILED",
+          "COMMERCE.APPROVAL-TOKEN.ORDER.APPROVED",
+          "COMMERCE.APPROVAL-TOKEN.ORDER.COMPLETED",
+          "COMMERCE.APPROVAL-TOKEN.PAYMENT-CAPTURE.COMPLETED",
+          "COMMERCE.APPROVAL-TOKEN.SHIPMENT.DELIVERED",
+          "COMMERCE.APPROVAL-TOKEN.SHIPMENT.SHIPPED",
+          "COMMERCE.BILLING.SUBSCRIPTION.TERMINATED",
+          "PAYMENT.INSTRUMENT.UPDATED",
+          "PAYMENT.NON-REFERENCED-CREDIT.COMPLETED",
+          "PAYMENT.NON-REFERENCED-CREDIT.FAILED",
+          "PAYMENT.ORDER.CANCELLED",
+          "PAYMENT.ORDER.CREATED",
+          "PAYMENT.PAYOUTS-ITEM.BLOCKED",
+          "PAYMENT.PAYOUTS-ITEM.CANCELED",
+          "PAYMENT.PAYOUTS-ITEM.FAILED",
+          "PAYMENT.PAYOUTS-ITEM.HELD",
+          "PAYMENT.PAYOUTS-ITEM.REFUNDED",
+          "PAYMENT.PAYOUTS-ITEM.RETURNED",
+          "PAYMENT.PAYOUTS-ITEM.SUCCEEDED",
+          "PAYMENT.PAYOUTS-ITEM.UNCLAIMED",
+          "PAYMENT.PAYOUTSBATCH.DENIED",
+          "PAYMENT.PAYOUTSBATCH.PROCESSING",
+          "PAYMENT.PAYOUTSBATCH.SUCCESS",
+          "PAYMENT.REFUND.CANCELLED",
+          "PAYMENT.REFUND.COMPLETED",
+          "PAYMENT.REFUND.DENIED",
+          "PAYMENT.REFUND.FAILED",
+          "PAYMENT.REFUND.PENDING",
+          "PAYMENT.SALE.COMPLETED",
+          "PAYMENTS.PAYMENT.CREATED",
+          "PAYMENT_NETWORKS.INSTRUMENT.LINKED-ACCOUNT-FAILED",
+          "PAYMENT_NETWORKS.INSTRUMENT.LINKED-ACCOUNT-UPDATED",
+          "PRICING.COMMISSION-CONFIG.CREATED",
+          "PRICING.COMMISSION-CONFIG.PROVISIONED",
+          "PRICING.COMMISSION-CONFIG.UPDATED",
+          "REPORTING.REPORT.AVAILABLE",
+          "RISK.DISPUTE.CREATED",
+          "TAXES.REPORTS.DELIVERED",
+          "TAXES.REPORTS.GENERATED",
+          "USAGE-BILLING.CREDIT-NOTE.CREATED",
+          "USAGE-BILLING.CREDIT-NOTE.REFUND.FAILED",
+          "USAGE-BILLING.INVOICE.CREATED",
+          "USAGE-BILLING.INVOICE.PAYMENT.FAILED",
+          "USAGE-BILLING.INVOICE.PAYMENT.OVERDUE",
+          "USAGE-BILLING.INVOICE.PAYMENT.SUCCEEDED",
+          "USAGE-BILLING.SUBSCRIPTION-ALERT.TRIGGERED",
+          "VAULT.CREDIT-CARD.CREATED",
+          "VAULT.CREDIT-CARD.DELETED",
+          "VAULT.CREDIT-CARD.UPDATED",
+          "VAULT.PAYMENT-TOKEN.CREATED",
+          "VAULT.PAYMENT-TOKEN.DELETED",
+          "VAULT.PAYMENT-TOKEN.DELETION-INITIATED",
+          "VAULT.PAYMENT-TOKEN.UPDATED",
+          "USAGE-BILLING.WALLET-TRANSACTION.CREATED",
+          "USAGE-BILLING.WALLET-TRANSACTION.UPDATED",
+          "USAGE-BILLING.WALLET.CREATED",
+          "USAGE-BILLING.WALLET.NET-BALANCE-DEPLETED",
+          "USAGE-BILLING.WALLET.TERMINATED",
+          "USAGE-BILLING.WALLET.UPDATED",
+          "PAYMENT-NETWORKS.ALTERNATIVE-PAYMENT.COMPLETED",
+          "PAYMENT-TOKENIZATION.BATCH-REQUEST.STATUS-CHANGED",
+          "PAYMENT-TOKENIZATION.ENROLLMENT.CREATED",
+          "PAYMENT-TOKENIZATION.METADATA.CHANGED",
+          "PAYMENT-TOKENIZATION.PAYMENT-CREDENTIAL.CREATED",
+          "PAYMENT-TOKENIZATION.PAYMENT-CREDENTIAL.UPDATED",
+          "PAYMENT-TOKENIZATION.TOKEN-REQUESTOR.UPDATED",
+          "PAYMENT-TOKENIZATION.TOKEN-STATUS.CHANGED",
+          "PAYMENT-TOKENIZATION.TRANSACTION.CREATED",
+          "PAYMENT.AUTHORIZATION.CREATED",
+          "PAYMENT.AUTHORIZATION.VOIDED",
+          "PAYMENT.CAPTURE.COMPLETED",
+          "PAYMENT.CAPTURE.DECLINED",
+          "PAYMENT.CAPTURE.DENIED",
+          "PAYMENT.CAPTURE.PENDING",
+          "PAYMENT.CAPTURE.REFUNDED",
+          "PAYMENT.CAPTURE.REVERSED",
+          "PAYMENT.INSTRUMENT.REPLACED",
+          "CUSTOMER.MERCHANT-MIGRATION.BILLING-AGREEMENT-MIGRATION.COMPLETED",
+          "CUSTOMER.MERCHANT-MIGRATION.BILLING-AGREEMENT-MIGRATION.FAILED",
+          "CUSTOMER.MERCHANT-MIGRATION.BILLING-AGREEMENT-MIGRATION.IN-PROGRESS",
+          "CUSTOMER.NEGATIVE-BALANCE.ACTIVE",
+          "CUSTOMER.NEGATIVE-BALANCE.CLEARED",
+          "CUSTOMER.NEGATIVE-BALANCE.CREATED",
+          "CUSTOMER.NEGATIVE-BALANCE.RECOUPMENT-COMPLETED",
+          "CUSTOMER.NEGATIVE-BALANCE.REVERSE-RECOUPMENT-COMPLETED",
+          "CUSTOMER.PARTNER-BALANCE.CHANGED",
+          "CUSTOMER.PARTNER-FINANCIAL-ACCOUNT.DEBITED",
+          "CUSTOMER.PAYOUT.COMPLETED",
+          "CUSTOMER.PAYOUT.FAILED",
+          "CUSTOMER.PAYPAL-ACCOUNT.CHANGED",
+          "CUSTOMER.PROFILE.ACCOUNT-CLOSED",
+          "CUSTOMER.USER-PROFILE.PASSWORD-CHANGED",
+          "CUSTOMER.VALUE-ADDED-SERVICES.CANCELED",
+          "CUSTOMER.VALUE-ADDED-SERVICES.ENROLLED",
+          "CUSTOMER.VALUE-ADDED-SERVICES.SUSPENDED",
+          "IDENTITY.AUTHORIZATION-CONSENT.GRANTED",
+          "AGGREGATED.TAXES.REPORTABLE.ACCOUNTS.READY",
+          "AGGREGATED.TAXES.REPORTS.CORRECTION",
+          "AGGREGATED.TAXES.REPORTS.FILED",
+          "AGGREGATED.TAXES.REPORTS.GENERATED",
+          "AGGREGATED.TAXES.TIN.VERIFICATION.RESULTS",
+          "CUSTOMER.FUNDS-RESERVE.WITHHELD",
+          "CUSTOMER.GRANTOR-PERMISSION.CHANGED",
+          "CUSTOMER.MANAGED-ACCOUNT.ACCOUNT-CREATED",
+          "CUSTOMER.MANAGED-ACCOUNT.ACCOUNT-LIMIT-APPROACHED",
+          "CUSTOMER.MANAGED-ACCOUNT.ACCOUNT-PROACTIVE-NOTIFICATION",
+          "CUSTOMER.MANAGED-ACCOUNT.ACCOUNT-STATUS-CHANGED",
+          "CUSTOMER.MANAGED-ACCOUNT.ACCOUNT-UPDATED",
+          "CUSTOMER.MANAGED-ACCOUNT.CONFIGURATIONS-UPDATED",
+          "CUSTOMER.MANAGED-ACCOUNT.CREATED",
+          "CUSTOMER.MANAGED-ACCOUNT.RISK-ASSESSED",
+          "CUSTOMER.MANAGED-ACCOUNT.UPDATED",
+          "CUSTOMER.MERCHANT-BALANCE.CHANGED",
+          "IDENTITY.AUTHORIZATION-CONSENT.REVOKED",
+          "INVOICING.INVOICE.AUTOMATIC-REMINDER-SENT",
+          "INVOICING.INVOICE.CANCELLED",
+          "INVOICING.INVOICE.CREATED",
+          "INVOICING.INVOICE.PAID",
+          "INVOICING.INVOICE.REFUNDED",
+          "INVOICING.INVOICE.SCHEDULED",
+          "INVOICING.INVOICE.SENT",
+          "INVOICING.INVOICE.UNPAID",
+          "INVOICING.INVOICE.UPDATED",
+          "INVOICING.RECURRING-INVOICES.EXPIRED",
+          "LOYALTY.REWARDS-PAYOUT.COMPLETED",
+          "MERCHANT.ONBOARDING.COMPLETED",
+          "MERCHANT.PARTNER-CONSENT.REVOKED",
+          "PAYMENT.SALE.DENIED",
+          "PAYMENT.SALE.PENDING",
+          "PAYMENT.SALE.REFUNDED",
+          "PAYMENT.SALE.REVERSED",
+          "PAYMENT.VERIFICATION.FAILED",
+          "PAYMENT.VERIFICATION.VERIFIED",
+          "PAYMENTS.CUSTOMER-PAYOUTS.CANCELED",
+          "PAYMENTS.CUSTOMER-PAYOUTS.COMPLETED",
+          "PAYMENTS.CUSTOMER-PAYOUTS.CREATED",
+          "PAYMENTS.CUSTOMER-PAYOUTS.FAILED",
+          "PAYMENTS.CUSTOMER-PAYOUTS.PENDING",
+          "PAYMENTS.CUSTOMER-PAYOUTS.REVERSED",
+          "COMPLIANCE.PROCESS.AGENT-ACTION-INITIATED",
+          "COMPLIANCE.PROCESS.COMPLETED",
+          "COMPLIANCE.PROCESS.END-USER-ACTION-REQUIRED",
+          "COMPLIANCE.PROCESS.EXEMPTED",
+          "COMPLIANCE.PROCESS.FAILED",
+          "COMPLIANCE.PROCESS.NOT-APPLIED",
+          "COMPLIANCE.PROCESS.SYSTEM-ACTION-INITIATED",
+          "CUSTOMER-SUPPORT.CHARGEBACK.DECISION-RESPONDED",
+          "CUSTOMER.ACCOUNT-ENTITIES.ACCOUNT-CREATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.ACCOUNT-LIMITS",
+          "CUSTOMER.ACCOUNT-ENTITIES.ACCOUNT-SETTINGS-UPDATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.ACCOUNT-UPDATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.BANK-ACCOUNTS.CREATED",
+          "CUSTOMER.ACCOUNT-ENTITIES.BANK-ACCOUNTS.REMOVED",
+          "CUSTOMER.ACCOUNT-ENTITIES.BANK-ACCOUNTS.UPDATED"
+        ]
+      },
+      "wildcardRegistered": {
+        "at": "2026-10-20T08:06:50.367Z",
+        "status": 2,
+        "ok": true,
+        "response": {
+          "id": "9NP392487J2937838",
+          "url": "https://paypal-doorbell.vercel.app/api/probe-wildcard",
+          "event_types": [
+            {
+              "name": "*",
+              "description": "ALL"
+            }
+          ],
+          "links": [
+            {
+              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/9NP392487J2937838",
+              "rel": "self",
+              "method": "GET"
+            },
+            {
+              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/9NP392487J2937838",
+              "rel": "update",
+              "method": "PATCH"
+            },
+            {
+              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/9NP392487J2937838",
+              "rel": "delete",
+              "method": "DELETE"
+            }
+          ]
+        }
+      },
+      "wildcardReadBack": {
+        "get": {
+          "id": "9NP392487J2937838",
+          "url": "https://paypal-doorbell.vercel.app/api/probe-wildcard",
+          "event_types": [
+            {
+              "name": "*",
+              "description": "ALL",
+              "status": "ENABLED"
+            }
+          ],
+          "links": [
+            {
+              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/9NP392487J2937838",
+              "rel": "self",
+              "method": "GET"
+            },
+            {
+              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/9NP392487J2937838",
+              "rel": "update",
+              "method": "PATCH"
+            },
+            {
+              "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks/9NP392487J2937838",
+              "rel": "delete",
+              "method": "DELETE"
+            }
+          ]
+        },
+        "subscribedEventTypesEndpoint": {
+          "event_types": [
+            {
+              "name": "*",
+              "description": "ALL",
+              "status": "ENABLED"
+            }
+          ]
+        },
+        "inList": {
+          "id": "<webhook>",
+          "types": [
+            {
+              "name": "*",
+              "description": "ALL",
+              "status": "ENABLED"
+            }
+          ]
+        }
+      },
+      "prefixPatternRegistered": {
+        "status": 400,
+        "ok": false,
+        "response": {
+          "codes": [
+            "VALIDATION_ERROR"
+          ],
+          "body": {
+            "name": "VALIDATION_ERROR",
+            "message": "Invalid data provided",
+            "debug_id": "f679876148443",
+            "information_link": "https://developer.paypal.com/docs/api/webhooks/#errors",
+            "details": [
+              {
+                "field": "event_types[0].name",
+                "location": "body",
+                "issue": "Not a valid event name"
+              }
+            ],
+            "links": []
+          }
+        }
+      },
+      "wildcardDeleted": {
+        "at": "2026-10-20T08:06:54.047Z",
+        "status": "deleted"
+      },
+      "devWitnessPatched": {
+        "at": "2026-10-20T08:06:54.047Z",
+        "status": "ok",
+        "response": {
+          "types": [
+            "CHECKOUT.ORDER.APPROVED",
+            "CHECKOUT.ORDER.COMPLETED",
+            "CHECKOUT.ORDER.DECLINED",
+            "CHECKOUT.ORDER.SAVED",
+            "CHECKOUT.ORDER.VOIDED",
+            "CUSTOMER.DISPUTE.CREATED",
+            "CUSTOMER.DISPUTE.RESOLVED",
+            "CUSTOMER.DISPUTE.UPDATED",
+            "PAYMENT.AUTHORIZATION.CREATED",
+            "PAYMENT.AUTHORIZATION.VOIDED",
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.DECLINED",
+            "PAYMENT.CAPTURE.DENIED",
+            "PAYMENT.CAPTURE.PENDING",
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.REVERSED"
+          ]
+        }
+      },
+      "devWebhooksAfter": [
+        {
+          "id": "7N5964230U472033D",
+          "url": "https://paypal-doorbell.vercel.app/api/witness",
+          "types": [
+            "CHECKOUT.ORDER.APPROVED",
+            "CHECKOUT.ORDER.COMPLETED",
+            "CHECKOUT.ORDER.DECLINED",
+            "CHECKOUT.ORDER.SAVED",
+            "CHECKOUT.ORDER.VOIDED",
+            "CUSTOMER.DISPUTE.CREATED",
+            "CUSTOMER.DISPUTE.RESOLVED",
+            "CUSTOMER.DISPUTE.UPDATED",
+            "PAYMENT.AUTHORIZATION.CREATED",
+            "PAYMENT.AUTHORIZATION.VOIDED",
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.DECLINED",
+            "PAYMENT.CAPTURE.DENIED",
+            "PAYMENT.CAPTURE.PENDING",
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.REVERSED"
+          ]
+        }
+      ]
+    },
+    "b_transaction_id_filter": {
+      "at": "2026-10-20T08:17:16.659Z",
+      "captureId": "<this order's capture>",
+      "note": "ids are listed so that a reader can see which resource each event is about; capture/order ids are Sandbox ids",
+      "captureId_value": "46E84226B1829180C",
+      "orderId_value": "3UP27163GD563972S",
+      "unfiltered": {
+        "count": 1,
+        "events": [
+          {
+            "id": "WH-03S59878CN389742J-0YT734793W433300A",
+            "type": "PAYMENT.CAPTURE.COMPLETED",
+            "resourceId": "46E84226B1829180C"
+          }
+        ],
+        "hasNext": false
+      },
+      "byCaptureId": {
+        "count": 1,
+        "events": [
+          {
+            "id": "WH-03S59878CN389742J-0YT734793W433300A",
+            "type": "PAYMENT.CAPTURE.COMPLETED",
+            "resourceId": "46E84226B1829180C"
+          }
+        ],
+        "hasNext": false
+      },
+      "byOrderId": {
+        "count": 0,
+        "events": [],
+        "hasNext": false
+      },
+      "byBogusId": {
+        "count": 0,
+        "events": [],
+        "hasNext": false
+      },
+      "byCaptureId_noStartTime": {
+        "count": 1,
+        "events": [
+          {
+            "id": "WH-03S59878CN389742J-0YT734793W433300A",
+            "type": "PAYMENT.CAPTURE.COMPLETED",
+            "resourceId": "46E84226B1829180C"
+          }
+        ],
+        "hasNext": false
+      }
+    },
+    "order": {
+      "orderId": "3UP27163GD563972S",
+      "captureId": "46E84226B1829180C",
+      "amount": "48.00",
+      "createdAt": "2026-10-20T08:15:04.214Z",
+      "witnessHeardCompletedAfterS": 25.2,
+      "witnessSlot": "D-dev",
+      "eventListShowedCompletedAfterS": 129
+    },
+    "c_chargeback": {
+      "at": "2026-10-20T08:17:37.102Z",
+      "requestedResponseDate": "2026-10-30T08:17:37.102Z",
+      "status": 2,
+      "ok": true,
+      "ms": 2646,
+      "response": {
+        "dispute_id": "PP-R-WOI-10193701"
+      },
+      "disputesApi": {
+        "polls": [
+          {
+            "afterS": 9,
+            "status": 200,
+            "items": 0
+          },
+          {
+            "afterS": 15,
+            "status": 200,
+            "items": 0
+          },
+          {
+            "afterS": 21,
+            "status": 200,
+            "items": 0
+          },
+          {
+            "afterS": 28,
+            "status": 200,
+            "items": 0
+          },
+          {
+            "afterS": 33,
+            "status": 200,
+            "items": 0
+          },
+          {
+            "afterS": 39,
+            "status": 200,
+            "items": 1
+          }
+        ],
+        "firstSeenAfterS": 39,
+        "listBody": {
+          "items": [
+            {
+              "dispute_id": "PP-R-WOI-10193701",
+              "create_time": "2026-10-20T08:17:39.000Z",
+              "update_time": "2026-10-20T08:18:13.000Z",
+              "disputed_transactions": [
+                {
+                  "buyer_transaction_id": "78M29905HJ1067152",
+                  "buyer": {
+                    "payer_id": "<redacted>"
+                  },
+                  "seller": {
+                    "merchant_id": "<redacted>"
+                  }
+                }
+              ],
+              "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+              "status": "OPEN",
+              "dispute_state": "UNDER_PAYPAL_REVIEW",
+              "dispute_amount": {
+                "currency_code": "USD",
+                "value": "48.00"
+              },
+              "dispute_life_cycle_stage": "CHARGEBACK",
+              "dispute_channel": "EXTERNAL",
+              "links": [
+                {
+                  "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-WOI-10193701",
+                  "rel": "self",
+                  "method": "GET"
+                }
+              ]
+            }
+          ],
+          "links": [
+            {
+              "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes?disputed_transaction_id=46E84226B1829180C",
+              "rel": "self",
+              "method": "GET"
+            },
+            {
+              "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes?disputed_transaction_id=46E84226B1829180C",
+              "rel": "first",
+              "method": "GET"
+            }
+          ]
+        },
+        "detail": {
+          "keys": [
+            "dispute_id",
+            "create_time",
+            "update_time",
+            "disputed_transactions",
+            "reason",
+            "status",
+            "dispute_amount",
+            "dispute_state",
+            "external_reason_code",
+            "dispute_life_cycle_stage",
+            "dispute_channel",
+            "extensions",
+            "evidences",
+            "offer",
+            "refund_details",
+            "links"
+          ],
+          "dispute_id_matches_chargeback_response": true,
+          "seller_transaction_ids": [
+            "46E84226B1829180C"
+          ],
+          "sellerTransactionIdEqualsCaptureId": true,
+          "requestedResponseDate": "2026-10-30T08:17:37.102Z",
+          "status": "OPEN",
+          "dispute_state": "UNDER_PAYPAL_REVIEW",
+          "full": {
+            "dispute_id": "PP-R-WOI-10193701",
+            "create_time": "2026-10-20T08:17:39.439Z",
+            "update_time": "2026-10-20T08:18:13.579Z",
+            "disputed_transactions": [
+              {
+                "buyer_transaction_id": "78M29905HJ1067152",
+                "seller_transaction_id": "46E84226B1829180C",
+                "create_time": "2026-10-20T08:15:06.000Z",
+                "transaction_status": "COMPLETED",
+                "gross_amount": {
+                  "currency_code": "USD",
+                  "value": "48.00"
+                },
+                "invoice_number": "DBELL-DISPUTE-1792484104214",
+                "buyer": {
+                  "payer_id": "<redacted>",
+                  "name": "Doorbell Test"
+                },
+                "seller": {
+                  "email": "<redacted>",
+                  "merchant_id": "<redacted>",
+                  "name": "Test Store"
+                },
+                "seller_protection_eligible": false
+              }
+            ],
+            "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+            "status": "OPEN",
+            "dispute_amount": {
+              "currency_code": "USD",
+              "value": "48.00"
+            },
+            "dispute_state": "UNDER_PAYPAL_REVIEW",
+            "external_reason_code": "1330",
+            "dispute_life_cycle_stage": "CHARGEBACK",
+            "dispute_channel": "EXTERNAL",
+            "extensions": {
+              "buyer_contacted_time": "2026-10-20T08:17:37.000Z"
+            },
+            "evidences": [
+              {
+                "evidence_type": "CREATE",
+                "notes": "TEST_MEMO",
+                "source": "SUBMITTED_BY_BUYER",
+                "date": "2026-10-20T08:17:39.439Z",
+                "dispute_life_cycle_stage": "CHARGEBACK"
+              }
+            ],
+            "offer": {
+              "buyer_requested_amount": {
+                "currency_code": "USD",
+                "value": "48.00"
+              }
+            },
+            "refund_details": {
+              "allowed_refund_amount": {
+                "currency_code": "USD",
+                "value": "48.00"
+              }
+            },
+            "links": [
+              {
+                "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-WOI-10193701",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-WOI-10193701/provide-supporting-info",
+                "rel": "provide_supporting_info",
+                "method": "POST"
+              }
+            ]
+          }
+        }
+      },
+      "eventList": {
+        "events": [
+          {
+            "id": "WH-85R616365D7242536-9WS56888961675821",
+            "type": "CUSTOMER.DISPUTE.UPDATED",
+            "createTime": "2026-10-20T08:21:33.271Z",
+            "listedAfterS": 352
+          },
+          {
+            "id": "WH-4NY37331K6294023J-5X2155257W973735X",
+            "type": "CUSTOMER.DISPUTE.CREATED",
+            "createTime": "2026-10-20T08:20:33.828Z",
+            "listedAfterS": 352
+          }
+        ],
+        "createdListedAfterS": 352
+      },
+      "witness": {
+        "deliveries": {
+          "CUSTOMER.DISPUTE.CREATED WH-4NY37331K6294023J-5X2155257W973735X": {
+            "afterS": 177.8,
+            "slot": "D-dev"
+          },
+          "CUSTOMER.DISPUTE.UPDATED WH-85R616365D7242536-9WS56888961675821": {
+            "afterS": 237.3,
+            "slot": "D-dev"
+          }
+        }
+      },
+      "disputeCreatedEvent": {
+        "id": "WH-4NY37331K6294023J-5X2155257W973735X",
+        "create_time": "2026-10-20T08:20:33.828Z",
+        "resource_type": "dispute",
+        "event_type": "CUSTOMER.DISPUTE.CREATED",
+        "summary": "A new dispute opened with case # PP-R-WOI-10193701",
+        "resource": {
+          "reason": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED",
+          "dispute_channel": "EXTERNAL",
+          "create_time": "2026-10-20T08:17:39.439Z",
+          "dispute_id": "PP-R-WOI-10193701",
+          "dispute_life_cycle_stage": "CHARGEBACK",
+          "refund_details": {
+            "allowed_refund_amount": {
+              "currency_code": "USD",
+              "value": "48.00"
+            }
+          },
+          "offer": {
+            "buyer_requested_amount": {
+              "currency_code": "USD",
+              "value": "48.00"
+            }
+          },
+          "disputed_transactions": [
+            {
+              "buyer_transaction_id": "78M29905HJ1067152",
+              "seller_transaction_id": "46E84226B1829180C",
+              "transaction_status": "COMPLETED",
+              "invoice_number": "DBELL-DISPUTE-1792484104214",
+              "seller": {
+                "merchant_id": "<redacted>",
+                "name": "Test Store"
+              },
+              "seller_protection_eligible": false,
+              "seller_protection_type": "SELLER_PROTECTION_INELIGIBLE"
+            }
+          ],
+          "update_time": "2026-10-20T08:20:24.100Z",
+          "links": [
+            {
+              "href": "https://api.sandbox.paypal.com/v1/customer/disputes/PP-R-WOI-10193701",
+              "rel": "self",
+              "method": "GET"
+            },
+            {
+              "href": "https://api.sandbox.paypal.com/v1/customer/disputes/PP-R-WOI-10193701/provide-supporting-info",
+              "rel": "provide_supporting_info",
+              "method": "POST"
+            }
+          ],
+          "dispute_amount": {
+            "currency_code": "USD",
+            "value": "48.00"
+          },
+          "external_reason_code": "1330",
+          "status": "UNDER_REVIEW"
+        },
+        "links": [
+          {
+            "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-4NY37331K6294023J-5X2155257W973735X",
+            "rel": "self",
+            "method": "GET",
+            "encType": "application/json"
+          },
+          {
+            "href": "https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-4NY37331K6294023J-5X2155257W973735X/resend",
+            "rel": "resend",
+            "method": "POST",
+            "encType": "application/json"
+          }
+        ],
+        "event_version": "1.0"
+      },
+      "disputeCreatedResource": {
+        "resourceKeys": [
+          "reason",
+          "dispute_channel",
+          "create_time",
+          "dispute_id",
+          "dispute_life_cycle_stage",
+          "refund_details",
+          "offer",
+          "disputed_transactions",
+          "update_time",
+          "links",
+          "dispute_amount",
+          "external_reason_code",
+          "status"
+        ],
+        "dispute_id_matches": true,
+        "sellerTransactionIdsInResource": [
+          "46E84226B1829180C"
+        ],
+        "resourceSellerTransactionIdEqualsCaptureId": true,
+        "requestedResponseDate": "2026-10-30T08:17:37.102Z"
+      },
+      "eventListFilteredByCaptureAfterDispute": [],
+      "eventListUnfilteredSameWindow": [
+        {
+          "id": "WH-85R616365D7242536-9WS56888961675821",
+          "type": "CUSTOMER.DISPUTE.UPDATED"
+        },
+        {
+          "id": "WH-4NY37331K6294023J-5X2155257W973735X",
+          "type": "CUSTOMER.DISPUTE.CREATED"
+        }
+      ],
+      "eventListFilteredByDisputeId": [
+        {
+          "id": "WH-85R616365D7242536-9WS56888961675821",
+          "type": "CUSTOMER.DISPUTE.UPDATED"
+        },
+        {
+          "id": "WH-4NY37331K6294023J-5X2155257W973735X",
+          "type": "CUSTOMER.DISPUTE.CREATED"
+        }
+      ]
+    },
+    "d_resend": {
+      "eventId": "WH-4NY37331K6294023J-5X2155257W973735X",
+      "trials": [
+        {
+          "n": 1,
+          "at": "2026-10-20T08:27:58.775Z",
+          "http": "2xx",
+          "arrivedAfterS": 2.3,
+          "newTransmissionId": true
+        },
+        {
+          "n": 2,
+          "at": "2026-10-20T08:31:50.062Z",
+          "http": "2xx",
+          "arrivedAfterS": null,
+          "newTransmissionId": null
+        }
+      ]
+    },
+    "c2_more_trials": {
+      "startedAt": "2026-10-20T08:34:40.190Z",
+      "n": 3,
+      "trials": [
+        {
+          "n": 1,
+          "captureId": "<capture>",
+          "chargebackAt": "2026-10-20T08:35:21.437Z",
+          "statusLog": [
+            {
+              "s": 100,
+              "status": "UNDER_REVIEW",
+              "state": "UNDER_PAYPAL_REVIEW",
+              "due": null
+            },
+            {
+              "s": 218,
+              "status": "WAITING_FOR_SELLER_RESPONSE",
+              "state": "REQUIRED_ACTION",
+              "due": "2026-10-31T03:59:59.000Z"
+            }
+          ],
+          "captureLog": [
+            {
+              "s": 3,
+              "status": "COMPLETED"
+            },
+            {
+              "s": 204,
+              "status": "PENDING"
+            }
+          ],
+          "witness": {
+            "created#93813b": 167.3
+          },
+          "resend": [
+            {
+              "n": 1,
+              "at": 1792485603060,
+              "http": "2xx",
+              "arrivedAfterS": null
+            },
+            {
+              "n": 2,
+              "at": 1792485686252,
+              "http": "2xx",
+              "arrivedAfterS": 1.3
+            }
+          ],
+          "dueRequested": "2026-10-30T08:35:21.437Z",
+          "amount": "48.00",
+          "disputeId": "<dispute>",
+          "apiFirstSeenS": 100,
+          "createdEventId": "<event>",
+          "createdEventCreateS": 166,
+          "createdListedAfterS": 223,
+          "updatedEventCreateS": 222
+        },
+        {
+          "n": 2,
+          "captureId": "<capture>",
+          "chargebackAt": "2026-10-20T08:35:21.438Z",
+          "statusLog": [
+            {
+              "s": 102,
+              "status": "UNDER_REVIEW",
+              "state": "UNDER_PAYPAL_REVIEW",
+              "due": null
+            },
+            {
+              "s": 220,
+              "status": "WAITING_FOR_SELLER_RESPONSE",
+              "state": "REQUIRED_ACTION",
+              "due": "2026-10-31T03:59:59.000Z"
+            }
+          ],
+          "captureLog": [
+            {
+              "s": 5,
+              "status": "COMPLETED"
+            },
+            {
+              "s": 175,
+              "status": "PENDING"
+            }
+          ],
+          "witness": {
+            "created#a2fd28": 193.3
+          },
+          "resend": [
+            {
+              "n": 1,
+              "at": 1792485603058,
+              "http": "404",
+              "arrivedAfterS": null
+            },
+            {
+              "n": 2,
+              "at": 1792485604011,
+              "http": "404",
+              "arrivedAfterS": null
+            },
+            {
+              "n": 3,
+              "at": 1792485605356,
+              "http": "2xx",
+              "arrivedAfterS": 0.9
+            }
+          ],
+          "dueRequested": "2026-10-30T08:35:21.438Z",
+          "amount": "20.00",
+          "disputeId": "<dispute>",
+          "apiFirstSeenS": 102,
+          "createdEventId": "<event>",
+          "createdEventCreateS": 192,
+          "createdListedAfterS": 238
+        },
+        {
+          "n": 3,
+          "captureId": "<capture>",
+          "chargebackAt": "2026-10-20T08:35:21.438Z",
+          "statusLog": [
+            {
+              "s": 104,
+              "status": "UNDER_REVIEW",
+              "state": "UNDER_PAYPAL_REVIEW",
+              "due": null
+            },
+            {
+              "s": 221,
+              "status": "WAITING_FOR_SELLER_RESPONSE",
+              "state": "REQUIRED_ACTION",
+              "due": "2026-10-31T03:59:59.000Z"
+            }
+          ],
+          "captureLog": [
+            {
+              "s": 7,
+              "status": "COMPLETED"
+            },
+            {
+              "s": 177,
+              "status": "PENDING"
+            }
+          ],
+          "witness": {
+            "created#a2c8ab": 192.9
+          },
+          "resend": [
+            {
+              "n": 1,
+              "at": 1792485602966,
+              "http": "2xx",
+              "arrivedAfterS": 1
+            }
+          ],
+          "dueRequested": "2026-10-30T08:35:21.438Z",
+          "amount": "48.00",
+          "disputeId": "<dispute>",
+          "apiFirstSeenS": 104,
+          "createdEventId": "<event>",
+          "createdEventCreateS": 192,
+          "createdListedAfterS": 281
+        }
+      ]
+    },
+    "z_cleanup": {
+      "at": "2026-10-20T08:42:09.102Z",
+      "restored": true,
+      "status": "ok",
+      "devWebhooksNow": [
+        {
+          "id": "7N5964230U472033D",
+          "url": "https://paypal-doorbell.vercel.app/api/witness",
+          "types": [
+            "CHECKOUT.ORDER.APPROVED",
+            "CHECKOUT.ORDER.COMPLETED",
+            "CHECKOUT.ORDER.DECLINED",
+            "CHECKOUT.ORDER.SAVED",
+            "CHECKOUT.ORDER.VOIDED",
+            "PAYMENT.AUTHORIZATION.CREATED",
+            "PAYMENT.AUTHORIZATION.VOIDED",
+            "PAYMENT.CAPTURE.COMPLETED",
+            "PAYMENT.CAPTURE.DECLINED",
+            "PAYMENT.CAPTURE.DENIED",
+            "PAYMENT.CAPTURE.PENDING",
+            "PAYMENT.CAPTURE.REFUNDED",
+            "PAYMENT.CAPTURE.REVERSED"
+          ]
+        }
+      ],
+      "matchesOriginal": true
+    },
+    "b2_transaction_id_with_refund": {
+      "note": "Re-entered by hand: the first run of this stage was overwritten by a parallel stage. Values below are what the stage printed and what a read-only follow-up (08:37Z) printed.",
+      "run1_at": "2026-10-20T08:35:39Z",
+      "run1": {
+        "refundedEventSeenInListWithEventTypeFilter": true,
+        "thenUnfilteredListInSameWindow": "empty []",
+        "filteredByCaptureId": "empty []",
+        "filteredByRefundId": "empty []",
+        "reading": "the list answered empty a moment after it had listed the REFUNDED event: the event list is not a stable read (PayPal replicas disagree)"
+      },
+      "followup_at": "2026-10-20T08:37Z",
+      "followup": {
+        "unfilteredWindow25min": [
+          "PAYMENT.CAPTURE.COMPLETED",
+          "PAYMENT.CAPTURE.REFUNDED",
+          "CUSTOMER.DISPUTE.UPDATED",
+          "CUSTOMER.DISPUTE.CREATED",
+          "PAYMENT.CAPTURE.COMPLETED"
+        ],
+        "transaction_id_equals_refund_id": [
+          "PAYMENT.CAPTURE.REFUNDED"
+        ],
+        "transaction_id_equals_capture_id_of_that_refund": [
+          "PAYMENT.CAPTURE.COMPLETED"
+        ],
+        "reading": "transaction_id matches the event resource own id (capture id for COMPLETED, refund id for REFUNDED, dispute id for DISPUTE.*), not the capture a refund or a dispute belongs to"
+      }
+    },
+    "e_dashboard_refund_target": {
+      "createdAt": "2026-10-20T08:54:06.240Z",
+      "captureId": "2H996672C2282460S",
+      "amount": "9.00",
+      "note": "to be refunded by the owner in the Sandbox business dashboard; then run `refund-watch`"
+    },
+    "e2_dispute_with_no_subscribing_webhook": {
+      "at": "2026-10-20T08:51:36.849Z",
+      "webhooksSubscribingToDisputes": 0,
+      "chargebackOk": true,
+      "disputeApiFirstSeenS": 52,
+      "statusLog": [
+        {
+          "s": 52,
+          "status": "OPEN",
+          "due": null
+        },
+        {
+          "s": 69,
+          "status": "UNDER_REVIEW",
+          "due": null
+        },
+        {
+          "s": 219,
+          "status": "WAITING_FOR_SELLER_RESPONSE",
+          "due": "2026-10-31T03:59:59.000Z"
+        }
+      ],
+      "dispute_event_in_list": [],
+      "watchedForS": 483
+    },
+    "f_event_type_tally": {
+      "checkedAt": "2026-10-20T09:03Z",
+      "window": "since 08:11Z, dev app event list, read after all stages",
+      "listed": {
+        "PAYMENT.CAPTURE.COMPLETED": 7,
+        "CUSTOMER.DISPUTE.CREATED": 4,
+        "CUSTOMER.DISPUTE.UPDATED": 4,
+        "PAYMENT.CAPTURE.REFUNDED": 1
+      },
+      "reading": "4 captures were observed going PENDING after a chargeback (the 5th, stage e2, was not checked); the dev witness webhook subscribed to PAYMENT.CAPTURE.PENDING and .REVERSED the whole time and the list has none of either. 4 disputes were created while a webhook subscribed to CUSTOMER.DISPUTE.*: 4 CREATED and 4 UPDATED events. The 5th (stage e2) was created with no subscribing webhook: no event."
+    },
+    "e3_dashboard_refund_instructions": {
+      "status": "not run: needs the owner to click in the Sandbox business dashboard; nobody logs in here",
+      "targetCapture": "see e_dashboard_refund_target",
+      "afterTheClick": "npx tsx scripts/disputes-probe.ts refund-watch   (prints the capture status, the REFUNDED events in the list for that capture, and the dev witness deliveries)"
+    }
+  },
+  "finishedAt": "2026-10-20T09:01:23.006Z",
+  "writesOnTheDevApp": [
+    {
+      "at": "2026-10-20T08:06:50Z",
+      "what": "registered a probe webhook subscribed to * (url /api/probe-wildcard), read it back, deleted it at 08:06:54Z"
+    },
+    {
+      "at": "2026-10-20T08:06:5xZ",
+      "what": "tried to register a webhook for PAYMENT.CAPTURE.*: 400 VALIDATION_ERROR, nothing created"
+    },
+    {
+      "at": "2026-10-20T08:06:54Z",
+      "what": "PATCH on the dev witness webhook 7N5964230U472033D: added CUSTOMER.DISPUTE.CREATED, .UPDATED, .RESOLVED to its 13 types"
+    },
+    {
+      "at": "2026-10-20T08:42:09Z",
+      "what": "PATCH back to the original 13 types (verified equal); from then on no webhook of the dev app subscribes to disputes (stage e2 relied on it)"
+    },
+    {
+      "at": "2026-10-20",
+      "what": "Sandbox test money only: 7 card orders of USD 6-48 on the dev app, 5 process-chargeback calls, 1 API refund (stage b2). The demo app (webhooks D, S, U) was only read by scripts/check-webhooks.ts before and after; it matched the record both times."
+    }
+  ],
+  "blindWindowNote": "After the 08:06:54Z webhook changes the dev witness heard a new capture 25.2 s after the order at 08:15:03Z (8 min later). Shorter waits were not tested."
+}

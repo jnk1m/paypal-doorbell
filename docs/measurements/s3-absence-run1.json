@@ -1,0 +1,198 @@
+{
+  "session": "1718d71f",
+  "heardCap": "64G99599RS9475646",
+  "checks": [
+    {
+      "label": "30 s",
+      "afterMs": 32797,
+      "rows": [
+        {
+          "n": 1,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 2,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 3,
+          "status": "UNVERIFIED",
+          "ev": [
+            "refunded:UNVERIFIED:absence_window:wait"
+          ]
+        }
+      ],
+      "rings": [
+        "wait",
+        "wait"
+      ],
+      "resendsUsed": 0
+    },
+    {
+      "label": "2 min",
+      "afterMs": 122175,
+      "rows": [
+        {
+          "n": 1,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 2,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 3,
+          "status": "UNVERIFIED",
+          "ev": [
+            "refunded:UNVERIFIED:absence_window:wait"
+          ]
+        }
+      ],
+      "rings": [
+        "wait",
+        "wait"
+      ],
+      "resendsUsed": 0
+    },
+    {
+      "label": "5 min",
+      "afterMs": 303995,
+      "rows": [
+        {
+          "n": 1,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 2,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 3,
+          "status": "UNVERIFIED",
+          "ev": [
+            "refunded:UNVERIFIED:absence_window:wait"
+          ]
+        }
+      ],
+      "rings": [
+        "wait",
+        "wait"
+      ],
+      "resendsUsed": 0
+    },
+    {
+      "label": "5 min 50 s",
+      "afterMs": 352540,
+      "rows": [
+        {
+          "n": 1,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 2,
+          "status": "UNVERIFIED",
+          "ev": [
+            "completed:UNVERIFIED:absence_window:wait"
+          ]
+        },
+        {
+          "n": 3,
+          "status": "UNVERIFIED",
+          "ev": [
+            "refunded:UNVERIFIED:absence_window:wait"
+          ]
+        }
+      ],
+      "rings": [
+        "wait",
+        "wait"
+      ],
+      "resendsUsed": 0
+    },
+    {
+      "label": "7 min",
+      "afterMs": 442879,
+      "rows": [
+        {
+          "n": 1,
+          "status": "GAP",
+          "ev": [
+            "completed:NO_REPORT:final:not_listed"
+          ]
+        },
+        {
+          "n": 2,
+          "status": "GAP",
+          "ev": [
+            "completed:NO_EVENT_FOUND:final:cannot_heal"
+          ]
+        },
+        {
+          "n": 3,
+          "status": "GAP",
+          "ev": [
+            "refunded:NO_EVENT_FOUND:final:cannot_heal"
+          ]
+        }
+      ],
+      "rings": [
+        "not_listed",
+        "cannot_heal"
+      ],
+      "resendsUsed": 0
+    },
+    {
+      "label": "8 min",
+      "afterMs": 482339,
+      "rows": [
+        {
+          "n": 1,
+          "status": "GAP",
+          "ev": [
+            "completed:NO_REPORT:final:not_listed"
+          ]
+        },
+        {
+          "n": 2,
+          "status": "GAP",
+          "ev": [
+            "completed:NO_EVENT_FOUND:final:cannot_heal"
+          ]
+        },
+        {
+          "n": 3,
+          "status": "GAP",
+          "ev": [
+            "refunded:NO_EVENT_FOUND:final:cannot_heal"
+          ]
+        }
+      ],
+      "rings": [
+        "not_listed",
+        "cannot_heal"
+      ],
+      "resendsUsed": 0
+    }
+  ]
+}

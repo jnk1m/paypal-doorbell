@@ -1,0 +1,35 @@
+diff --git a/src/config.js b/src/config.js
+--- a/src/config.js
++++ b/src/config.js
+@@ -4,7 +4,7 @@
+     base: process.env.PAYPAL_BASE_URL ?? "https://api-m.paypal.com",
+     clientId: process.env.PAYPAL_CLIENT_ID,
+     clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+-    webhookId: process.env.PAYPAL_WEBHOOK_ID,
++    webhookId: process.env.PAYPAL_WEBHOOK_ID_LIVE,
+   },
+   db: { url: process.env.DATABASE_URL },
+ };
+diff --git a/src/payments/paypal-webhook.js b/src/payments/paypal-webhook.js
+--- a/src/payments/paypal-webhook.js
++++ b/src/payments/paypal-webhook.js
+@@ -10,9 +10,9 @@
+ 
+ // Events this endpoint acts on. Anything else is acknowledged and ignored.
+ const HANDLED = new Set([
++  "PAYMENT.CAPTURE.DENIED",
+   "PAYMENT.CAPTURE.COMPLETED",
+   "PAYMENT.CAPTURE.REFUNDED",
+-  "PAYMENT.CAPTURE.DENIED",
+ ]);
+ 
+ async function verifySignature(req, raw) {
+@@ -49,7 +49,7 @@
+   }
+ }
+ 
+-router.post("/api/paypal/webhook", express.raw({ type: "application/json" }), async (req, res) => {
++router.post("/api/paypal/webhook", express.raw({ type: "application/json", limit: "1mb" }), async (req, res) => {
+   const raw = req.body;
+   if (!(await verifySignature(req, raw))) {
+     logger.warn({ transmissionId: req.get("paypal-transmission-id") }, "paypal webhook signature rejected");

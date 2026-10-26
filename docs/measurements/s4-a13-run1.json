@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-19T07:48:24.042Z",
+  "flood_scan": {
+    "requests": 1000,
+    "ms": 1628,
+    "passed": 8,
+    "evalCalls": 9,
+    "serverCommands": 26,
+    "normalVisitorStillPasses": true
+  },
+  "flood_session": {
+    "requests": 1000,
+    "ms": 1592,
+    "passed": 8,
+    "evalCalls": 9,
+    "serverCommands": 26,
+    "normalVisitorStillPasses": true
+  },
+  "flood_order": {
+    "requests": 1000,
+    "ms": 1382,
+    "passed": 6,
+    "evalCalls": 8,
+    "serverCommands": 31,
+    "normalVisitorStillPasses": true
+  },
+  "blockedRequests": {
+    "pool": 10,
+    "passedOfFirst40": 10,
+    "evalCallsToFill": 11,
+    "blockedAfterwards": 500,
+    "extraEvalCalls": 0,
+    "extraServerCommands": 0
+  },
+  "budget": {
+    "requestWorstCaseUsd": 0.0311,
+    "dailyCapUsd": 0.0779,
+    "unbilledFailures": 20,
+    "spentAfterUnbilledUsd": 0,
+    "timeoutOutcomes": [
+      "timeout",
+      "timeout",
+      "budget",
+      "budget"
+    ],
+    "modelCallsMade": 22
+  }
+}

@@ -1,0 +1,61 @@
+diff --git a/app/api/paypal/webhook/route.ts b/app/api/paypal/webhook/route.ts
+--- a/app/api/paypal/webhook/route.ts
++++ b/app/api/paypal/webhook/route.ts
+@@ -4,6 +4,7 @@
+ import { sql } from "@/lib/db";
+ import { log } from "@/lib/log";
+ import { fetchCert } from "@/lib/paypal-certs";
++import { PayPalEventSchema } from "@/lib/paypal-schema";
+ 
+ export const runtime = "nodejs";
+ 
+@@ -50,11 +51,14 @@
+ 
+ export async function POST(req: Request) {
+   const raw = await req.text();
+-  if (!(await verify(req, raw))) {
+-    log.warn({ transmissionId: req.headers.get("paypal-transmission-id") }, "paypal webhook signature rejected");
++  const parsed = PayPalEventSchema.safeParse(JSON.parse(raw));
++  if (!parsed.success) return NextResponse.json({ error: "bad payload" }, { status: 400 });
++  const event = parsed.data as PayPalEvent;
++  const canonical = JSON.stringify(event);
++  if (!(await verify(req, canonical))) {
++    log.warn({ transmissionId: req.headers.get("paypal-transmission-id") }, "paypal webhook signature rejected for event");
+     return NextResponse.json({ error: "bad signature" }, { status: 401 });
+   }
+-  const event = JSON.parse(raw) as PayPalEvent;
+   if (!HANDLED.has(event.event_type)) return NextResponse.json({ ok: true });
+   try {
+     await applyEvent(event);
+diff --git a/lib/paypal-schema.ts b/lib/paypal-schema.ts
+new file mode 100644
+--- /dev/null
++++ b/lib/paypal-schema.ts
+@@ -0,0 +1,15 @@
++import { z } from "zod";
++
++// Shape of the PayPal events this app cares about. Unknown keys are dropped.
++export const PayPalEventSchema = z.object({
++  id: z.string(),
++  event_type: z.string(),
++  create_time: z.string(),
++  resource_type: z.string().optional(),
++  resource: z.object({
++    id: z.string(),
++    amount: z.object({ currency_code: z.string(), value: z.string() }).optional(),
++    links: z.array(z.object({ href: z.string(), rel: z.string() })).default([]),
++    supplementary_data: z.any().optional(),
++  }),
++});
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,7 @@
+   "name": "shop-web",
+   "dependencies": {
+     "buffer-crc32": "^0.2.13",
+-    "next": "^15.0.3",
++    "next": "^15.1.6",
+     "postgres": "^3.4.4",
+     "pino": "^9.1.0"
+   }

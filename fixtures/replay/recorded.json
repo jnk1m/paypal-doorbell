@@ -1,0 +1,95 @@
+{
+  "bad_body": {
+    "mode": "bad_body",
+    "ranAt": 1792394144254,
+    "events": {
+      "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+      ],
+      "ids": [
+        "WH-4D669182B5385532J-21K655575T999184M",
+        "WH-2G256235BF806141B-6VL338609Y7291831"
+      ]
+    },
+    "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+    "verdict": "CONFIRMED BY REPLAY",
+    "basis": "replayed",
+    "good": {
+      "statuses": [
+        200,
+        200
+      ],
+      "book": "refunded"
+    },
+    "bad": {
+      "statuses": [
+        401,
+        401
+      ],
+      "book": null
+    }
+  },
+  "ack_then_drop": {
+    "mode": "ack_then_drop",
+    "ranAt": 1792394148001,
+    "events": {
+      "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+      ],
+      "ids": [
+        "WH-54112502TY247564A-63756306JM3352023",
+        "WH-7C9085383R196130T-47F6908373075621L"
+      ]
+    },
+    "expectation": "Both builds answer 200; the good build books the events, the bad build books nothing.",
+    "verdict": "CONFIRMED BY REPLAY",
+    "basis": "replayed",
+    "good": {
+      "statuses": [
+        200,
+        200
+      ],
+      "book": "refunded"
+    },
+    "bad": {
+      "statuses": [
+        200,
+        200
+      ],
+      "book": null
+    }
+  },
+  "last_write_wins": {
+    "mode": "last_write_wins",
+    "ranAt": 1792394150775,
+    "events": {
+      "types": [
+        "PAYMENT.CAPTURE.REFUNDED",
+        "PAYMENT.CAPTURE.COMPLETED"
+      ],
+      "ids": [
+        "WH-45W97943CV565620K-85D47668E8514093T",
+        "WH-5YF04438PK066832N-82V270692B2358747"
+      ]
+    },
+    "expectation": "Both builds answer 200 to a refund followed by a late payment; the good build keeps the order refunded, the bad build overwrites it with paid.",
+    "verdict": "CONFIRMED BY REPLAY",
+    "basis": "replayed",
+    "good": {
+      "statuses": [
+        200,
+        200
+      ],
+      "book": "refunded"
+    },
+    "bad": {
+      "statuses": [
+        200,
+        200
+      ],
+      "book": "paid"
+    }
+  }
+}

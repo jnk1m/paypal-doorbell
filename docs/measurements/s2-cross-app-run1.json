@@ -1,0 +1,87 @@
+{
+  "run": "951722",
+  "sid": "xapp5b032ad6dd924e35bfb7fb69119d",
+  "startedAt": 1792382526339,
+  "made": [
+    {
+      "app": "dev",
+      "kind": "payment",
+      "captureId": "4K142754EJ506094U",
+      "resourceId": "4K142754EJ506094U",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382531539
+    },
+    {
+      "app": "dev",
+      "kind": "payment",
+      "captureId": "3TH782199S938011K",
+      "resourceId": "3TH782199S938011K",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382535465
+    },
+    {
+      "app": "dev",
+      "kind": "payment",
+      "captureId": "0W136742W7520160H",
+      "resourceId": "0W136742W7520160H",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382540846
+    },
+    {
+      "app": "dev",
+      "kind": "payment",
+      "captureId": "87W695392U729743E",
+      "resourceId": "87W695392U729743E",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382544558
+    },
+    {
+      "app": "dev",
+      "kind": "refund",
+      "captureId": "4K142754EJ506094U",
+      "resourceId": "4LH08206V7272040J",
+      "type": "PAYMENT.CAPTURE.REFUNDED",
+      "at": 1792382546464
+    },
+    {
+      "app": "demo",
+      "kind": "payment",
+      "captureId": "1XC53333V34690222",
+      "resourceId": "1XC53333V34690222",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382551470
+    },
+    {
+      "app": "demo",
+      "kind": "payment",
+      "captureId": "6AN6442307118751G",
+      "resourceId": "6AN6442307118751G",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382555464
+    },
+    {
+      "app": "demo",
+      "kind": "payment",
+      "captureId": "8RH70714GY7607322",
+      "resourceId": "8RH70714GY7607322",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382559255
+    },
+    {
+      "app": "demo",
+      "kind": "payment",
+      "captureId": "1AT987408J973900C",
+      "resourceId": "1AT987408J973900C",
+      "type": "PAYMENT.CAPTURE.COMPLETED",
+      "at": 1792382563015
+    },
+    {
+      "app": "demo",
+      "kind": "refund",
+      "captureId": "1XC53333V34690222",
+      "resourceId": "2EU651956X230871K",
+      "type": "PAYMENT.CAPTURE.REFUNDED",
+      "at": 1792382564957
+    }
+  ]
+}

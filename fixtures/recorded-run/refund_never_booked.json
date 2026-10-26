@@ -1,0 +1,2399 @@
+{
+ "id": "refund_never_booked",
+ "plantedMode": "ack_then_drop",
+ "title": "A refund PayPal made never reached the books",
+ "capturedAt": 1792492992416,
+ "steps": [
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792492992416,
+   "step": {
+    "index": 1,
+    "of": 4,
+    "title": "PayPal refunded two orders. The shop's books still say paid."
+   },
+   "session": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "ack_then_drop",
+     "planted": true,
+     "plantedLabel": "planted by us",
+     "file": "handlers/ack-drop.ts",
+     "at": 1792492913906
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "0R002311PK500803M",
+      "captureId": "26G70238KP779015X",
+      "invoiceId": "MM-734c4086-1",
+      "at": 1792492914189,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "heard": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "received": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "08R76678K7536933N",
+      "captureId": "7JR84672VB473763D",
+      "invoiceId": "MM-734c4086-2",
+      "at": 1792492918289,
+      "refundAt": 1792492941226,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+       "at": 1792492937732
+      },
+      "books": "waiting",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "heard": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "received": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "heard": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "received": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "4EN87529YT5306746",
+      "captureId": "72851533F23699236",
+      "invoiceId": "MM-734c4086-3",
+      "at": 1792492922836,
+      "refundAt": 1792492945300,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+       "at": 1792492937015
+      },
+      "books": "waiting",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "heard": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "received": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "heard": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "received": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792492978431
+   },
+   "scan": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "ack_then_drop"
+    },
+    "at": 1792492978431,
+    "durationMs": 1811,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "26G70238KP779015X",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "d": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "s": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "listed": false,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "7JR84672VB473763D",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+       "at": 1792492937732
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "d": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "s": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "listed": false,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "d": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "s": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492948777,
+        "finding": {
+         "cls": "ACKED_BUT_NOT_APPLIED",
+         "final": true,
+         "why": "The shop answered 200 and the books still differ from PayPal."
+        },
+        "ring": {
+         "state": "ready",
+         "label": "Ring again"
+        },
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "72851533F23699236",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+       "at": 1792492937015
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "d": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "s": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492929392,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "d": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "s": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         }
+        ],
+        "listed": false,
+        "finding": {
+         "cls": "ACKED_BUT_NOT_APPLIED",
+         "final": true,
+         "why": "The shop answered 200 and the books still differ from PayPal."
+        },
+        "ring": {
+         "state": "not_listed",
+         "label": "Cannot auto-heal: the event is not in PayPal's list (it shows up 80 to 163 s late)"
+        },
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 1,
+     "gaps": 2,
+     "unverified": 0,
+     "byClass": {
+      "ACKED_BUT_NOT_APPLIED": 2
+     }
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 7
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 2,
+     "retries": 0
+    },
+    "resendsUsed": 0
+   },
+   "causes": [
+    {
+     "captureId": "7JR84672VB473763D",
+     "mode": "ack_then_drop",
+     "cause": {
+      "promptVersion": "cause-v1",
+      "requestHash": "b55c60c874a4c9de99753cf0374d1097e83104329898eda24b7b7b64279207cb",
+      "status": "proposed",
+      "category": "WORK_AFTER_ACK",
+      "file": "handlers/ack-drop.ts",
+      "hunkId": "H2",
+      "lines": [
+       {
+        "id": "L9",
+        "file": "handlers/ack-drop.ts",
+        "shownFile": "handlers/good.ts",
+        "kind": "del",
+        "no": 18,
+        "text": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });",
+        "shown": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });"
+       },
+       {
+        "id": "L11",
+        "file": "handlers/ack-drop.ts",
+        "shownFile": "handlers/ack-drop.ts",
+        "kind": "add",
+        "no": 11,
+        "text": "  queue.push(event);",
+        "shown": "  queue.push(event);"
+       }
+      ],
+      "explanation": "A changed line answers PayPal before the booking work is finished, so that work can be lost after the 200.",
+      "source": "recording"
+     },
+     "replay": {
+      "mode": "ack_then_drop",
+      "ranAt": 1792492980732,
+      "events": {
+       "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+       ],
+       "ids": [
+        "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "WH-8T160268TP801723N-6CK44473GG7311445"
+       ]
+      },
+      "expectation": "Both builds answer 200; the good build books the events, the bad build books nothing.",
+      "verdict": "CONFIRMED BY REPLAY",
+      "basis": "replayed",
+      "good": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": "refunded"
+      },
+      "bad": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": null
+      }
+     },
+     "confirmation": {
+      "confirmed": true,
+      "chip": "CONFIRMED BY REPLAY"
+     },
+     "fix": {
+      "mode": "ack_then_drop",
+      "causeRequestHash": "b55c60c874a4c9de99753cf0374d1097e83104329898eda24b7b7b64279207cb",
+      "fixRequestHash": "e69774df2631ddea33c8820d50cc1dcbc8201a8ba707ea160324d064c3defd3d",
+      "promptVersion": "fix-v1",
+      "model": "claude-sonnet-5-5",
+      "source": "recording",
+      "basis": "replayed",
+      "recordedAt": 1792490380843,
+      "ranAt": 1792492992415,
+      "verdict": "proven",
+      "claim": "Behaves like the good build and PayPal's answer on these 15 inputs (3 orders x arrival order, reversed, tampered).",
+      "orders": 3,
+      "inputs": 15,
+      "patchSha256": "99b1abf9c4375fd45f3b7c153862a643323dce4efa2a2b92e7b2ac504e7ef014",
+      "patch": {
+       "file": "handlers/ack-drop.ts",
+       "hunks": [
+        [
+         {
+          "kind": "ctx",
+          "text": "// Maple Mug webhook handler. PayPal posts here when a payment is captured or refunded."
+         },
+         {
+          "kind": "add",
+          "text": "import { bookingOf, rank } from \"../lib/shop/events.ts\";"
+         },
+         {
+          "kind": "ctx",
+          "text": "import type { Handler } from \"../lib/shop/types.ts\";"
+         },
+         {
+          "kind": "ctx",
+          "text": ""
+         }
+        ],
+        [
+         {
+          "kind": "ctx",
+          "text": "  if ((await ctx.verify(event)) !== \"SUCCESS\") return { status: 401 };"
+         },
+         {
+          "kind": "ctx",
+          "text": ""
+         },
+         {
+          "kind": "add",
+          "text": "  const booking = bookingOf(event);"
+         },
+         {
+          "kind": "add",
+          "text": "  if (!booking) return { status: 200 };"
+         },
+         {
+          "kind": "add",
+          "text": ""
+         },
+         {
+          "kind": "add",
+          "text": "  // Never move an order backwards: a late \"paid\" must not undo a \"refunded\"."
+         },
+         {
+          "kind": "add",
+          "text": "  const current = await ctx.books.get(booking.captureId);"
+         },
+         {
+          "kind": "add",
+          "text": "  if (current && rank(current.state) > rank(booking.state)) return { status: 200 };"
+         },
+         {
+          "kind": "add",
+          "text": ""
+         },
+         {
+          "kind": "add",
+          "text": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });"
+         },
+         {
+          "kind": "ctx",
+          "text": "  // Acknowledge first, book later."
+         },
+         {
+          "kind": "del",
+          "text": "  queue.push(event);"
+         },
+         {
+          "kind": "ctx",
+          "text": "  return { status: 200 };"
+         },
+         {
+          "kind": "ctx",
+          "text": "};"
+         }
+        ]
+       ],
+       "added": 9,
+       "removed": 1
+      },
+      "checks": [
+       {
+        "id": "edits_valid",
+        "label": "The edits name changed lines of the diff, and replace or delete only lines the cause cited.",
+        "ok": true
+       },
+       {
+        "id": "parses",
+        "label": "The patched file parses.",
+        "ok": true
+       },
+       {
+        "id": "allowlist",
+        "label": "It uses only the imports and names a handler may use.",
+        "ok": true
+       },
+       {
+        "id": "uncited_kept",
+        "label": "Lines of the bad deploy that the cause did not cite are unchanged, byte for byte.",
+        "ok": true
+       },
+       {
+        "id": "inside_hunks",
+        "label": "The edits stay inside the bad deploy's changed hunks.",
+        "ok": true
+       }
+      ],
+      "controls": [
+       {
+        "id": "arrival_order",
+        "label": "The events in the order they arrived: same answers and same books as the good build.",
+        "ok": true,
+        "n": 5
+       },
+       {
+        "id": "reversed",
+        "label": "The same events, last one first: same answers and same books as the good build.",
+        "ok": true,
+        "n": 5
+       },
+       {
+        "id": "tampered",
+        "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+        "ok": true,
+        "n": 5
+       },
+       {
+        "id": "paypal_books",
+        "label": "The books equal PayPal's own answer for the order (GET capture).",
+        "ok": true,
+        "n": 6
+       }
+      ],
+      "baseline": {
+       "id": "skips_signature_check",
+       "label": "The same patch with its signature check removed (written by us)",
+       "controls": [
+        {
+         "id": "arrival_order",
+         "label": "The events in the order they arrived: same answers and same books as the good build.",
+         "ok": true,
+         "n": 5
+        },
+        {
+         "id": "reversed",
+         "label": "The same events, last one first: same answers and same books as the good build.",
+         "ok": true,
+         "n": 5
+        },
+        {
+         "id": "tampered",
+         "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+         "ok": false,
+         "n": 5
+        },
+        {
+         "id": "paypal_books",
+         "label": "The books equal PayPal's own answer for the order (GET capture).",
+         "ok": true,
+         "n": 6
+        }
+       ]
+      },
+      "leftovers": [
+       {
+        "kind": "comment",
+        "lines": 1
+       },
+       {
+        "kind": "unused",
+        "name": "queue",
+        "declares": "value"
+       }
+      ]
+     }
+    },
+    {
+     "captureId": "72851533F23699236",
+     "mode": "ack_then_drop",
+     "cause": {
+      "promptVersion": "cause-v1",
+      "requestHash": "b55c60c874a4c9de99753cf0374d1097e83104329898eda24b7b7b64279207cb",
+      "status": "proposed",
+      "category": "WORK_AFTER_ACK",
+      "file": "handlers/ack-drop.ts",
+      "hunkId": "H2",
+      "lines": [
+       {
+        "id": "L9",
+        "file": "handlers/ack-drop.ts",
+        "shownFile": "handlers/good.ts",
+        "kind": "del",
+        "no": 18,
+        "text": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });",
+        "shown": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });"
+       },
+       {
+        "id": "L11",
+        "file": "handlers/ack-drop.ts",
+        "shownFile": "handlers/ack-drop.ts",
+        "kind": "add",
+        "no": 11,
+        "text": "  queue.push(event);",
+        "shown": "  queue.push(event);"
+       }
+      ],
+      "explanation": "A changed line answers PayPal before the booking work is finished, so that work can be lost after the 200.",
+      "source": "recording"
+     },
+     "replay": {
+      "mode": "ack_then_drop",
+      "ranAt": 1792492980732,
+      "events": {
+       "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+       ],
+       "ids": [
+        "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "WH-8T160268TP801723N-6CK44473GG7311445"
+       ]
+      },
+      "expectation": "Both builds answer 200; the good build books the events, the bad build books nothing.",
+      "verdict": "CONFIRMED BY REPLAY",
+      "basis": "replayed",
+      "good": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": "refunded"
+      },
+      "bad": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": null
+      }
+     },
+     "confirmation": {
+      "confirmed": true,
+      "chip": "CONFIRMED BY REPLAY"
+     },
+     "fix": {
+      "mode": "ack_then_drop",
+      "causeRequestHash": "b55c60c874a4c9de99753cf0374d1097e83104329898eda24b7b7b64279207cb",
+      "fixRequestHash": "e69774df2631ddea33c8820d50cc1dcbc8201a8ba707ea160324d064c3defd3d",
+      "promptVersion": "fix-v1",
+      "model": "claude-sonnet-5-5",
+      "source": "recording",
+      "basis": "replayed",
+      "recordedAt": 1792490380843,
+      "ranAt": 1792492992415,
+      "verdict": "proven",
+      "claim": "Behaves like the good build and PayPal's answer on these 15 inputs (3 orders x arrival order, reversed, tampered).",
+      "orders": 3,
+      "inputs": 15,
+      "patchSha256": "99b1abf9c4375fd45f3b7c153862a643323dce4efa2a2b92e7b2ac504e7ef014",
+      "patch": {
+       "file": "handlers/ack-drop.ts",
+       "hunks": [
+        [
+         {
+          "kind": "ctx",
+          "text": "// Maple Mug webhook handler. PayPal posts here when a payment is captured or refunded."
+         },
+         {
+          "kind": "add",
+          "text": "import { bookingOf, rank } from \"../lib/shop/events.ts\";"
+         },
+         {
+          "kind": "ctx",
+          "text": "import type { Handler } from \"../lib/shop/types.ts\";"
+         },
+         {
+          "kind": "ctx",
+          "text": ""
+         }
+        ],
+        [
+         {
+          "kind": "ctx",
+          "text": "  if ((await ctx.verify(event)) !== \"SUCCESS\") return { status: 401 };"
+         },
+         {
+          "kind": "ctx",
+          "text": ""
+         },
+         {
+          "kind": "add",
+          "text": "  const booking = bookingOf(event);"
+         },
+         {
+          "kind": "add",
+          "text": "  if (!booking) return { status: 200 };"
+         },
+         {
+          "kind": "add",
+          "text": ""
+         },
+         {
+          "kind": "add",
+          "text": "  // Never move an order backwards: a late \"paid\" must not undo a \"refunded\"."
+         },
+         {
+          "kind": "add",
+          "text": "  const current = await ctx.books.get(booking.captureId);"
+         },
+         {
+          "kind": "add",
+          "text": "  if (current && rank(current.state) > rank(booking.state)) return { status: 200 };"
+         },
+         {
+          "kind": "add",
+          "text": ""
+         },
+         {
+          "kind": "add",
+          "text": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });"
+         },
+         {
+          "kind": "ctx",
+          "text": "  // Acknowledge first, book later."
+         },
+         {
+          "kind": "del",
+          "text": "  queue.push(event);"
+         },
+         {
+          "kind": "ctx",
+          "text": "  return { status: 200 };"
+         },
+         {
+          "kind": "ctx",
+          "text": "};"
+         }
+        ]
+       ],
+       "added": 9,
+       "removed": 1
+      },
+      "checks": [
+       {
+        "id": "edits_valid",
+        "label": "The edits name changed lines of the diff, and replace or delete only lines the cause cited.",
+        "ok": true
+       },
+       {
+        "id": "parses",
+        "label": "The patched file parses.",
+        "ok": true
+       },
+       {
+        "id": "allowlist",
+        "label": "It uses only the imports and names a handler may use.",
+        "ok": true
+       },
+       {
+        "id": "uncited_kept",
+        "label": "Lines of the bad deploy that the cause did not cite are unchanged, byte for byte.",
+        "ok": true
+       },
+       {
+        "id": "inside_hunks",
+        "label": "The edits stay inside the bad deploy's changed hunks.",
+        "ok": true
+       }
+      ],
+      "controls": [
+       {
+        "id": "arrival_order",
+        "label": "The events in the order they arrived: same answers and same books as the good build.",
+        "ok": true,
+        "n": 5
+       },
+       {
+        "id": "reversed",
+        "label": "The same events, last one first: same answers and same books as the good build.",
+        "ok": true,
+        "n": 5
+       },
+       {
+        "id": "tampered",
+        "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+        "ok": true,
+        "n": 5
+       },
+       {
+        "id": "paypal_books",
+        "label": "The books equal PayPal's own answer for the order (GET capture).",
+        "ok": true,
+        "n": 6
+       }
+      ],
+      "baseline": {
+       "id": "skips_signature_check",
+       "label": "The same patch with its signature check removed (written by us)",
+       "controls": [
+        {
+         "id": "arrival_order",
+         "label": "The events in the order they arrived: same answers and same books as the good build.",
+         "ok": true,
+         "n": 5
+        },
+        {
+         "id": "reversed",
+         "label": "The same events, last one first: same answers and same books as the good build.",
+         "ok": true,
+         "n": 5
+        },
+        {
+         "id": "tampered",
+         "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+         "ok": false,
+         "n": 5
+        },
+        {
+         "id": "paypal_books",
+         "label": "The books equal PayPal's own answer for the order (GET capture).",
+         "ok": true,
+         "n": 6
+        }
+       ]
+      },
+      "leftovers": [
+       {
+        "kind": "comment",
+        "lines": 1
+       },
+       {
+        "kind": "unused",
+        "name": "queue",
+        "declares": "value"
+       }
+      ]
+     }
+    }
+   ],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "2 gaps · Tied on 1/3",
+    "header": "2 of 3 captures did not match PayPal (2 answered OK but the books do not match PayPal) · $96.00 across 2 refunds not in books · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 1,
+     "gaps": 2,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "96.00",
+     "refundsNotInBooks": 2,
+     "byClass": {
+      "ACKED_BUT_NOT_APPLIED": 2
+     }
+    },
+    "limits": [
+     "3 rows are inside PayPal's event-list lag (median about 80 s, up to 163 s measured): an event missing from the list proves nothing yet."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "2 refunds that PayPal made are still marked as paid in your books. That is $96.00.",
+     "These need your attention: your books and PayPal disagree.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792492978431,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492967182,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 11 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792492994608,
+   "step": {
+    "index": 2,
+    "of": 4,
+    "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+   },
+   "session": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492913906
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "0R002311PK500803M",
+      "captureId": "26G70238KP779015X",
+      "invoiceId": "MM-734c4086-1",
+      "at": 1792492914189,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "heard": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "received": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "08R76678K7536933N",
+      "captureId": "7JR84672VB473763D",
+      "invoiceId": "MM-734c4086-2",
+      "at": 1792492918289,
+      "refundAt": 1792492941226,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+       "at": 1792492937732
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "heard": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "received": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "heard": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "received": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "4EN87529YT5306746",
+      "captureId": "72851533F23699236",
+      "invoiceId": "MM-734c4086-3",
+      "at": 1792492922836,
+      "refundAt": 1792492945300,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+       "at": 1792492937015
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "heard": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "received": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "heard": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "received": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792492992889
+   },
+   "scan": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "good"
+    },
+    "at": 1792492992889,
+    "durationMs": 1719,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "26G70238KP779015X",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "d": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "s": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492921096,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "7JR84672VB473763D",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+       "at": 1792492937732
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "d": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "s": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925188,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "d": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "s": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         }
+        ],
+        "listed": false,
+        "finding": {
+         "cls": "ACKED_BUT_NOT_APPLIED",
+         "final": true,
+         "why": "The shop answered 200 and the books still differ from PayPal."
+        },
+        "ring": {
+         "state": "not_listed",
+         "label": "Cannot auto-heal: the event is not in PayPal's list (it shows up 80 to 163 s late)"
+        },
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "72851533F23699236",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+       "at": 1792492937015
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "d": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "s": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492929392,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "d": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "s": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         }
+        ],
+        "listed": false,
+        "finding": {
+         "cls": "ACKED_BUT_NOT_APPLIED",
+         "final": true,
+         "why": "The shop answered 200 and the books still differ from PayPal."
+        },
+        "ring": {
+         "state": "not_listed",
+         "label": "Cannot auto-heal: the event is not in PayPal's list (it shows up 80 to 163 s late)"
+        },
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 1,
+     "gaps": 2,
+     "unverified": 0,
+     "byClass": {
+      "ACKED_BUT_NOT_APPLIED": 2
+     }
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 12
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 2,
+     "retries": 0
+    },
+    "resendsUsed": 0
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "2 gaps · Tied on 1/3",
+    "header": "2 of 3 captures did not match PayPal (2 answered OK but the books do not match PayPal) · $96.00 across 2 refunds not in books · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 1,
+     "gaps": 2,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "96.00",
+     "refundsNotInBooks": 2,
+     "byClass": {
+      "ACKED_BUT_NOT_APPLIED": 2
+     }
+    },
+    "limits": [
+     "3 rows are inside PayPal's event-list lag (median about 80 s, up to 163 s measured): an event missing from the list proves nothing yet."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "2 refunds that PayPal made are still marked as paid in your books. That is $96.00.",
+     "These need your attention: your books and PayPal disagree.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792492992889,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492967182,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 26 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792493042250,
+   "step": {
+    "index": 3,
+    "of": 4,
+    "title": "Ring again: PayPal accepted a resend for each row (HTTP 202). 0 of 2 have already reached the shop; 0 rows are tied again."
+   },
+   "session": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492913906
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "0R002311PK500803M",
+      "captureId": "26G70238KP779015X",
+      "invoiceId": "MM-734c4086-1",
+      "at": 1792492914189,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "heard": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "received": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "08R76678K7536933N",
+      "captureId": "7JR84672VB473763D",
+      "invoiceId": "MM-734c4086-2",
+      "at": 1792492918289,
+      "refundAt": 1792492941226,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+       "at": 1792492937732
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "heard": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "received": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "heard": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "received": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "4EN87529YT5306746",
+      "captureId": "72851533F23699236",
+      "invoiceId": "MM-734c4086-3",
+      "at": 1792492922836,
+      "refundAt": 1792492945300,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+       "at": 1792492937015
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "heard": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "received": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "heard": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "received": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792493040670
+   },
+   "scan": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "good"
+    },
+    "at": 1792493040670,
+    "durationMs": 1580,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "26G70238KP779015X",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "d": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "s": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492921096,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "7JR84672VB473763D",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+       "at": 1792492937732
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "d": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "s": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925188,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "d": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "s": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492948777,
+        "finding": {
+         "cls": "ACKED_BUT_NOT_APPLIED",
+         "final": true,
+         "why": "The shop answered 200 and the books still differ from PayPal."
+        },
+        "ring": {
+         "state": "in_progress",
+         "label": "Resent, waiting for it to arrive"
+        },
+        "heal": {
+         "state": "sent",
+         "sends": 1,
+         "sentAt": [
+          1792493021704
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "72851533F23699236",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+       "at": 1792492937015
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "d": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "s": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492929392,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "d": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "s": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492950344,
+        "finding": {
+         "cls": "ACKED_BUT_NOT_APPLIED",
+         "final": true,
+         "why": "The shop answered 200 and the books still differ from PayPal."
+        },
+        "ring": {
+         "state": "in_progress",
+         "label": "Resent, waiting for it to arrive"
+        },
+        "heal": {
+         "state": "sent",
+         "sends": 1,
+         "sentAt": [
+          1792493040351
+         ]
+        }
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 1,
+     "gaps": 2,
+     "unverified": 0,
+     "byClass": {
+      "ACKED_BUT_NOT_APPLIED": 2
+     }
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 17
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 2,
+     "retries": 0
+    },
+    "resendsUsed": 2
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "2 gaps · Tied on 1/3",
+    "header": "2 of 3 captures did not match PayPal (2 answered OK but the books do not match PayPal) · $96.00 across 2 refunds not in books · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 1,
+     "gaps": 2,
+     "unverified": 0,
+     "healed": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "96.00",
+     "refundsNotInBooks": 2,
+     "byClass": {
+      "ACKED_BUT_NOT_APPLIED": 2
+     }
+    },
+    "limits": [
+     "3 rows are inside PayPal's event-list lag (median about 80 s, up to 163 s measured): an event missing from the list proves nothing yet."
+    ],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "2 refunds that PayPal made are still marked as paid in your books. That is $96.00.",
+     "These need your attention: your books and PayPal disagree.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792493040670,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492967182,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 73 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792493165575,
+   "step": {
+    "index": 4,
+    "of": 4,
+    "title": "All 2 rows are tied again: the resent messages reached the shop and the books changed (1 needed more than one resend)."
+   },
+   "session": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792492913906
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "0R002311PK500803M",
+      "captureId": "26G70238KP779015X",
+      "invoiceId": "MM-734c4086-1",
+      "at": 1792492914189,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "heard": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "received": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "08R76678K7536933N",
+      "captureId": "7JR84672VB473763D",
+      "invoiceId": "MM-734c4086-2",
+      "at": 1792492918289,
+      "refundAt": 1792492941226,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "refunded",
+       "amount": "48.00",
+       "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+       "at": 1792493156585
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "heard": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "received": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "heard": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "received": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         },
+         {
+          "tid": "6c8d49b2-cc73-11f1-a71f-8dc51a6d9ee6",
+          "attempt": "e8ef8ed86f14",
+          "state": "responded",
+          "receivedAt": 1792493156287,
+          "status": 200,
+          "respondedAt": 1792493156588
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "4EN87529YT5306746",
+      "captureId": "72851533F23699236",
+      "invoiceId": "MM-734c4086-3",
+      "at": 1792492922836,
+      "refundAt": 1792492945300,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "refunded",
+       "amount": "48.00",
+       "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+       "at": 1792493044295
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "heard": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "received": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "heard": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "received": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         },
+         {
+          "tid": "28cc784e-cc73-11f1-80f8-75252f1898dc",
+          "attempt": "1daf19c59ffa",
+          "state": "responded",
+          "receivedAt": 1792493043604,
+          "status": 200,
+          "respondedAt": 1792493044298
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792493162755
+   },
+   "scan": {
+    "session": {
+     "id": "734c40860d54435904c85baf408276e8",
+     "mode": "good"
+    },
+    "at": 1792493162755,
+    "durationMs": 2820,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "26G70238KP779015X",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+       "at": 1792492938812
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "26G70238KP779015X",
+        "eid": "WH-7JX16587BJ834740G-20U59878F60611519",
+        "d": {
+         "at": 1792492938042,
+         "slot": "D",
+         "tid": "ea1b9467-cc72-11f1-9883-93b91170d7e1"
+        },
+        "s": [
+         {
+          "tid": "ea192404-cc72-11f1-80f8-37e76a6be840",
+          "attempt": "8a6ae809aba1",
+          "state": "responded",
+          "receivedAt": 1792492938166,
+          "status": 200,
+          "respondedAt": 1792492938816
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492921096,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "7JR84672VB473763D",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "TIED",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": null,
+      "book": {
+       "state": "refunded",
+       "amount": "48.00",
+       "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+       "at": 1792493156585
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "7JR84672VB473763D",
+        "eid": "WH-8SF14086RM936084A-1X2598707Y904873R",
+        "d": {
+         "at": 1792492936972,
+         "slot": "D",
+         "tid": "e98e486b-cc72-11f1-9883-a393f4ad955d"
+        },
+        "s": [
+         {
+          "tid": "e98b1419-cc72-11f1-9883-3d0138e618fd",
+          "attempt": "79ab220f2765",
+          "state": "responded",
+          "receivedAt": 1792492937092,
+          "status": 200,
+          "respondedAt": 1792492937736
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492925188,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "7K948161E8707351X",
+        "eid": "WH-8T160268TP801723N-6CK44473GG7311445",
+        "d": {
+         "at": 1792492957337,
+         "slot": "D",
+         "tid": "f5effde2-cc72-11f1-ab13-bfda59bf9b55"
+        },
+        "s": [
+         {
+          "tid": "f5ecc991-cc72-11f1-ab13-df615bf09594",
+          "attempt": "2633c735c8ef",
+          "state": "responded",
+          "receivedAt": 1792492957982,
+          "status": 200,
+          "respondedAt": 1792492958303
+         },
+         {
+          "tid": "6c8d49b2-cc73-11f1-a71f-8dc51a6d9ee6",
+          "attempt": "e8ef8ed86f14",
+          "state": "responded",
+          "receivedAt": 1792493156287,
+          "status": 200,
+          "respondedAt": 1792493156588
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492948777,
+        "finding": null,
+        "ring": null,
+        "heal": {
+         "state": "healed",
+         "sends": 3,
+         "sentAt": [
+          1792493021704,
+          1792493087990,
+          1792493154117
+         ],
+         "arrivedAt": 1792493156287,
+         "arrivalSeconds": 2.2,
+         "answer": 200
+        }
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "72851533F23699236",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "TIED",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": null,
+      "book": {
+       "state": "refunded",
+       "amount": "48.00",
+       "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+       "at": 1792493044295
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "72851533F23699236",
+        "eid": "WH-7C063861LL438404H-14H44098HF7015156",
+        "d": {
+         "at": 1792492937114,
+         "slot": "D",
+         "tid": "e9828883-cc72-11f1-ab13-e5c3a117a996"
+        },
+        "s": [
+         {
+          "tid": "e97fa252-cc72-11f1-ab13-d74565a827e8",
+          "attempt": "560e9bf5602a",
+          "state": "responded",
+          "receivedAt": 1792492936730,
+          "status": 200,
+          "respondedAt": 1792492937018
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492929392,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "2BJ64894JX6244253",
+        "eid": "WH-0DY03958T5342644C-8PG210277V697140A",
+        "d": {
+         "at": 1792492967182,
+         "slot": "D",
+         "tid": "fb7ff16c-cc72-11f1-9883-699bad9b1345"
+        },
+        "s": [
+         {
+          "tid": "fb7d0b22-cc72-11f1-8c96-970c78a329fb",
+          "attempt": "141187e477dc",
+          "state": "responded",
+          "receivedAt": 1792492966814,
+          "status": 200,
+          "respondedAt": 1792492967352
+         },
+         {
+          "tid": "28cc784e-cc73-11f1-80f8-75252f1898dc",
+          "attempt": "1daf19c59ffa",
+          "state": "responded",
+          "receivedAt": 1792493043604,
+          "status": 200,
+          "respondedAt": 1792493044298
+         }
+        ],
+        "listed": true,
+        "listedAt": 1792492950344,
+        "finding": null,
+        "ring": null,
+        "heal": {
+         "state": "healed",
+         "sends": 1,
+         "sentAt": [
+          1792493040351
+         ],
+         "arrivedAt": 1792493043604,
+         "arrivalSeconds": 3.3,
+         "answer": 200
+        }
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 3,
+     "tied": 3,
+     "gaps": 0,
+     "unverified": 0,
+     "byClass": {}
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 18
+    },
+    "calls": {
+     "captures": 3,
+     "refunds": 0,
+     "retries": 0
+    },
+    "resendsUsed": 4
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "green",
+    "stampText": "Tied on 3/3 of what we can see",
+    "header": "2 gaps found · 2 healed · 0 still open · checked 3 of 3 captures.",
+    "numbers": {
+     "rows": 3,
+     "checked": 3,
+     "tied": 3,
+     "gaps": 0,
+     "unverified": 0,
+     "healed": 2,
+     "coveragePct": 100,
+     "moneyNotInBooks": "0.00",
+     "refundsNotInBooks": 0,
+     "byClass": {}
+    },
+    "limits": [],
+    "footnote": "Orders that were approved but never captured cannot be counted (PayPal has no list API for them). An event that is not in PayPal's event list cannot be shown to have existed. Transaction Search lags about 97-128 minutes, so the last 2 hours of transactions were not used. This certificate is not signed: anyone could edit it.",
+    "ownerView": [
+     "We checked 3 of your 3 orders against PayPal's own records.",
+     "2 orders did not match PayPal earlier ($96.00). PayPal was asked to send their messages again, and your books now match.",
+     "Your books match PayPal on 3 of 3 orders.",
+     "We can only check what PayPal tells us about. An order that was started but never paid cannot be counted.",
+     "This page is not signed. Anyone could edit it, so treat it as a report, not a receipt."
+    ],
+    "scopeAt": 1792493162755,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792492967182,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 3 min ago · events list shows 0 the witness missed"
+   }
+  }
+ ],
+ "paypalIds": [
+  "08R76678K7536933N",
+  "0R002311PK500803M",
+  "26G70238KP779015X",
+  "2BJ64894JX6244253",
+  "4EN87529YT5306746",
+  "72851533F23699236",
+  "7JR84672VB473763D",
+  "7K948161E8707351X",
+  "WH-0DY03958T5342644C-8PG210277V697140A",
+  "WH-7C063861LL438404H-14H44098HF7015156",
+  "WH-7JX16587BJ834740G-20U59878F60611519",
+  "WH-8SF14086RM936084A-1X2598707Y904873R",
+  "WH-8T160268TP801723N-6CK44473GG7311445"
+ ]
+}

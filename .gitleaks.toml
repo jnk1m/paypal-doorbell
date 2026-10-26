@@ -1,0 +1,21 @@
+title = "Doorbell: gitleaks configuration"
+
+# All of gitleaks' default rules stay on.
+[extend]
+useDefault = true
+
+# Path allowlists exist only for files that hold planted, synthetic secrets (decoys). Every entry says why.
+# A real key pasted into one of these files would not be reported either, so keep the list this short.
+#
+# When this file was written, gitleaks 8.30.1 with the default rules reported nothing on either file, with or without these entries
+# (the strings are too short or too repetitive to match). They are listed so that a newer rule set does not stop a push over
+# strings that are planted on purpose. The exporter that built this tree scans a second time without the entries and prints what they
+# hide, so a file that really needs an entry shows up there. Paths are matched as gitleaks sees them: relative in `git` mode, with
+# the scanned folder in front in `dir` mode, which is why they start with (^|/).
+[[allowlists]]
+description = "lib/cause/hygiene.test.ts: the input-hygiene test plants an sk-ant- shaped key, an A21AA-prefixed PayPal-shaped token, a Bearer token and a truncated private-key block, and asserts they are replaced before any text reaches the model. All are made up."
+paths = ['''(^|/)lib/cause/hygiene\.test\.ts$''']
+
+[[allowlists]]
+description = "lib/web/http.test.ts: the error-body test (A13-5) puts one sk-ant- shaped constant into 12 failure shapes and asserts it never reaches a response body. It is made up."
+paths = ['''(^|/)lib/web/http\.test\.ts$''']

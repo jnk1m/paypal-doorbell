@@ -1,0 +1,42 @@
+commands per store operation (EVAL = 1 + inner calls)
+verify budget: first call in a window                      2
+verify budget: next call in the window                     2
+verify budget: over the limit                              3
+commit verified: first attempt of a transmission id        3
+commit verified: a later attempt (retry)                   2
+quarantine push                                            3
+count a rejection: first in the hour                       3
+count a rejection: next in the hour                        2
+re-verify: move a quarantined entry to the attempts        3
+quarantine push that trims the ring (past 600)             4
+cleanup: deleted 4 test keys
+
+commands per delivery, composed from the above
+verified, first attempt                                    5
+verified, retry of an id already stored                    4
+refused by PayPal's verify (FAILURE)                       4-5
+quarantined, verify call failed                            5-6
+quarantined, budget just spent                             6-7
+quarantined, budget known spent (cached on the instance)   3-4
+refused by the pre-check (not a delivery)                  0
+worst case over all rows: 7
+
+deployed receiver, 3 runs each (nothing else should be using the database)
+  first attempt                                            6
+  retry                                                    4
+  tampered signature                                       7
+  no signature header                                      0
+  first attempt                                            6
+  retry                                                    4
+  tampered signature                                       6
+  no signature header                                      0
+  first attempt                                            6
+  retry                                                    4
+  tampered signature                                       6
+  no signature header                                      0
+
+commands per delivery as seen on the deployed receiver (min-max over 3 runs)
+verified, first attempt (key deleted first)                6
+verified, retry of a stored id                             4
+refused by PayPal's verify (tampered signature)            6-7
+refused by the pre-check (no signature header)             0

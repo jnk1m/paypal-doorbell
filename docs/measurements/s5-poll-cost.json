@@ -1,0 +1,24 @@
+{
+ "at": "2026-10-19T12:34:24.162Z",
+ "perPoll": {
+  "polls": 20,
+  "wrapperCommands": 7,
+  "wrapperByName": {
+   "eval": 1,
+   "hgetall": 4,
+   "mget": 2
+  },
+  "serverCommands": 6.35
+ },
+ "tenMinutes": {
+  "note": "one action at the start, then the page's cadence (3 s, 10 s, then every 20 s until 5 minutes after the action): 16 polls; none after that",
+  "polls": 16,
+  "wrapperCommands": 112,
+  "serverCommands": 102,
+  "plan": 60,
+  "pollsThatFitInThePlansSixty": {
+   "wrapper": 8,
+   "server": 9
+  }
+ }
+}

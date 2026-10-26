@@ -1,0 +1,151 @@
+{
+ "at": "2026-10-20T10:52:53.757Z",
+ "base": "https://paypal-doorbell.vercel.app",
+ "scenarios": [
+  {
+   "id": "refund_never_booked",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "5ce75a78",
+     "valid": true,
+     "seconds": 252,
+     "steps": [
+      {
+       "at": "2026-10-20T10:43:12.416Z",
+       "title": "PayPal refunded two orders. The shop's books still say paid."
+      },
+      {
+       "at": "2026-10-20T10:43:14.608Z",
+       "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+      },
+      {
+       "at": "2026-10-20T10:44:02.250Z",
+       "title": "Ring again: PayPal accepted a resend for each row (HTTP 202). 0 of 2 have already reached the shop; 0 rows are tied again."
+      },
+      {
+       "at": "2026-10-20T10:46:05.575Z",
+       "title": "All 2 rows are tied again: the resent messages reached the shop and the books changed (1 needed more than one resend)."
+      }
+     ],
+     "notes": [
+      "heals: [{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":3,\"sentAt\":[1792493021704,1792493087990,1792493154117],\"arrivedAt\":1792493156287,\"arrivalSeconds\":2.2,\"answer\":200}},{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":1,\"sentAt\":[1792493040351],\"arrivedAt\":1792493043604,\"arrivalSeconds\":3.3,\"answer\":200}}]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "late_payment_overwrites",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "10ed8297",
+     "valid": true,
+     "seconds": 216,
+     "steps": [
+      {
+       "at": "2026-10-20T10:45:14.117Z",
+       "title": "A late payment message arrived after the refund and overwrote it. The books say paid again."
+      },
+      {
+       "at": "2026-10-20T10:45:16.780Z",
+       "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+      },
+      {
+       "at": "2026-10-20T10:45:23.611Z",
+       "title": "Ring again: PayPal accepted a resend for each row (HTTP 202). 0 of 2 have already reached the shop; 0 rows are tied again."
+      },
+      {
+       "at": "2026-10-20T10:45:30.102Z",
+       "title": "All 2 rows are tied again: the resent messages reached the shop and the books changed."
+      }
+     ],
+     "notes": [
+      "heals: [{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":1,\"sentAt\":[1792493120197],\"arrivedAt\":1792493123230,\"arrivalSeconds\":3,\"answer\":200}},{\"status\":\"TIED\",\"heal\":{\"state\":\"healed\",\"sends\":1,\"sentAt\":[1792493121018],\"arrivedAt\":1792493123473,\"arrivalSeconds\":2.5,\"answer\":200}}]"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "signature_rejected",
+   "recorded": false,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "e829d73d",
+     "valid": false,
+     "reason": "Ring again was not available for every row in 7 minutes (rows still waiting: 2)",
+     "seconds": 659,
+     "steps": [
+      {
+       "at": "2026-10-20T10:45:44.639Z",
+       "title": "PayPal sent each refund 3 times; the shop answered 401 on all three tries."
+      },
+      {
+       "at": "2026-10-20T10:45:48.359Z",
+       "title": "The fix is deployed: the handler books refunds correctly again. The gaps stay until PayPal sends the messages again."
+      }
+     ],
+     "notes": []
+    },
+    {
+     "attempt": 2,
+     "session": "bf491a45",
+     "valid": false,
+     "reason": "the script failed: POST /api/shop/order -> HTTP 429 {\"error\":{\"message\":\"Limit reached for this hour. Try again in 50 min.\",\"id\":\"9424e58c-837e-4b38-beb2-3e2fdc47dd93\"}}",
+     "seconds": 0,
+     "steps": [],
+     "notes": []
+    },
+    {
+     "attempt": 3,
+     "session": "28e1463f",
+     "valid": false,
+     "reason": "the script failed: POST /api/shop/order -> HTTP 429 {\"error\":{\"message\":\"Limit reached for this hour. Try again in 50 min.\",\"id\":\"39858efa-0b8b-455d-b96c-d7f918d572cb\"}}",
+     "seconds": 0,
+     "steps": [],
+     "notes": []
+    }
+   ]
+  },
+  {
+   "id": "dispute_never_heard",
+   "recorded": true,
+   "runs": [
+    {
+     "attempt": 1,
+     "session": "adc5473c",
+     "valid": true,
+     "seconds": 261,
+     "steps": [
+      {
+       "at": "2026-10-20T10:42:29.401Z",
+       "title": "3 of 3 orders are tied: the books agree with PayPal."
+      },
+      {
+       "at": "2026-10-20T10:43:11.544Z",
+       "title": "PayPal lists a $48.00 dispute on order #2. The shop's books have none, and no webhook of this app subscribes to dispute events."
+      },
+      {
+       "at": "2026-10-20T10:46:11.656Z",
+       "title": "The capture now shows PENDING at PayPal. PayPal's response-due date is 2026-10-31 03:59 UTC, the one our Sandbox test call asked for."
+      },
+      {
+       "at": "2026-10-20T10:46:15.012Z",
+       "title": "Ring again: nothing was sent. No webhook of this app subscribes to dispute events, so Doorbell has no event to ask PayPal to send again."
+      }
+     ],
+     "notes": [
+      "the scan found the dispute 36 s after the chargeback call",
+      "deployed scan: 617 ms, dispute reads {\"asked\":3,\"unreadable\":0}",
+      "the response-due date was there 215 s after the call",
+      "the capture showed PENDING 218 s after the call",
+      "Ring again answered: cannot_heal / Nothing to resend: no webhook of this app subscribes to dispute events, so PayPal made no event to send again. Subscribing the shop's webhook to CUSTOMER.DISPUTE.CREATED would tell it about the next dispute."
+     ]
+    }
+   ]
+  }
+ ]
+}

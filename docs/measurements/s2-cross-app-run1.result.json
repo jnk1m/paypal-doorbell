@@ -1,0 +1,115 @@
+{
+  "at": "2026-10-19T04:07:39.704Z",
+  "rows": [
+    {
+      "origin": "dev",
+      "kind": "payment",
+      "resource": "4K1427…",
+      "witnessDemo": 0,
+      "witnessDev": 1,
+      "witnessEventIds": 1,
+      "shopDemo": 0,
+      "listedByDev": true,
+      "listedByDemo": false
+    },
+    {
+      "origin": "dev",
+      "kind": "payment",
+      "resource": "3TH782…",
+      "witnessDemo": 0,
+      "witnessDev": 1,
+      "witnessEventIds": 1,
+      "shopDemo": 0,
+      "listedByDev": true,
+      "listedByDemo": false
+    },
+    {
+      "origin": "dev",
+      "kind": "payment",
+      "resource": "0W1367…",
+      "witnessDemo": 0,
+      "witnessDev": 1,
+      "witnessEventIds": 1,
+      "shopDemo": 0,
+      "listedByDev": true,
+      "listedByDemo": false
+    },
+    {
+      "origin": "dev",
+      "kind": "payment",
+      "resource": "87W695…",
+      "witnessDemo": 0,
+      "witnessDev": 1,
+      "witnessEventIds": 1,
+      "shopDemo": 0,
+      "listedByDev": true,
+      "listedByDemo": false
+    },
+    {
+      "origin": "dev",
+      "kind": "refund",
+      "resource": "4LH082…",
+      "witnessDemo": 0,
+      "witnessDev": 1,
+      "witnessEventIds": 1,
+      "shopDemo": 0,
+      "listedByDev": true,
+      "listedByDemo": false
+    },
+    {
+      "origin": "demo",
+      "kind": "payment",
+      "resource": "1XC533…",
+      "witnessDemo": 1,
+      "witnessDev": 0,
+      "witnessEventIds": 1,
+      "shopDemo": 1,
+      "listedByDev": false,
+      "listedByDemo": true
+    },
+    {
+      "origin": "demo",
+      "kind": "payment",
+      "resource": "6AN644…",
+      "witnessDemo": 1,
+      "witnessDev": 0,
+      "witnessEventIds": 1,
+      "shopDemo": 1,
+      "listedByDev": false,
+      "listedByDemo": true
+    },
+    {
+      "origin": "demo",
+      "kind": "payment",
+      "resource": "8RH707…",
+      "witnessDemo": 1,
+      "witnessDev": 0,
+      "witnessEventIds": 1,
+      "shopDemo": 1,
+      "listedByDev": false,
+      "listedByDemo": true
+    },
+    {
+      "origin": "demo",
+      "kind": "payment",
+      "resource": "1AT987…",
+      "witnessDemo": 1,
+      "witnessDev": 0,
+      "witnessEventIds": 1,
+      "shopDemo": 1,
+      "listedByDev": false,
+      "listedByDemo": true
+    },
+    {
+      "origin": "demo",
+      "kind": "refund",
+      "resource": "2EU651…",
+      "witnessDemo": 1,
+      "witnessDev": 0,
+      "witnessEventIds": 1,
+      "shopDemo": 1,
+      "listedByDev": false,
+      "listedByDemo": true
+    }
+  ]
+}

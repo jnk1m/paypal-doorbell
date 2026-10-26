@@ -1,0 +1,10 @@
+{
+  "category": "WORK_AFTER_ACK",
+  "file": "app/api/paypal/webhook/route.ts",
+  "lines": [
+    "const done = applyEvent(event);"
+  ],
+  "hard": true,
+  "tail": false,
+  "stack": "next"
+}

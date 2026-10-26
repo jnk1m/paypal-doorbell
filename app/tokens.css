@@ -1,0 +1,83 @@
+/* THE LOOK. Every visual decision of the screens is a custom property in this file: color, type, space, shape. app/globals.css holds
+   structure and component classes that read these tokens and contain no color, font size or radius of its own (lib/ui/contrast.test.ts
+   checks it), so a different look is a change to this file.
+
+   The look: a white page, one cool-grey panel, navy ink and ONE brand yellow. Red and green exist only on status marks and their words,
+   and green only appears when the certificate says green (the story view sets data-cert="green" then; --ok is navy until it does).
+   Two weights (400 and 600), six sizes. Numbers, times and ids are tabular, and ids, times and code are set in the mono.
+
+   What any look must keep:
+     - text on its background at 4.5:1 or more, lines and marks at 3:1 or more (lib/ui/contrast.test.ts reads this file);
+     - green only behind [data-cert="green"]: it is the one place green may exist;
+     - each state said by at least two things besides color: its shape, its words. */
+
+:root {
+  color-scheme: light;
+
+  /* palette */
+  --page: #ffffff;
+  --panel: #f3f4f8;
+  --ink: #1b2233;
+  --ink-2: #4a5367;
+  --mute: #5b6477;
+  --rail: #7f889e; /* the dashed road of the path, a line not text */
+  --edge: #8a93a8; /* the border of a control */
+  --yellow: #ffc933; /* the brand: the Ring again button, the doorbell, the current chapter */
+  --yellow-soft: #ffebb0; /* a button that is switched off */
+  --marker: #ffe08a; /* the highlighter: one phrase per chapter and the cited line of code, never a status */
+  --red: #b7222a;
+  --green: #0f7345;
+  --ok: var(--ink); /* the mark of a hop that worked: navy, until the certificate says green */
+
+  /* type */
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --text-xs: 13px; /* the smallest text: ids, times, notes. Never 12: evidence is read at 13 or more */
+  --text-sm: 14px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 40px; /* a chapter's headline */
+  --text-xxl: 52px; /* the headline of the first chapter: the only text above 28 px in its viewport */
+  --leading: 1.55;
+  --weight-regular: 400;
+  --weight-strong: 600;
+
+  /* space: three steps with a ratio of at least two (inside a group / between groups / between sections) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 24px;
+  --space-5: 48px;
+  --space-6: 96px;
+  --gutter: 48px;
+  --page-max: 1320px;
+  --bar-h: 56px;
+
+  /* shape */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-panel: 20px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (max-width: 1099px) {
+  :root {
+    --text-xl: 32px; /* a phone chapter is a headline, one sentence and one piece of evidence: the headline is the one large text of its screen */
+    --text-xxl: 32px; /* the first chapter's too: the strip above it and the evidence under it carry the first screen */
+    --gutter: 16px;
+    --space-5: 36px;
+    --radius-panel: 16px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1279px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+/* Green. It is the certificate's color: the story view sets this attribute only when the certificate at the end of the run says green. */
+[data-cert="green"] {
+  --ok: var(--green);
+}

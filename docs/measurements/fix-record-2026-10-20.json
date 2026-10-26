@@ -1,0 +1,709 @@
+{
+  "at": "2026-10-20T09:59:48.330Z",
+  "model": "claude-sonnet-5-5",
+  "promptVersion": "fix-v1",
+  "params": {
+    "sdk": "ai",
+    "provider": "@ai-sdk/anthropic",
+    "model": "claude-sonnet-5-5",
+    "maxOutputTokens": 6000,
+    "timeoutMs": 90000,
+    "maxRetries": 0,
+    "temperature": "dropped by the SDK for this model",
+    "structuredOutput": "Output.object(zod)"
+  },
+  "live": true,
+  "modelCallsThisRun": 3,
+  "spendCapUsd": 0.5,
+  "spentUsdAllRuns": 0.0261,
+  "orders": [
+    {
+      "capture": "8F7931",
+      "truth": "REFUNDED",
+      "deliveries": 2,
+      "ageHoursWhenPrepared": 0.8
+    },
+    {
+      "capture": "8S0618",
+      "truth": "REFUNDED",
+      "deliveries": 2,
+      "ageHoursWhenPrepared": 0.9
+    },
+    {
+      "capture": "3E7929",
+      "truth": "REFUNDED",
+      "deliveries": 2,
+      "ageHoursWhenPrepared": 1.4
+    },
+    {
+      "capture": "3BL068",
+      "truth": "COMPLETED",
+      "deliveries": 1,
+      "ageHoursWhenPrepared": 0.9
+    },
+    {
+      "capture": "2H9966",
+      "truth": "COMPLETED",
+      "deliveries": 1,
+      "ageHoursWhenPrepared": 1.1
+    }
+  ],
+  "refereeDropped": [],
+  "verify": {
+    "liveCalls": 0,
+    "answeredFromStored": 96
+  },
+  "stoppedByCap": null,
+  "modes": [
+    {
+      "mode": "ack_then_drop",
+      "symptom": "2xx_but_books_unchanged",
+      "cause": {
+        "category": "WORK_AFTER_ACK",
+        "cited": [
+          "L9 - await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });",
+          "L11 + queue.push(event);"
+        ],
+        "requestHash": "b55c60c874a4c9de99753cf0374d1097e83104329898eda24b7b7b64279207cb"
+      },
+      "fixRequestHash": "e69774df2631ddea33c8820d50cc1dcbc8201a8ba707ea160324d064c3defd3d",
+      "modelAnswer": {
+        "source": "live",
+        "recordedAt": "2026-10-20T09:59:40.843Z",
+        "usage": {
+          "inputTokens": 2557,
+          "outputTokens": 485,
+          "reasoningTokens": 275
+        },
+        "costUsd": 0.009964,
+        "edits": [
+          {
+            "op": "restore",
+            "id": "L1",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L2",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L3",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L4",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L5",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L6",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L7",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L8",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L9",
+            "lines": []
+          },
+          {
+            "op": "delete",
+            "id": "L11",
+            "lines": []
+          }
+        ]
+      },
+      "problems": [],
+      "result": {
+        "mode": "ack_then_drop",
+        "causeRequestHash": "b55c60c874a4c9de99753cf0374d1097e83104329898eda24b7b7b64279207cb",
+        "fixRequestHash": "e69774df2631ddea33c8820d50cc1dcbc8201a8ba707ea160324d064c3defd3d",
+        "promptVersion": "fix-v1",
+        "model": "claude-sonnet-5-5",
+        "source": "recording",
+        "basis": "replayed",
+        "recordedAt": 1792490380843,
+        "ranAt": 1792490381006,
+        "verdict": "proven",
+        "claim": "Behaves like the good build and PayPal's answer on these 24 inputs (5 orders x arrival order, reversed, tampered).",
+        "orders": 5,
+        "inputs": 24,
+        "patchSha256": "99b1abf9c4375fd45f3b7c153862a643323dce4efa2a2b92e7b2ac504e7ef014",
+        "patch": {
+          "file": "handlers/ack-drop.ts",
+          "hunks": [
+            [
+              {
+                "kind": "ctx",
+                "text": "// Maple Mug webhook handler. PayPal posts here when a payment is captured or refunded."
+              },
+              {
+                "kind": "add",
+                "text": "import { bookingOf, rank } from \"../lib/shop/events.ts\";"
+              },
+              {
+                "kind": "ctx",
+                "text": "import type { Handler } from \"../lib/shop/types.ts\";"
+              },
+              {
+                "kind": "ctx",
+                "text": ""
+              }
+            ],
+            [
+              {
+                "kind": "ctx",
+                "text": "  if ((await ctx.verify(event)) !== \"SUCCESS\") return { status: 401 };"
+              },
+              {
+                "kind": "ctx",
+                "text": ""
+              },
+              {
+                "kind": "add",
+                "text": "  const booking = bookingOf(event);"
+              },
+              {
+                "kind": "add",
+                "text": "  if (!booking) return { status: 200 };"
+              },
+              {
+                "kind": "add",
+                "text": ""
+              },
+              {
+                "kind": "add",
+                "text": "  // Never move an order backwards: a late \"paid\" must not undo a \"refunded\"."
+              },
+              {
+                "kind": "add",
+                "text": "  const current = await ctx.books.get(booking.captureId);"
+              },
+              {
+                "kind": "add",
+                "text": "  if (current && rank(current.state) > rank(booking.state)) return { status: 200 };"
+              },
+              {
+                "kind": "add",
+                "text": ""
+              },
+              {
+                "kind": "add",
+                "text": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });"
+              },
+              {
+                "kind": "ctx",
+                "text": "  // Acknowledge first, book later."
+              },
+              {
+                "kind": "del",
+                "text": "  queue.push(event);"
+              },
+              {
+                "kind": "ctx",
+                "text": "  return { status: 200 };"
+              },
+              {
+                "kind": "ctx",
+                "text": "};"
+              }
+            ]
+          ],
+          "added": 9,
+          "removed": 1
+        },
+        "checks": [
+          {
+            "id": "edits_valid",
+            "label": "The edits name changed lines of the diff, and replace or delete only lines the cause cited.",
+            "ok": true
+          },
+          {
+            "id": "parses",
+            "label": "The patched file parses.",
+            "ok": true
+          },
+          {
+            "id": "allowlist",
+            "label": "It uses only the imports and names a handler may use.",
+            "ok": true
+          },
+          {
+            "id": "uncited_kept",
+            "label": "Lines of the bad deploy that the cause did not cite are unchanged, byte for byte.",
+            "ok": true
+          },
+          {
+            "id": "inside_hunks",
+            "label": "The edits stay inside the bad deploy's changed hunks.",
+            "ok": true
+          }
+        ],
+        "controls": [
+          {
+            "id": "arrival_order",
+            "label": "The events in the order they arrived: same answers and same books as the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "reversed",
+            "label": "The same events, last one first: same answers and same books as the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "tampered",
+            "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "paypal_books",
+            "label": "The books equal PayPal's own answer for the order (GET capture).",
+            "ok": true,
+            "n": 10
+          }
+        ],
+        "baseline": {
+          "id": "skips_signature_check",
+          "label": "The same patch with its signature check removed (written by us)",
+          "controls": [
+            {
+              "id": "arrival_order",
+              "label": "The events in the order they arrived: same answers and same books as the good build.",
+              "ok": true,
+              "n": 8
+            },
+            {
+              "id": "reversed",
+              "label": "The same events, last one first: same answers and same books as the good build.",
+              "ok": true,
+              "n": 8
+            },
+            {
+              "id": "tampered",
+              "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+              "ok": false,
+              "n": 8
+            },
+            {
+              "id": "paypal_books",
+              "label": "The books equal PayPal's own answer for the order (GET capture).",
+              "ok": true,
+              "n": 10
+            }
+          ]
+        }
+      },
+      "patchedLineCount": 24,
+      "refereeFailures": []
+    },
+    {
+      "mode": "bad_body",
+      "symptom": "all_401",
+      "cause": {
+        "category": "RAW_BODY_ALTERED",
+        "cited": [
+          "L2 + const event = canonical(JSON.parse(ctx.rawBody));"
+        ],
+        "requestHash": "baebb6a3336cdb0947efa9cc4ea66507210ea83901e63a3611d4cec96f133d3d"
+      },
+      "fixRequestHash": "074bc57f352540da2ee71b9a3039bdce76f3063be9c072723580223428d38b84",
+      "modelAnswer": {
+        "source": "live",
+        "recordedAt": "2026-10-20T09:59:42.866Z",
+        "usage": {
+          "inputTokens": 2738,
+          "outputTokens": 51,
+          "reasoningTokens": 0
+        },
+        "costUsd": 0.005986,
+        "edits": [
+          {
+            "op": "replace",
+            "id": "L2",
+            "lines": [
+              "  const event = JSON.parse(ctx.rawBody);"
+            ]
+          }
+        ]
+      },
+      "problems": [],
+      "result": {
+        "mode": "bad_body",
+        "causeRequestHash": "baebb6a3336cdb0947efa9cc4ea66507210ea83901e63a3611d4cec96f133d3d",
+        "fixRequestHash": "074bc57f352540da2ee71b9a3039bdce76f3063be9c072723580223428d38b84",
+        "promptVersion": "fix-v1",
+        "model": "claude-sonnet-5-5",
+        "source": "recording",
+        "basis": "replayed",
+        "recordedAt": 1792490382866,
+        "ranAt": 1792490383026,
+        "verdict": "proven",
+        "claim": "Behaves like the good build and PayPal's answer on these 24 inputs (5 orders x arrival order, reversed, tampered).",
+        "orders": 5,
+        "inputs": 24,
+        "patchSha256": "d6e3d4dde79f7a854e87ab05ee3f553c93e33e357a9aa2f388cd84236427215a",
+        "patch": {
+          "file": "handlers/bad-body.ts",
+          "hunks": [
+            [
+              {
+                "kind": "ctx",
+                "text": ""
+              },
+              {
+                "kind": "ctx",
+                "text": "export const handleWebhook: Handler = async (ctx) => {"
+              },
+              {
+                "kind": "del",
+                "text": "  const event = canonical(JSON.parse(ctx.rawBody));"
+              },
+              {
+                "kind": "add",
+                "text": "  const event = JSON.parse(ctx.rawBody);"
+              },
+              {
+                "kind": "ctx",
+                "text": "  if ((await ctx.verify(event)) !== \"SUCCESS\") return { status: 401 };"
+              },
+              {
+                "kind": "ctx",
+                "text": ""
+              }
+            ]
+          ],
+          "added": 1,
+          "removed": 1
+        },
+        "checks": [
+          {
+            "id": "edits_valid",
+            "label": "The edits name changed lines of the diff, and replace or delete only lines the cause cited.",
+            "ok": true
+          },
+          {
+            "id": "parses",
+            "label": "The patched file parses.",
+            "ok": true
+          },
+          {
+            "id": "allowlist",
+            "label": "It uses only the imports and names a handler may use.",
+            "ok": true
+          },
+          {
+            "id": "uncited_kept",
+            "label": "Lines of the bad deploy that the cause did not cite are unchanged, byte for byte.",
+            "ok": true
+          },
+          {
+            "id": "inside_hunks",
+            "label": "The edits stay inside the bad deploy's changed hunks.",
+            "ok": true
+          }
+        ],
+        "controls": [
+          {
+            "id": "arrival_order",
+            "label": "The events in the order they arrived: same answers and same books as the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "reversed",
+            "label": "The same events, last one first: same answers and same books as the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "tampered",
+            "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "paypal_books",
+            "label": "The books equal PayPal's own answer for the order (GET capture).",
+            "ok": true,
+            "n": 10
+          }
+        ],
+        "baseline": {
+          "id": "skips_signature_check",
+          "label": "The same patch with its signature check removed (written by us)",
+          "controls": [
+            {
+              "id": "arrival_order",
+              "label": "The events in the order they arrived: same answers and same books as the good build.",
+              "ok": true,
+              "n": 8
+            },
+            {
+              "id": "reversed",
+              "label": "The same events, last one first: same answers and same books as the good build.",
+              "ok": true,
+              "n": 8
+            },
+            {
+              "id": "tampered",
+              "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+              "ok": false,
+              "n": 8
+            },
+            {
+              "id": "paypal_books",
+              "label": "The books equal PayPal's own answer for the order (GET capture).",
+              "ok": true,
+              "n": 10
+            }
+          ]
+        }
+      },
+      "patchedLineCount": 28,
+      "refereeFailures": []
+    },
+    {
+      "mode": "last_write_wins",
+      "symptom": "2xx_but_books_unchanged",
+      "cause": {
+        "category": "OTHER_CODE_CHANGE",
+        "cited": [
+          "L4 - const current = await ctx.books.get(booking.captureId);",
+          "L5 - if (current && rank(current.state) > rank(booking.state)) return { status: 200 };"
+        ],
+        "requestHash": "d7812115cb00d9901a7dd458fbc23efe1add5534613e3f8efd8d622d7fa3b533"
+      },
+      "fixRequestHash": "d62c746760ba847b2030517e9fd17039fd31b8f40174956d38eafcaa61ca6a9f",
+      "modelAnswer": {
+        "source": "live",
+        "recordedAt": "2026-10-20T09:59:48.169Z",
+        "usage": {
+          "inputTokens": 2531,
+          "outputTokens": 513,
+          "reasoningTokens": 379
+        },
+        "costUsd": 0.010192,
+        "edits": [
+          {
+            "op": "insert_after",
+            "id": "L2",
+            "lines": [
+              "import { rank } from \"../lib/shop/events.ts\";"
+            ]
+          },
+          {
+            "op": "restore",
+            "id": "L3",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L4",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L5",
+            "lines": []
+          },
+          {
+            "op": "restore",
+            "id": "L6",
+            "lines": []
+          }
+        ]
+      },
+      "problems": [],
+      "result": {
+        "mode": "last_write_wins",
+        "causeRequestHash": "d7812115cb00d9901a7dd458fbc23efe1add5534613e3f8efd8d622d7fa3b533",
+        "fixRequestHash": "d62c746760ba847b2030517e9fd17039fd31b8f40174956d38eafcaa61ca6a9f",
+        "promptVersion": "fix-v1",
+        "model": "claude-sonnet-5-5",
+        "source": "recording",
+        "basis": "replayed",
+        "recordedAt": 1792490388169,
+        "ranAt": 1792490388330,
+        "verdict": "proven",
+        "claim": "Behaves like the good build and PayPal's answer on these 24 inputs (5 orders x arrival order, reversed, tampered).",
+        "orders": 5,
+        "inputs": 24,
+        "patchSha256": "ed93a20338e10696c0f585db5672ceb345d6a1f2f7c2bc14075e9397e7652ab8",
+        "patch": {
+          "file": "handlers/last-write-wins.ts",
+          "hunks": [
+            [
+              {
+                "kind": "ctx",
+                "text": "// Maple Mug webhook handler. PayPal posts here when a payment is captured or refunded."
+              },
+              {
+                "kind": "ctx",
+                "text": "import { bookingOf } from \"../lib/shop/events.ts\";"
+              },
+              {
+                "kind": "add",
+                "text": "import { rank } from \"../lib/shop/events.ts\";"
+              },
+              {
+                "kind": "ctx",
+                "text": "import type { Handler } from \"../lib/shop/types.ts\";"
+              },
+              {
+                "kind": "ctx",
+                "text": ""
+              }
+            ],
+            [
+              {
+                "kind": "ctx",
+                "text": "  if (!booking) return { status: 200 };"
+              },
+              {
+                "kind": "ctx",
+                "text": ""
+              },
+              {
+                "kind": "add",
+                "text": "  // Never move an order backwards: a late \"paid\" must not undo a \"refunded\"."
+              },
+              {
+                "kind": "add",
+                "text": "  const current = await ctx.books.get(booking.captureId);"
+              },
+              {
+                "kind": "add",
+                "text": "  if (current && rank(current.state) > rank(booking.state)) return { status: 200 };"
+              },
+              {
+                "kind": "add",
+                "text": ""
+              },
+              {
+                "kind": "ctx",
+                "text": "  await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });"
+              },
+              {
+                "kind": "ctx",
+                "text": "  return { status: 200 };"
+              }
+            ]
+          ],
+          "added": 5,
+          "removed": 0
+        },
+        "checks": [
+          {
+            "id": "edits_valid",
+            "label": "The edits name changed lines of the diff, and replace or delete only lines the cause cited.",
+            "ok": true
+          },
+          {
+            "id": "parses",
+            "label": "The patched file parses.",
+            "ok": true
+          },
+          {
+            "id": "allowlist",
+            "label": "It uses only the imports and names a handler may use.",
+            "ok": true
+          },
+          {
+            "id": "uncited_kept",
+            "label": "Lines of the bad deploy that the cause did not cite are unchanged, byte for byte.",
+            "ok": true
+          },
+          {
+            "id": "inside_hunks",
+            "label": "The edits stay inside the bad deploy's changed hunks.",
+            "ok": true
+          }
+        ],
+        "controls": [
+          {
+            "id": "arrival_order",
+            "label": "The events in the order they arrived: same answers and same books as the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "reversed",
+            "label": "The same events, last one first: same answers and same books as the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "tampered",
+            "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+            "ok": true,
+            "n": 8
+          },
+          {
+            "id": "paypal_books",
+            "label": "The books equal PayPal's own answer for the order (GET capture).",
+            "ok": true,
+            "n": 10
+          }
+        ],
+        "baseline": {
+          "id": "skips_signature_check",
+          "label": "The same patch with its signature check removed (written by us)",
+          "controls": [
+            {
+              "id": "arrival_order",
+              "label": "The events in the order they arrived: same answers and same books as the good build.",
+              "ok": true,
+              "n": 8
+            },
+            {
+              "id": "reversed",
+              "label": "The same events, last one first: same answers and same books as the good build.",
+              "ok": true,
+              "n": 8
+            },
+            {
+              "id": "tampered",
+              "label": "One amount in each body changed: 401 and nothing booked, like the good build.",
+              "ok": false,
+              "n": 8
+            },
+            {
+              "id": "paypal_books",
+              "label": "The books equal PayPal's own answer for the order (GET capture).",
+              "ok": true,
+              "n": 10
+            }
+          ]
+        }
+      },
+      "patchedLineCount": 22,
+      "refereeFailures": []
+    }
+  ],
+  "reviewedPatchesOnFile": [],
+  "patchedFilesOnFile": [
+    "ack_then_drop",
+    "bad_body",
+    "last_write_wins"
+  ],
+  "costOfRecordedAnswersUsd": 0.0261
+}

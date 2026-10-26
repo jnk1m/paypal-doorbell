@@ -1,0 +1,10 @@
+{
+  "category": "EVENT_TYPE_DROPPED",
+  "file": "scripts/register-webhook.mjs",
+  "lines": [
+    "{ name: \"PAYMENT.CAPTURE.REFUNDED\" },"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "next"
+}

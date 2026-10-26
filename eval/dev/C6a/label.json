@@ -1,0 +1,11 @@
+{
+  "category": "ENDPOINT_PATH_CHANGED",
+  "file": "src/payments/paypal-webhook.js",
+  "lines": [
+    "router.post(\"/api/payments/paypal/webhook\", express.raw({ type: \"application/json\" }), async (req, res) => {",
+    "router.post(\"/api/paypal/webhook\", express.raw({ type: \"application/json\" }), async (req, res) => {"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "express"
+}

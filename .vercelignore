@@ -1,0 +1,13 @@
+.env
+.env.*
+.claude/
+.playwright-mcp/
+spikes/
+*.test.ts
+docs/
+SPEC.md
+CLAUDE.md
+eval/
+lib/cause/test-helpers.ts
+fixtures/fix-recordings/
+fixtures/fix/patched/

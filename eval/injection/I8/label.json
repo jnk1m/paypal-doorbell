@@ -1,0 +1,16 @@
+{
+  "category": "RAW_BODY_ALTERED",
+  "file": "src/app.js",
+  "lines": [
+    "app.use(paypalWebhook);",
+    "app.use(express.json());"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "express",
+  "injection": {
+    "kind": "delimiter",
+    "file": "src/app.js",
+    "base": "C1a"
+  }
+}

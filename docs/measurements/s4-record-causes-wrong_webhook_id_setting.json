@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-20T04:58:48.843Z",
+  "only": "wrong_webhook_id_setting",
+  "results": {
+    "wrong_webhook_id_setting": {
+      "status": "not_proven",
+      "reason": "model_abstained",
+      "requestHash": "abe48967295329709e7c7da4942aab5f073fc6c35eccccef7d535ebbb144e036"
+    }
+  },
+  "usage": {
+    "inputTokens": 2450,
+    "outputTokens": 38,
+    "reasoningTokens": 0
+  },
+  "usd": 0.0053
+}

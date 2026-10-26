@@ -1,0 +1,50 @@
+{
+  "frozenAt": "2026-10-19T04:21:18.980Z",
+  "app": {
+    "name": "Doorbell Demo",
+    "appId": "APP-4SF2883699350514P"
+  },
+  "webhooks": [
+    {
+      "id": "9MY68414XY338293X",
+      "url": "https://paypal-doorbell.vercel.app/api/shop/case-u",
+      "eventTypes": [
+        "PAYMENT.CAPTURE.COMPLETED"
+      ]
+    },
+    {
+      "id": "8D519417XY9586355",
+      "url": "https://paypal-doorbell.vercel.app/api/shop/webhook",
+      "eventTypes": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+      ]
+    },
+    {
+      "id": "95S68045X9784900W",
+      "url": "https://paypal-doorbell.vercel.app/api/witness",
+      "eventTypes": [
+        "CHECKOUT.ORDER.APPROVED",
+        "CHECKOUT.ORDER.COMPLETED",
+        "CHECKOUT.ORDER.DECLINED",
+        "CHECKOUT.ORDER.SAVED",
+        "CHECKOUT.ORDER.VOIDED",
+        "PAYMENT.AUTHORIZATION.CREATED",
+        "PAYMENT.AUTHORIZATION.VOIDED",
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.DECLINED",
+        "PAYMENT.CAPTURE.DENIED",
+        "PAYMENT.CAPTURE.PENDING",
+        "PAYMENT.CAPTURE.REFUNDED",
+        "PAYMENT.CAPTURE.REVERSED"
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "at": "2026-10-19T04:34:51.588Z",
+      "webhook": "9MY68414XY338293X",
+      "why": "S3: webhook U, the unsubscribed-event-type case file's webhook (subscribes to COMPLETED only, not REFUNDED)"
+    }
+  ]
+}

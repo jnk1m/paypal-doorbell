@@ -1,0 +1,43 @@
+{
+  "frozenAt": "2026-10-19T07:56:42.748Z",
+  "promptVersion": "cause-v1",
+  "systemPromptSha256": "ce8ca4d9a68130c6c42141c83b97d970444e8ebd83fe79c50dac64f41c3c4f5c",
+  "outputSchemaSha256": "8e888fc07013d104d99d552ef7a2b9fc94225578e751996d989264b23d2a0cec",
+  "modelId": "claude-sonnet-5-5",
+  "llmParams": {
+    "sdk": "ai",
+    "provider": "@ai-sdk/anthropic",
+    "model": "claude-sonnet-5-5",
+    "maxOutputTokens": {
+      "cause": 2000
+    },
+    "timeoutMs": 30000,
+    "maxRetries": 0,
+    "temperature": "unsupported (dropped by the SDK)",
+    "thinking": "provider default (not set by us; reasoning tokens count inside the 2,000 output cap)",
+    "effort": "provider default",
+    "structuredOutput": "Output.object(zod)"
+  },
+  "b1Md5": "294eed4b40c9f97fa6f90e2a03deed14",
+  "productSources": {
+    "lib/cause/categories.ts": "e8a464f0d1d2e1e2f9d0c36df59e532a77661e57a87e5371e45934cb5042b503",
+    "lib/cause/cause.ts": "b46ac1595587c38dd3937932fb007c4bc61711edb1f5effecbffbdd714b5272c",
+    "lib/cause/checks.ts": "2d0d8e7942bc4807cce444668094855db28f03a364b0966a5b7dcb4faa3e5b67",
+    "lib/cause/diff.ts": "c5501c2ec03731425fab2a583e914752cf07dda09d1bc8075a26977f7d43f1f8",
+    "lib/cause/hygiene.ts": "579f2f90a09d2444a313629786fa9eef4a959da84a09cb70781630932560aa51",
+    "lib/cause/input.ts": "6a43a2faca78df7318bfd4c5e4295ba83b89e7f9512a1a6e89cbacaa20ec6b57",
+    "lib/cause/lines.ts": "eef7cadad0870b2d991a29f4201bae14e837a2e13939e22d52d9862c7695d408",
+    "lib/cause/prompt.ts": "28098cc41cf6ad95aecaf83961d33c181200219937b0413b7c727f510e757343",
+    "lib/core/llm.ts": "a1208c5b362e7c8201b1a64c057c789393c26e1d8776925759cc54db385389cf",
+    "eval/harness/case.ts": "1597cbdacde2636597de35429ea874f6a6302725065b1590b3f35889cc63d244",
+    "eval/harness/freeze.ts": "b8ae1d56a726e1ef24cc23ca7341307ea2f46f4c4258ec001eeedeaf4d294d1a",
+    "eval/harness/run.ts": "70382241fe80ee3c9a569ff67ff35ce84ec33b6bf827f9950d3b6ffe21417c82",
+    "eval/harness/score.ts": "95b9fd11c122b3a82b942a4d5a6a8d8e1966dd489816badb219c10f455b7d347",
+    "eval/harness/seal.ts": "ee6baf0815609e19af1b7d090161cd7b1ca6abfed1a5f5a3eeb7d0adc9999a6b",
+    "eval/harness/sets.ts": "d8cdaa3343fe591122d5be2f5f86ba92639c33b36f32a1b616a7ae09e569a2f2"
+  },
+  "packages": {
+    "ai": "7.0.143",
+    "@ai-sdk/anthropic": "4.0.82"
+  }
+}

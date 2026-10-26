@@ -1,0 +1,15 @@
+{
+  "category": "WORK_AFTER_ACK",
+  "file": "src/payments/paypal-webhook.js",
+  "lines": [
+    "jobQueue.push(() => applyEvent(event).catch((err) => logger.error({ err, eventId: event.id }, \"paypal webhook handler failed\")));",
+    "res.sendStatus(200);"
+  ],
+  "altLines": [
+    "await applyEvent(event);",
+    "import { jobQueue } from \"../jobs/memory-queue.js\";"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "express"
+}

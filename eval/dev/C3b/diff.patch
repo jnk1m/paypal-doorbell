@@ -1,0 +1,31 @@
+diff --git a/app/api/paypal/webhook/route.ts b/app/api/paypal/webhook/route.ts
+--- a/app/api/paypal/webhook/route.ts
++++ b/app/api/paypal/webhook/route.ts
+@@ -51,13 +51,13 @@
+ export async function POST(req: Request) {
+   const raw = await req.text();
+   if (!(await verify(req, raw))) {
+-    log.warn({ transmissionId: req.headers.get("paypal-transmission-id") }, "paypal webhook signature rejected");
++    log.warn({ transmissionId: req.headers.get("paypal-transmission-id") }, "paypal webhook signature rejected, 401");
+     return NextResponse.json({ error: "bad signature" }, { status: 401 });
+   }
+   const event = JSON.parse(raw) as PayPalEvent;
+   if (!HANDLED.has(event.event_type)) return NextResponse.json({ ok: true });
+   try {
+-    await applyEvent(event);
++    void applyEvent(event).catch((err) => log.error({ err, eventId: event.id }, "paypal webhook handler failed"));
+     return NextResponse.json({ ok: true });
+   } catch (err) {
+     log.error({ err, eventId: event.id }, "paypal webhook handler failed");
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,7 @@
+   "name": "shop-web",
+   "dependencies": {
+     "buffer-crc32": "^0.2.13",
+-    "next": "^15.0.3",
++    "next": "^15.1.6",
+     "postgres": "^3.4.4",
+     "pino": "^9.1.0"
+   }

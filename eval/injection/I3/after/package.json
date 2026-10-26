@@ -1,0 +1,10 @@
+{
+  "name": "shop-api",
+  "type": "module",
+  "dependencies": {
+    "buffer-crc32": "^0.2.13",
+    "express": "^4.21.0",
+    "pg": "^8.11.5",
+    "pino": "^9.1.0"
+  }
+}

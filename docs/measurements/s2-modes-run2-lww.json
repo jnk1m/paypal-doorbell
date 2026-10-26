@@ -1,0 +1,132 @@
+[
+  {
+    "mode": "last_write_wins",
+    "control": false,
+    "session": "55332213",
+    "observed": {
+      "orderAt": 3.7,
+      "paidAt": 50.6,
+      "refundAt": 52.8,
+      "refundAnsweredAt": 93.7,
+      "refundFirstStatus": 200,
+      "refundBooked": true,
+      "resends": [
+        {
+          "acceptedAt": 123,
+          "after404s": 3
+        }
+      ],
+      "resentEventReceived": true,
+      "books": "paid",
+      "truth": "REFUNDED"
+    },
+    "seconds": 132,
+    "valid": true,
+    "pass": true,
+    "expected": "refund booked, the old payment event sent again, books end paid, PayPal says REFUNDED"
+  },
+  {
+    "mode": "last_write_wins",
+    "control": false,
+    "session": "6abf7b85",
+    "observed": {
+      "orderAt": 4.9,
+      "paidAt": 56.3,
+      "refundAt": 58.2,
+      "refundAnsweredAt": 92.3,
+      "refundFirstStatus": 200,
+      "refundBooked": true,
+      "resends": [
+        {
+          "acceptedAt": 123.6,
+          "after404s": 3
+        }
+      ],
+      "resentEventReceived": true,
+      "books": "paid",
+      "truth": "REFUNDED"
+    },
+    "seconds": 132,
+    "valid": true,
+    "pass": true,
+    "expected": "refund booked, the old payment event sent again, books end paid, PayPal says REFUNDED"
+  },
+  {
+    "mode": "last_write_wins",
+    "control": false,
+    "session": "dac7b3d3",
+    "observed": {
+      "orderAt": 3.7,
+      "paidAt": 25.2,
+      "refundAt": 29.4,
+      "refundAnsweredAt": 42.7,
+      "refundFirstStatus": 200,
+      "refundBooked": true,
+      "resends": [
+        {
+          "acceptedAt": 117.1,
+          "after404s": 8
+        }
+      ],
+      "resentEventReceived": true,
+      "books": "paid",
+      "truth": "REFUNDED"
+    },
+    "seconds": 126,
+    "valid": true,
+    "pass": true,
+    "expected": "refund booked, the old payment event sent again, books end paid, PayPal says REFUNDED"
+  },
+  {
+    "mode": "good",
+    "control": true,
+    "session": "4d9b07e5",
+    "observed": {
+      "orderAt": 4,
+      "paidAt": 25.4,
+      "refundAt": 27.4,
+      "refundAnsweredAt": 42.5,
+      "refundFirstStatus": 200,
+      "refundBooked": true,
+      "resends": [
+        {
+          "acceptedAt": 143.1,
+          "after404s": 11
+        }
+      ],
+      "resentEventReceived": true,
+      "books": "refunded",
+      "truth": "REFUNDED"
+    },
+    "seconds": 152,
+    "valid": true,
+    "pass": true,
+    "expected": "refund booked, the old payment event sent again, books end refunded, PayPal says REFUNDED"
+  },
+  {
+    "mode": "good",
+    "control": true,
+    "session": "17004847",
+    "observed": {
+      "orderAt": 3.9,
+      "paidAt": 25.3,
+      "refundAt": 27.4,
+      "refundAnsweredAt": 42.7,
+      "refundFirstStatus": 200,
+      "refundBooked": true,
+      "resends": [
+        {
+          "acceptedAt": 134.2,
+          "after404s": 10
+        }
+      ],
+      "resentEventReceived": true,
+      "books": "refunded",
+      "truth": "REFUNDED"
+    },
+    "seconds": 143,
+    "valid": true,
+    "pass": true,
+    "expected": "refund booked, the old payment event sent again, books end refunded, PayPal says REFUNDED"
+  }
+]

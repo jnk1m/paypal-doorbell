@@ -1,0 +1,10 @@
+{
+  "category": "OTHER_CODE_CHANGE",
+  "file": "db/migrations/0012_rename_capture_column.sql",
+  "lines": [
+    "ALTER TABLE orders RENAME COLUMN pp_capture_id TO paypal_capture_id;"
+  ],
+  "hard": false,
+  "tail": true,
+  "stack": "express"
+}

@@ -1,0 +1,2012 @@
+{
+ "id": "signature_rejected",
+ "title": "Signature rejected, 401 ×3",
+ "plantedMode": "bad_body",
+ "capturedAt": 1792399180000,
+ "steps": [
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792399520000,
+   "step": {
+    "index": 1,
+    "of": 3,
+    "title": "Doorbell finds 2 gaps"
+   },
+   "session": {
+    "session": {
+     "id": "sample-session-3",
+     "mode": "bad_body",
+     "planted": true,
+     "plantedLabel": "planted by us",
+     "file": "handlers/bad-body.ts",
+     "at": 1792399180000
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "SAMPLE_ORD_0001",
+      "captureId": "SAMPLE_CAP_0001",
+      "invoiceId": "SAMPLE-INV-1",
+      "at": 1792399180000,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-S3-PAY-1",
+       "at": 1792399191000
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0001",
+        "eid": "WH-S3-PAY-1",
+        "heard": {
+         "at": 1792399191000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-1a",
+          "attempt": "SAMPLE-TID-1a-1792399191000",
+          "receivedAt": 1792399191000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399191180
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "SAMPLE_ORD_0002",
+      "captureId": "SAMPLE_CAP_0002",
+      "invoiceId": "SAMPLE-INV-2",
+      "at": 1792399205000,
+      "refundAt": 1792399323000,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-S3-PAY-2",
+       "at": 1792399216000
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0002",
+        "eid": "WH-S3-PAY-2",
+        "heard": {
+         "at": 1792399216000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-2a",
+          "attempt": "SAMPLE-TID-2a-1792399216000",
+          "receivedAt": 1792399216000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399216180
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_2",
+        "eid": "WH-S3-REF-2",
+        "heard": {
+         "at": 1792399329000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399329000",
+          "receivedAt": 1792399329000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399329120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399363000",
+          "receivedAt": 1792399363000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399363120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399489000",
+          "receivedAt": 1792399489000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399489120
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "colombia-250",
+      "itemName": "Colombia Huila, 250 g",
+      "amount": "16.50",
+      "orderId": "SAMPLE_ORD_0003",
+      "captureId": "SAMPLE_CAP_0003",
+      "invoiceId": "SAMPLE-INV-3",
+      "at": 1792399220000,
+      "refundAt": 1792399329000,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "16.50",
+       "eid": "WH-S3-PAY-3",
+       "at": 1792399231000
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0003",
+        "eid": "WH-S3-PAY-3",
+        "heard": {
+         "at": 1792399231000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-3a",
+          "attempt": "SAMPLE-TID-3a-1792399231000",
+          "receivedAt": 1792399231000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399231180
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_3",
+        "eid": "WH-S3-REF-3",
+        "heard": {
+         "at": 1792399335000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399335000",
+          "receivedAt": 1792399335000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399335120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399369000",
+          "receivedAt": 1792399369000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399369120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399495000",
+          "receivedAt": 1792399495000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399495120
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "item": "ethiopia-250",
+      "itemName": "Ethiopia Yirgacheffe, 250 g",
+      "amount": "18.00",
+      "orderId": "SAMPLE_ORD_0004",
+      "captureId": "SAMPLE_CAP_0004",
+      "invoiceId": "SAMPLE-INV-4",
+      "at": 1792399195000,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "18.00",
+       "eid": "WH-S3-PAY-4",
+       "at": 1792399206000
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0004",
+        "eid": "WH-S3-PAY-4",
+        "heard": {
+         "at": 1792399206000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-4a",
+          "attempt": "SAMPLE-TID-4a-1792399206000",
+          "receivedAt": 1792399206000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399206180
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792399520000
+   },
+   "scan": {
+    "session": {
+     "id": "sample-session-3",
+     "mode": "bad_body"
+    },
+    "at": 1792399520000,
+    "durationMs": 2900,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "SAMPLE_CAP_0001",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-S3-PAY-1",
+       "at": 1792399191000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0001",
+        "eid": "WH-S3-PAY-1",
+        "d": {
+         "at": 1792399191000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-1a",
+          "attempt": "SAMPLE-TID-1a-1792399191000",
+          "receivedAt": 1792399191000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399191180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "SAMPLE_CAP_0002",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-S3-PAY-2",
+       "at": 1792399216000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0002",
+        "eid": "WH-S3-PAY-2",
+        "d": {
+         "at": 1792399216000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-2a",
+          "attempt": "SAMPLE-TID-2a-1792399216000",
+          "receivedAt": 1792399216000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399216180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_2",
+        "eid": "WH-S3-REF-2",
+        "d": {
+         "at": 1792399329000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399329000",
+          "receivedAt": 1792399329000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399329120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399363000",
+          "receivedAt": 1792399363000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399363120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399489000",
+          "receivedAt": 1792399489000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399489120
+         }
+        ],
+        "listed": true,
+        "finding": {
+         "cls": "HANDLER_REJECTING",
+         "final": true,
+         "why": "The shop answered 401, 401, 401 (3 attempts, none 2xx)."
+        },
+        "ring": {
+         "state": "ready",
+         "label": "Ring again"
+        },
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "SAMPLE_CAP_0003",
+      "itemName": "Colombia Huila, 250 g",
+      "amount": "16.50",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "16.50",
+       "eid": "WH-S3-PAY-3",
+       "at": 1792399231000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0003",
+        "eid": "WH-S3-PAY-3",
+        "d": {
+         "at": 1792399231000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-3a",
+          "attempt": "SAMPLE-TID-3a-1792399231000",
+          "receivedAt": 1792399231000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399231180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_3",
+        "eid": "WH-S3-REF-3",
+        "d": {
+         "at": 1792399335000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399335000",
+          "receivedAt": 1792399335000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399335120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399369000",
+          "receivedAt": 1792399369000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399369120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399495000",
+          "receivedAt": 1792399495000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399495120
+         }
+        ],
+        "listed": true,
+        "finding": {
+         "cls": "HANDLER_REJECTING",
+         "final": true,
+         "why": "The shop answered 401, 401, 401 (3 attempts, none 2xx)."
+        },
+        "ring": {
+         "state": "ready",
+         "label": "Ring again"
+        },
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "captureId": "SAMPLE_CAP_0004",
+      "itemName": "Ethiopia Yirgacheffe, 250 g",
+      "amount": "18.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "18.00",
+       "eid": "WH-S3-PAY-4",
+       "at": 1792399206000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0004",
+        "eid": "WH-S3-PAY-4",
+        "d": {
+         "at": 1792399206000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-4a",
+          "attempt": "SAMPLE-TID-4a-1792399206000",
+          "receivedAt": 1792399206000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399206180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 4,
+     "tied": 2,
+     "gaps": 2,
+     "unverified": 0,
+     "byClass": {
+      "HANDLER_REJECTING": 2
+     }
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 6
+    },
+    "calls": {
+     "captures": 4,
+     "refunds": 2,
+     "retries": 0
+    },
+    "resendsUsed": 0,
+    "reverify": null
+   },
+   "causes": [],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "2 gaps · $64.50 across 2 refunds not in books",
+    "header": "Checked 4 of 4 captures (100%) · 0 too new to verify · $64.50 across 2 refunds not in books.",
+    "numbers": {
+     "rows": 4,
+     "checked": 4,
+     "tied": 2,
+     "gaps": 2,
+     "unverified": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "64.50",
+     "refundsNotInBooks": 2,
+     "byClass": {
+      "HANDLER_REJECTING": 2
+     }
+    },
+    "limits": [
+     "Events found nowhere (PayPal making them cannot be proven): 0.",
+     "Rows inside the events list lag (80 to 163 s), where a missing event cannot be claimed yet: 0.",
+     "Re-queries that failed: 0."
+    ],
+    "footnote": "Approved but never captured orders cannot be counted (PayPal has no list for them). An event that is not in PayPal's events list cannot be proven to have existed. Transaction Search runs 97 to 128 minutes late, so the last 2 hours were not used. This certificate is not signed.",
+    "ownerView": [
+     "We looked at 4 sales in the Maple Mug books and asked PayPal about each one.",
+     "2 sales agree with PayPal's own answer.",
+     "2 refunds, $64.50 in total, are not in your books. PayPal says the customer was refunded; your books still say they paid.",
+     "What we could not check: orders that were approved but never charged cannot be counted, and the last 2 hours of PayPal's own history were not used."
+    ],
+    "scopeAt": 1792399520000,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792399495000,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 25 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792399555000,
+   "step": {
+    "index": 2,
+    "of": 3,
+    "title": "The cause, checked by replay"
+   },
+   "session": {
+    "session": {
+     "id": "sample-session-3",
+     "mode": "bad_body",
+     "planted": true,
+     "plantedLabel": "planted by us",
+     "file": "handlers/bad-body.ts",
+     "at": 1792399180000
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "SAMPLE_ORD_0001",
+      "captureId": "SAMPLE_CAP_0001",
+      "invoiceId": "SAMPLE-INV-1",
+      "at": 1792399180000,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-S3-PAY-1",
+       "at": 1792399191000
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0001",
+        "eid": "WH-S3-PAY-1",
+        "heard": {
+         "at": 1792399191000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-1a",
+          "attempt": "SAMPLE-TID-1a-1792399191000",
+          "receivedAt": 1792399191000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399191180
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "SAMPLE_ORD_0002",
+      "captureId": "SAMPLE_CAP_0002",
+      "invoiceId": "SAMPLE-INV-2",
+      "at": 1792399205000,
+      "refundAt": 1792399323000,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-S3-PAY-2",
+       "at": 1792399216000
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0002",
+        "eid": "WH-S3-PAY-2",
+        "heard": {
+         "at": 1792399216000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-2a",
+          "attempt": "SAMPLE-TID-2a-1792399216000",
+          "receivedAt": 1792399216000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399216180
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_2",
+        "eid": "WH-S3-REF-2",
+        "heard": {
+         "at": 1792399329000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399329000",
+          "receivedAt": 1792399329000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399329120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399363000",
+          "receivedAt": 1792399363000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399363120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399489000",
+          "receivedAt": 1792399489000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399489120
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "colombia-250",
+      "itemName": "Colombia Huila, 250 g",
+      "amount": "16.50",
+      "orderId": "SAMPLE_ORD_0003",
+      "captureId": "SAMPLE_CAP_0003",
+      "invoiceId": "SAMPLE-INV-3",
+      "at": 1792399220000,
+      "refundAt": 1792399329000,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "16.50",
+       "eid": "WH-S3-PAY-3",
+       "at": 1792399231000
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0003",
+        "eid": "WH-S3-PAY-3",
+        "heard": {
+         "at": 1792399231000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-3a",
+          "attempt": "SAMPLE-TID-3a-1792399231000",
+          "receivedAt": 1792399231000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399231180
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_3",
+        "eid": "WH-S3-REF-3",
+        "heard": {
+         "at": 1792399335000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399335000",
+          "receivedAt": 1792399335000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399335120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399369000",
+          "receivedAt": 1792399369000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399369120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399495000",
+          "receivedAt": 1792399495000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399495120
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "item": "ethiopia-250",
+      "itemName": "Ethiopia Yirgacheffe, 250 g",
+      "amount": "18.00",
+      "orderId": "SAMPLE_ORD_0004",
+      "captureId": "SAMPLE_CAP_0004",
+      "invoiceId": "SAMPLE-INV-4",
+      "at": 1792399195000,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "18.00",
+       "eid": "WH-S3-PAY-4",
+       "at": 1792399206000
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0004",
+        "eid": "WH-S3-PAY-4",
+        "heard": {
+         "at": 1792399206000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-4a",
+          "attempt": "SAMPLE-TID-4a-1792399206000",
+          "receivedAt": 1792399206000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399206180
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792399555000
+   },
+   "scan": {
+    "session": {
+     "id": "sample-session-3",
+     "mode": "bad_body"
+    },
+    "at": 1792399555000,
+    "durationMs": 2900,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "SAMPLE_CAP_0001",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-S3-PAY-1",
+       "at": 1792399191000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0001",
+        "eid": "WH-S3-PAY-1",
+        "d": {
+         "at": 1792399191000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-1a",
+          "attempt": "SAMPLE-TID-1a-1792399191000",
+          "receivedAt": 1792399191000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399191180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "SAMPLE_CAP_0002",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-S3-PAY-2",
+       "at": 1792399216000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0002",
+        "eid": "WH-S3-PAY-2",
+        "d": {
+         "at": 1792399216000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-2a",
+          "attempt": "SAMPLE-TID-2a-1792399216000",
+          "receivedAt": 1792399216000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399216180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_2",
+        "eid": "WH-S3-REF-2",
+        "d": {
+         "at": 1792399329000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399329000",
+          "receivedAt": 1792399329000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399329120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399363000",
+          "receivedAt": 1792399363000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399363120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399489000",
+          "receivedAt": 1792399489000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399489120
+         }
+        ],
+        "listed": true,
+        "finding": {
+         "cls": "HANDLER_REJECTING",
+         "final": true,
+         "why": "The shop answered 401, 401, 401 (3 attempts, none 2xx)."
+        },
+        "ring": {
+         "state": "ready",
+         "label": "Ring again"
+        },
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "SAMPLE_CAP_0003",
+      "itemName": "Colombia Huila, 250 g",
+      "amount": "16.50",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "16.50",
+       "eid": "WH-S3-PAY-3",
+       "at": 1792399231000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0003",
+        "eid": "WH-S3-PAY-3",
+        "d": {
+         "at": 1792399231000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-3a",
+          "attempt": "SAMPLE-TID-3a-1792399231000",
+          "receivedAt": 1792399231000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399231180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_3",
+        "eid": "WH-S3-REF-3",
+        "d": {
+         "at": 1792399335000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399335000",
+          "receivedAt": 1792399335000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399335120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399369000",
+          "receivedAt": 1792399369000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399369120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399495000",
+          "receivedAt": 1792399495000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399495120
+         }
+        ],
+        "listed": true,
+        "finding": {
+         "cls": "HANDLER_REJECTING",
+         "final": true,
+         "why": "The shop answered 401, 401, 401 (3 attempts, none 2xx)."
+        },
+        "ring": {
+         "state": "ready",
+         "label": "Ring again"
+        },
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "captureId": "SAMPLE_CAP_0004",
+      "itemName": "Ethiopia Yirgacheffe, 250 g",
+      "amount": "18.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "18.00",
+       "eid": "WH-S3-PAY-4",
+       "at": 1792399206000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0004",
+        "eid": "WH-S3-PAY-4",
+        "d": {
+         "at": 1792399206000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-4a",
+          "attempt": "SAMPLE-TID-4a-1792399206000",
+          "receivedAt": 1792399206000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399206180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 4,
+     "tied": 2,
+     "gaps": 2,
+     "unverified": 0,
+     "byClass": {
+      "HANDLER_REJECTING": 2
+     }
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 6
+    },
+    "calls": {
+     "captures": 4,
+     "refunds": 2,
+     "retries": 0
+    },
+    "resendsUsed": 0,
+    "reverify": null
+   },
+   "causes": [
+    {
+     "captureId": "SAMPLE_CAP_0002",
+     "mode": "bad_body",
+     "cause": {
+      "promptVersion": "cause-v1",
+      "requestHash": "baebb6a3336cdb0947efa9cc4ea66507210ea83901e63a3611d4cec96f133d3d",
+      "status": "proposed",
+      "category": "RAW_BODY_ALTERED",
+      "file": "handlers/bad-body.ts",
+      "hunkId": "H1",
+      "lines": [
+       {
+        "id": "L2",
+        "file": "handlers/bad-body.ts",
+        "shownFile": "handlers/bad-body.ts",
+        "kind": "add",
+        "no": 8,
+        "text": "  const event = canonical(JSON.parse(ctx.rawBody));",
+        "shown": "  const event = canonical(JSON.parse(ctx.rawBody));"
+       }
+      ],
+      "explanation": "A changed line parses or rewrites the request body before the signature is checked, so the bytes that are verified are not the bytes PayPal signed.",
+      "source": "recording"
+     },
+     "replay": {
+      "mode": "bad_body",
+      "ranAt": 1792394144254,
+      "events": {
+       "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+       ],
+       "ids": [
+        "WH-4D669182B5385532J-21K655575T999184M",
+        "WH-2G256235BF806141B-6VL338609Y7291831"
+       ]
+      },
+      "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+      "verdict": "CONFIRMED BY REPLAY",
+      "basis": "recorded",
+      "good": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": "refunded"
+      },
+      "bad": {
+       "statuses": [
+        401,
+        401
+       ],
+       "book": null
+      }
+     },
+     "confirmation": {
+      "confirmed": true,
+      "chip": "CONFIRMED BY REPLAY · recorded"
+     }
+    },
+    {
+     "captureId": "SAMPLE_CAP_0003",
+     "mode": "bad_body",
+     "cause": {
+      "promptVersion": "cause-v1",
+      "requestHash": "baebb6a3336cdb0947efa9cc4ea66507210ea83901e63a3611d4cec96f133d3d",
+      "status": "proposed",
+      "category": "RAW_BODY_ALTERED",
+      "file": "handlers/bad-body.ts",
+      "hunkId": "H1",
+      "lines": [
+       {
+        "id": "L2",
+        "file": "handlers/bad-body.ts",
+        "shownFile": "handlers/bad-body.ts",
+        "kind": "add",
+        "no": 8,
+        "text": "  const event = canonical(JSON.parse(ctx.rawBody));",
+        "shown": "  const event = canonical(JSON.parse(ctx.rawBody));"
+       }
+      ],
+      "explanation": "A changed line parses or rewrites the request body before the signature is checked, so the bytes that are verified are not the bytes PayPal signed.",
+      "source": "recording"
+     },
+     "replay": {
+      "mode": "bad_body",
+      "ranAt": 1792394144254,
+      "events": {
+       "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+       ],
+       "ids": [
+        "WH-4D669182B5385532J-21K655575T999184M",
+        "WH-2G256235BF806141B-6VL338609Y7291831"
+       ]
+      },
+      "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+      "verdict": "CONFIRMED BY REPLAY",
+      "basis": "recorded",
+      "good": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": "refunded"
+      },
+      "bad": {
+       "statuses": [
+        401,
+        401
+       ],
+       "book": null
+      }
+     },
+     "confirmation": {
+      "confirmed": true,
+      "chip": "CONFIRMED BY REPLAY · recorded"
+     }
+    }
+   ],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "2 gaps · $64.50 across 2 refunds not in books",
+    "header": "Checked 4 of 4 captures (100%) · 0 too new to verify · $64.50 across 2 refunds not in books.",
+    "numbers": {
+     "rows": 4,
+     "checked": 4,
+     "tied": 2,
+     "gaps": 2,
+     "unverified": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "64.50",
+     "refundsNotInBooks": 2,
+     "byClass": {
+      "HANDLER_REJECTING": 2
+     }
+    },
+    "limits": [
+     "Events found nowhere (PayPal making them cannot be proven): 0.",
+     "Rows inside the events list lag (80 to 163 s), where a missing event cannot be claimed yet: 0.",
+     "Re-queries that failed: 0."
+    ],
+    "footnote": "Approved but never captured orders cannot be counted (PayPal has no list for them). An event that is not in PayPal's events list cannot be proven to have existed. Transaction Search runs 97 to 128 minutes late, so the last 2 hours were not used. This certificate is not signed.",
+    "ownerView": [
+     "We looked at 4 sales in the Maple Mug books and asked PayPal about each one.",
+     "2 sales agree with PayPal's own answer.",
+     "2 refunds, $64.50 in total, are not in your books. PayPal says the customer was refunded; your books still say they paid.",
+     "What we could not check: orders that were approved but never charged cannot be counted, and the last 2 hours of PayPal's own history were not used."
+    ],
+    "scopeAt": 1792399555000,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792399495000,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 60 s ago · events list shows 0 the witness missed"
+   }
+  },
+  {
+   "mode": "RECORDED RUN",
+   "recordedAt": 1792399780000,
+   "step": {
+    "index": 3,
+    "of": 3,
+    "title": "Fix it, ring again, read the certificate"
+   },
+   "session": {
+    "session": {
+     "id": "sample-session-3",
+     "mode": "good",
+     "planted": false,
+     "plantedLabel": "planted by us",
+     "file": "handlers/good.ts",
+     "at": 1792399180000
+    },
+    "orders": [
+     {
+      "n": 1,
+      "item": "house-250",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "orderId": "SAMPLE_ORD_0001",
+      "captureId": "SAMPLE_CAP_0001",
+      "invoiceId": "SAMPLE-INV-1",
+      "at": 1792399180000,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-S3-PAY-1",
+       "at": 1792399191000
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0001",
+        "eid": "WH-S3-PAY-1",
+        "heard": {
+         "at": 1792399191000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-1a",
+          "attempt": "SAMPLE-TID-1a-1792399191000",
+          "receivedAt": 1792399191000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399191180
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "item": "gift-set",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "orderId": "SAMPLE_ORD_0002",
+      "captureId": "SAMPLE_CAP_0002",
+      "invoiceId": "SAMPLE-INV-2",
+      "at": 1792399205000,
+      "refundAt": 1792399323000,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-S3-PAY-2",
+       "at": 1792399216000
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0002",
+        "eid": "WH-S3-PAY-2",
+        "heard": {
+         "at": 1792399216000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-2a",
+          "attempt": "SAMPLE-TID-2a-1792399216000",
+          "receivedAt": 1792399216000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399216180
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_2",
+        "eid": "WH-S3-REF-2",
+        "heard": {
+         "at": 1792399329000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399329000",
+          "receivedAt": 1792399329000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399329120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399363000",
+          "receivedAt": 1792399363000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399363120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399489000",
+          "receivedAt": 1792399489000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399489120
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "item": "colombia-250",
+      "itemName": "Colombia Huila, 250 g",
+      "amount": "16.50",
+      "orderId": "SAMPLE_ORD_0003",
+      "captureId": "SAMPLE_CAP_0003",
+      "invoiceId": "SAMPLE-INV-3",
+      "at": 1792399220000,
+      "refundAt": 1792399329000,
+      "paypal": "REFUNDED",
+      "book": {
+       "state": "paid",
+       "amount": "16.50",
+       "eid": "WH-S3-PAY-3",
+       "at": 1792399231000
+      },
+      "books": "differ",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0003",
+        "eid": "WH-S3-PAY-3",
+        "heard": {
+         "at": 1792399231000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-3a",
+          "attempt": "SAMPLE-TID-3a-1792399231000",
+          "receivedAt": 1792399231000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399231180
+         }
+        ],
+        "noted": true
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_3",
+        "eid": "WH-S3-REF-3",
+        "heard": {
+         "at": 1792399335000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399335000",
+          "receivedAt": 1792399335000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399335120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399369000",
+          "receivedAt": 1792399369000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399369120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399495000",
+          "receivedAt": 1792399495000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399495120
+         }
+        ],
+        "noted": true
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "item": "ethiopia-250",
+      "itemName": "Ethiopia Yirgacheffe, 250 g",
+      "amount": "18.00",
+      "orderId": "SAMPLE_ORD_0004",
+      "captureId": "SAMPLE_CAP_0004",
+      "invoiceId": "SAMPLE-INV-4",
+      "at": 1792399195000,
+      "refundAt": null,
+      "paypal": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "18.00",
+       "eid": "WH-S3-PAY-4",
+       "at": 1792399206000
+      },
+      "books": "agree",
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0004",
+        "eid": "WH-S3-PAY-4",
+        "heard": {
+         "at": 1792399206000,
+         "slot": "D"
+        },
+        "received": [
+         {
+          "tid": "SAMPLE-TID-4a",
+          "attempt": "SAMPLE-TID-4a-1792399206000",
+          "receivedAt": 1792399206000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399206180
+         }
+        ],
+        "noted": true
+       }
+      ]
+     }
+    ],
+    "now": 1792399780000
+   },
+   "scan": {
+    "session": {
+     "id": "sample-session-3",
+     "mode": "good"
+    },
+    "at": 1792399780000,
+    "durationMs": 2900,
+    "deadlineHit": false,
+    "rows": [
+     {
+      "n": 1,
+      "captureId": "SAMPLE_CAP_0001",
+      "itemName": "House blend, 250 g",
+      "amount": "14.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "14.00",
+       "eid": "WH-S3-PAY-1",
+       "at": 1792399191000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0001",
+        "eid": "WH-S3-PAY-1",
+        "d": {
+         "at": 1792399191000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-1a",
+          "attempt": "SAMPLE-TID-1a-1792399191000",
+          "receivedAt": 1792399191000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399191180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     },
+     {
+      "n": 2,
+      "captureId": "SAMPLE_CAP_0002",
+      "itemName": "Gift set: three coffees and a mug",
+      "amount": "48.00",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "48.00",
+       "eid": "WH-S3-PAY-2",
+       "at": 1792399216000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0002",
+        "eid": "WH-S3-PAY-2",
+        "d": {
+         "at": 1792399216000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-2a",
+          "attempt": "SAMPLE-TID-2a-1792399216000",
+          "receivedAt": 1792399216000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399216180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_2",
+        "eid": "WH-S3-REF-2",
+        "d": {
+         "at": 1792399329000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399329000",
+          "receivedAt": 1792399329000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399329120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399363000",
+          "receivedAt": 1792399363000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399363120
+         },
+         {
+          "tid": "SAMPLE-TID-2r",
+          "attempt": "SAMPLE-TID-2r-1792399489000",
+          "receivedAt": 1792399489000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399489120
+         }
+        ],
+        "listed": true,
+        "finding": {
+         "cls": "HANDLER_REJECTING",
+         "final": true,
+         "why": "The shop answered 401, 401, 401 (3 attempts, none 2xx)."
+        },
+        "ring": {
+         "state": "ready",
+         "label": "Ring again"
+        },
+        "heal": {
+         "state": "lost",
+         "sends": 3
+        }
+       }
+      ]
+     },
+     {
+      "n": 3,
+      "captureId": "SAMPLE_CAP_0003",
+      "itemName": "Colombia Huila, 250 g",
+      "amount": "16.50",
+      "status": "GAP",
+      "truth": "refunded",
+      "paypalStatus": "REFUNDED",
+      "refundStatus": "COMPLETED",
+      "book": {
+       "state": "paid",
+       "amount": "16.50",
+       "eid": "WH-S3-PAY-3",
+       "at": 1792399231000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0003",
+        "eid": "WH-S3-PAY-3",
+        "d": {
+         "at": 1792399231000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-3a",
+          "attempt": "SAMPLE-TID-3a-1792399231000",
+          "receivedAt": 1792399231000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399231180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       },
+       {
+        "kind": "refunded",
+        "resourceId": "SAMPLE_REF_3",
+        "eid": "WH-S3-REF-3",
+        "d": {
+         "at": 1792399335000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399335000",
+          "receivedAt": 1792399335000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399335120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399369000",
+          "receivedAt": 1792399369000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399369120
+         },
+         {
+          "tid": "SAMPLE-TID-3r",
+          "attempt": "SAMPLE-TID-3r-1792399495000",
+          "receivedAt": 1792399495000,
+          "state": "responded",
+          "status": 401,
+          "respondedAt": 1792399495120
+         }
+        ],
+        "listed": true,
+        "finding": {
+         "cls": "HANDLER_REJECTING",
+         "final": true,
+         "why": "The shop answered 401, 401, 401 (3 attempts, none 2xx)."
+        },
+        "ring": {
+         "state": "in_progress",
+         "label": "Resent, waiting for it to arrive"
+        },
+        "heal": {
+         "state": "sent",
+         "sends": 1
+        }
+       }
+      ]
+     },
+     {
+      "n": 4,
+      "captureId": "SAMPLE_CAP_0004",
+      "itemName": "Ethiopia Yirgacheffe, 250 g",
+      "amount": "18.00",
+      "status": "TIED",
+      "truth": "paid",
+      "paypalStatus": "COMPLETED",
+      "refundStatus": null,
+      "book": {
+       "state": "paid",
+       "amount": "18.00",
+       "eid": "WH-S3-PAY-4",
+       "at": 1792399206000
+      },
+      "events": [
+       {
+        "kind": "completed",
+        "resourceId": "SAMPLE_CAP_0004",
+        "eid": "WH-S3-PAY-4",
+        "d": {
+         "at": 1792399206000,
+         "slot": "D"
+        },
+        "s": [
+         {
+          "tid": "SAMPLE-TID-4a",
+          "attempt": "SAMPLE-TID-4a-1792399206000",
+          "receivedAt": 1792399206000,
+          "state": "responded",
+          "status": 200,
+          "respondedAt": 1792399206180
+         }
+        ],
+        "listed": true,
+        "finding": null,
+        "ring": null,
+        "heal": null
+       }
+      ]
+     }
+    ],
+    "summary": {
+     "rows": 4,
+     "tied": 2,
+     "gaps": 2,
+     "unverified": 0,
+     "byClass": {
+      "HANDLER_REJECTING": 2
+     }
+    },
+    "listing": {
+     "asked": true,
+     "read": true,
+     "events": 6
+    },
+    "calls": {
+     "captures": 4,
+     "refunds": 2,
+     "retries": 0
+    },
+    "resendsUsed": 4,
+    "reverify": null
+   },
+   "causes": [
+    {
+     "captureId": "SAMPLE_CAP_0002",
+     "mode": "bad_body",
+     "cause": {
+      "promptVersion": "cause-v1",
+      "requestHash": "baebb6a3336cdb0947efa9cc4ea66507210ea83901e63a3611d4cec96f133d3d",
+      "status": "proposed",
+      "category": "RAW_BODY_ALTERED",
+      "file": "handlers/bad-body.ts",
+      "hunkId": "H1",
+      "lines": [
+       {
+        "id": "L2",
+        "file": "handlers/bad-body.ts",
+        "shownFile": "handlers/bad-body.ts",
+        "kind": "add",
+        "no": 8,
+        "text": "  const event = canonical(JSON.parse(ctx.rawBody));",
+        "shown": "  const event = canonical(JSON.parse(ctx.rawBody));"
+       }
+      ],
+      "explanation": "A changed line parses or rewrites the request body before the signature is checked, so the bytes that are verified are not the bytes PayPal signed.",
+      "source": "recording"
+     },
+     "replay": {
+      "mode": "bad_body",
+      "ranAt": 1792394144254,
+      "events": {
+       "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+       ],
+       "ids": [
+        "WH-4D669182B5385532J-21K655575T999184M",
+        "WH-2G256235BF806141B-6VL338609Y7291831"
+       ]
+      },
+      "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+      "verdict": "CONFIRMED BY REPLAY",
+      "basis": "recorded",
+      "good": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": "refunded"
+      },
+      "bad": {
+       "statuses": [
+        401,
+        401
+       ],
+       "book": null
+      }
+     },
+     "confirmation": {
+      "confirmed": true,
+      "chip": "CONFIRMED BY REPLAY · recorded"
+     }
+    },
+    {
+     "captureId": "SAMPLE_CAP_0003",
+     "mode": "bad_body",
+     "cause": {
+      "promptVersion": "cause-v1",
+      "requestHash": "baebb6a3336cdb0947efa9cc4ea66507210ea83901e63a3611d4cec96f133d3d",
+      "status": "proposed",
+      "category": "RAW_BODY_ALTERED",
+      "file": "handlers/bad-body.ts",
+      "hunkId": "H1",
+      "lines": [
+       {
+        "id": "L2",
+        "file": "handlers/bad-body.ts",
+        "shownFile": "handlers/bad-body.ts",
+        "kind": "add",
+        "no": 8,
+        "text": "  const event = canonical(JSON.parse(ctx.rawBody));",
+        "shown": "  const event = canonical(JSON.parse(ctx.rawBody));"
+       }
+      ],
+      "explanation": "A changed line parses or rewrites the request body before the signature is checked, so the bytes that are verified are not the bytes PayPal signed.",
+      "source": "recording"
+     },
+     "replay": {
+      "mode": "bad_body",
+      "ranAt": 1792394144254,
+      "events": {
+       "types": [
+        "PAYMENT.CAPTURE.COMPLETED",
+        "PAYMENT.CAPTURE.REFUNDED"
+       ],
+       "ids": [
+        "WH-4D669182B5385532J-21K655575T999184M",
+        "WH-2G256235BF806141B-6VL338609Y7291831"
+       ]
+      },
+      "expectation": "The good build answers 200 and books the events; the bad build answers 401 and books nothing.",
+      "verdict": "CONFIRMED BY REPLAY",
+      "basis": "recorded",
+      "good": {
+       "statuses": [
+        200,
+        200
+       ],
+       "book": "refunded"
+      },
+      "bad": {
+       "statuses": [
+        401,
+        401
+       ],
+       "book": null
+      }
+     },
+     "confirmation": {
+      "confirmed": true,
+      "chip": "CONFIRMED BY REPLAY · recorded"
+     }
+    }
+   ],
+   "certificate": {
+    "stamp": "red",
+    "stampText": "2 gaps · $64.50 across 2 refunds not in books",
+    "header": "Checked 4 of 4 captures (100%) · 0 too new to verify · $64.50 across 2 refunds not in books.",
+    "numbers": {
+     "rows": 4,
+     "checked": 4,
+     "tied": 2,
+     "gaps": 2,
+     "unverified": 0,
+     "coveragePct": 100,
+     "moneyNotInBooks": "64.50",
+     "refundsNotInBooks": 2,
+     "byClass": {
+      "HANDLER_REJECTING": 2
+     }
+    },
+    "limits": [
+     "Events found nowhere (PayPal making them cannot be proven): 0.",
+     "Rows inside the events list lag (80 to 163 s), where a missing event cannot be claimed yet: 0.",
+     "Re-queries that failed: 0."
+    ],
+    "footnote": "Approved but never captured orders cannot be counted (PayPal has no list for them). An event that is not in PayPal's events list cannot be proven to have existed. Transaction Search runs 97 to 128 minutes late, so the last 2 hours were not used. This certificate is not signed.",
+    "ownerView": [
+     "We looked at 4 sales in the Maple Mug books and asked PayPal about each one.",
+     "2 sales agree with PayPal's own answer.",
+     "2 refunds, $64.50 in total, are not in your books. PayPal says the customer was refunded; your books still say they paid.",
+     "What we could not check: orders that were approved but never charged cannot be counted, and the last 2 hours of PayPal's own history were not used."
+    ],
+    "scopeAt": 1792399780000,
+    "signed": false
+   },
+   "heartbeat": {
+    "lastDeliveryAt": 1792399732000,
+    "listedMissedByWitness": 0,
+    "state": "ok",
+    "text": "Witness: last delivery 48 s ago · events list shows 0 the witness missed"
+   }
+  }
+ ],
+ "paypalIds": []
+}

@@ -1,0 +1,27 @@
+# A canary for the hosted demo during judging: twice a day, three plain requests. GitHub mails the repository owner when a
+# scheduled run fails. It needs no key: the recorded pages and the guarded routes answer without one.
+name: canary
+on:
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: the recorded story answers 200 and carries the honesty bar
+        run: |
+          set -e
+          body=$(curl -sS --max-time 20 "https://paypal-doorbell.vercel.app/?s=refund_never_booked")
+          echo "$body" | grep -q "bugs are planted by us"
+      - name: the witness refuses an unsigned post with 401
+        run: |
+          set -e
+          code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 -X POST -H 'content-type: application/json' -d '{}' "https://paypal-doorbell.vercel.app/api/witness")
+          test "$code" = "401"
+      - name: the shop's API is up and closed without the judge token (403, not a 5xx or a timeout)
+        run: |
+          set -e
+          code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 "https://paypal-doorbell.vercel.app/api/shop/snapshot/causes")
+          test "$code" = "403"

@@ -1,0 +1,17 @@
+{
+  "category": "APP_OR_ENV_MISMATCH",
+  "file": "lib/paypal.ts",
+  "lines": [
+    "const ENV = process.env.PAYPAL_ENV ?? \"sandbox\";"
+  ],
+  "altFiles": [
+    "deploy/env.production.keys"
+  ],
+  "altLines": [
+    "const ENV = process.env.PAYPAL_ENV ?? \"live\";",
+    "PAYPAL_ENV"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "next"
+}

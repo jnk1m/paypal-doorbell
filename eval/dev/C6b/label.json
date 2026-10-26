@@ -1,0 +1,11 @@
+{
+  "category": "ENDPOINT_PATH_CHANGED",
+  "file": "app/api/payments/paypal/webhook/route.ts",
+  "lines": [
+    "rename to app/api/payments/paypal/webhook/route.ts",
+    "rename from app/api/paypal/webhook/route.ts"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "next"
+}

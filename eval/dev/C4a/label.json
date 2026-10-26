@@ -1,0 +1,14 @@
+{
+  "category": "EVENT_TYPE_DROPPED",
+  "file": "src/payments/paypal-webhook.js",
+  "lines": [
+    "\"PAYMENT.CAPTURE.REFUNDED\",",
+    "case \"PAYMENT.CAPTURE.REFUNDED\":"
+  ],
+  "altLines": [
+    "await pool.query(\"UPDATE orders SET status = 'refunded' WHERE pp_capture_id = $1\", [captureIdOf(event)]);"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "express"
+}

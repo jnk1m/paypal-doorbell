@@ -1,0 +1,67 @@
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -3,7 +3,7 @@
+   "type": "module",
+   "dependencies": {
+     "buffer-crc32": "^0.2.13",
+-    "express": "^4.19.2",
++    "express": "^4.21.0",
+     "pg": "^8.11.5",
+     "pino": "^9.1.0"
+   }
+diff --git a/src/jobs/memory-queue.js b/src/jobs/memory-queue.js
+new file mode 100644
+--- /dev/null
++++ b/src/jobs/memory-queue.js
+@@ -0,0 +1,16 @@
++// Simple in-process job queue. Jobs run one at a time, in order. The queue lives in memory and is lost when the process exits.
++const jobs = [];
++let running = false;
++
++export const jobQueue = {
++  push(job) {
++    jobs.push(job);
++    if (!running) drain();
++  },
++};
++
++async function drain() {
++  running = true;
++  while (jobs.length) await jobs.shift()();
++  running = false;
++}
+diff --git a/src/payments/paypal-webhook.js b/src/payments/paypal-webhook.js
+--- a/src/payments/paypal-webhook.js
++++ b/src/payments/paypal-webhook.js
+@@ -5,6 +5,7 @@
+ import { logger } from "../logger.js";
+ import { config } from "../config.js";
+ import { fetchCert } from "./certs.js";
++import { jobQueue } from "../jobs/memory-queue.js";
+ 
+ const router = express.Router();
+ 
+@@ -52,18 +53,14 @@
+ router.post("/api/paypal/webhook", express.raw({ type: "application/json" }), async (req, res) => {
+   const raw = req.body;
+   if (!(await verifySignature(req, raw))) {
+-    logger.warn({ transmissionId: req.get("paypal-transmission-id") }, "paypal webhook signature rejected");
++    logger.warn({ transmissionId: req.get("paypal-transmission-id") }, "paypal webhook rejected: invalid signature (check webhook_id and body)");
+     return res.sendStatus(401);
+   }
+   const event = JSON.parse(raw.toString("utf8"));
+   if (!HANDLED.has(event.event_type)) return res.sendStatus(200);
+-  try {
+-    await applyEvent(event);
+-    return res.sendStatus(200);
+-  } catch (err) {
+-    logger.error({ err, eventId: event.id }, "paypal webhook handler failed");
+-    return res.sendStatus(500);
+-  }
++  // Acknowledge fast so PayPal does not time out; process in the background.
++  res.sendStatus(200);
++  jobQueue.push(() => applyEvent(event).catch((err) => logger.error({ err, eventId: event.id }, "paypal webhook handler failed")));
+ });
+ 
+ export default router;

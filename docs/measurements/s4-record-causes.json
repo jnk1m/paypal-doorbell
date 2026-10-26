@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-19T06:42:21.450Z",
+  "results": {
+    "bad_body": {
+      "status": "proposed",
+      "category": "RAW_BODY_ALTERED",
+      "file": "handlers/bad-body.ts",
+      "lines": [
+        "L2 add const event = canonical(JSON.parse(ctx.rawBody));"
+      ]
+    },
+    "ack_then_drop": {
+      "status": "proposed",
+      "category": "WORK_AFTER_ACK",
+      "file": "handlers/ack-drop.ts",
+      "lines": [
+        "L9 del await ctx.books.set(booking.captureId, { state: booking.state, amount: booking.amount, eid: event.id, at: ctx.now() });",
+        "L11 add queue.push(event);"
+      ]
+    },
+    "last_write_wins": {
+      "status": "proposed",
+      "category": "OTHER_CODE_CHANGE",
+      "file": "handlers/last-write-wins.ts",
+      "lines": [
+        "L4 del const current = await ctx.books.get(booking.captureId);",
+        "L5 del if (current && rank(current.state) > rank(booking.state)) return { status: 200 };"
+      ]
+    }
+  },
+  "usage": {
+    "inputTokens": 7865,
+    "outputTokens": 411,
+    "reasoningTokens": 231
+  },
+  "usd": 0.0198
+}

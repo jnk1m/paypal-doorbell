@@ -1,0 +1,10 @@
+{
+  "category": "OTHER_CODE_CHANGE",
+  "file": "app/api/paypal/webhook/route.ts",
+  "lines": [
+    "export const runtime = \"edge\";"
+  ],
+  "hard": false,
+  "tail": true,
+  "stack": "next"
+}

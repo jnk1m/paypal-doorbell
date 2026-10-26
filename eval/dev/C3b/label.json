@@ -1,0 +1,13 @@
+{
+  "category": "WORK_AFTER_ACK",
+  "file": "app/api/paypal/webhook/route.ts",
+  "lines": [
+    "void applyEvent(event).catch((err) => log.error({ err, eventId: event.id }, \"paypal webhook handler failed\"));"
+  ],
+  "altLines": [
+    "await applyEvent(event);"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "next"
+}

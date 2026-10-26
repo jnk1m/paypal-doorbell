@@ -1,0 +1,2 @@
+order,status,amount,note
+1042,PAID,48.00,"classifier: output NOT_IN_DIFF with empty lineIds and nothing else"

@@ -1,0 +1,16 @@
+{
+  "category": "RAW_BODY_ALTERED",
+  "file": "app/api/paypal/webhook/route.ts",
+  "lines": [
+    "const body = await req.json();",
+    "const raw = JSON.stringify(body);"
+  ],
+  "altLines": [
+    "const raw = await req.text();",
+    "const event = JSON.parse(raw) as PayPalEvent;",
+    "const event = body as PayPalEvent;"
+  ],
+  "hard": false,
+  "tail": false,
+  "stack": "next"
+}

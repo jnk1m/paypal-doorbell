@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-20T03:45Z",
+  "question": "Does a stored real signature still verify with PayPal's verify endpoint 24 h later? (plan 5.4 #3 replay window; 4.9 h was the oldest confirmed in S4, docs/measurements/s4-reverify-run1.json)",
+  "script": "npx tsx scripts/reverify-stored.ts --webhook-id 95S68045X9784900W --dev-webhook-id 7N5964230U472033D",
+  "stored": "266 first deliveries in the witness record (db:w:att:*), slots D and D-dev; the oldest is from the first witness deliveries of 2026-10-19 02:2xZ",
+  "result": { "SUCCESS": 266 },
+  "under": { "D": 178, "D-dev": 88 },
+  "age": { "youngestHours": 15.22, "oldestHours": 25.25, "oldestThatVerified": 25.25, "youngestThatDidNot": null },
+  "decision": "REPLAY_WINDOW_MS raised from 4 h to 24 h. Older than 25.25 h is still not measured; the witness keeps attempts 4 days, so a later run can extend it."
+}
