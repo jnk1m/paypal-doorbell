@@ -29,6 +29,7 @@
   },
   "include": [
     "handlers",
+    "examples",
     "eval/harness",
     "lib",
     "scripts",

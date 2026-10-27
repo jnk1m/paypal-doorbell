@@ -115,6 +115,17 @@ export function shopStoreContract(make: ShopStoreFactory) {
     }
   });
 
+  test("shop store: a report nonce is claimed once; a repeat is refused, another nonce is not", async () => {
+    const { store, done } = await make();
+    try {
+      assert.equal(await store.claimReportNonce("0123456789abcdef", 60_000), true);
+      assert.equal(await store.claimReportNonce("0123456789abcdef", 60_000), false);
+      assert.equal(await store.claimReportNonce("fedcba9876543210", 60_000), true);
+    } finally {
+      await done();
+    }
+  });
+
   test("shop store: report lines are appended, never overwritten, and an event with no record reads back as null", async () => {
     const { store, done } = await make();
     try {

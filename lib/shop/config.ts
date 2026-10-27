@@ -7,6 +7,8 @@ import { PaypalClient } from "../pay/paypal.ts";
 import { witnessFromEnv } from "../witness/config.ts";
 import { reverifyQuarantined, type WitnessDeps } from "../witness/receive.ts";
 import { noteWhatWitnessHeard } from "./heard.ts";
+import type { ReportIntakeDeps } from "./report-intake.ts";
+import { MIN_SECRET_LENGTH } from "./report-signature.ts";
 import { InProcessReporter } from "./reporter.ts";
 import { shopStoreFromEnv } from "./store-env.ts";
 import type { ShopStore } from "./store.ts";
@@ -40,6 +42,17 @@ export function shopWebhookFromEnv(): ShopWebhookDeps {
   const store = shopStoreFromEnv();
   webhook = { webhookId, settingWebhookId: settingWebhookIdFromEnv(), store, reporter: new InProcessReporter(store), verify: (p) => client.verifyWebhookSignature(p, WEBHOOK_PAYPAL_TIMEOUT_MS) };
   return webhook;
+}
+
+// The report intake for a shop of your own (report-intake.ts). Open only with DOORBELL_REPORTER_SECRET of 32 characters or more; the
+// hosted demo sets none, so its intake answers 404 and never touches the store. A short secret is reported once and treated as none.
+let intake: ReportIntakeDeps | undefined;
+export function reportIntakeFromEnv(): ReportIntakeDeps {
+  if (intake) return intake;
+  const secret = process.env.DOORBELL_REPORTER_SECRET;
+  if (secret && secret.length < MIN_SECRET_LENGTH) console.error(JSON.stringify({ route: "api/report", outcome: "closed", reason: `DOORBELL_REPORTER_SECRET is shorter than ${MIN_SECRET_LENGTH} characters; the intake stays closed` }));
+  intake = secret && secret.length >= MIN_SECRET_LENGTH ? { secret, store: shopStoreFromEnv() } : {};
+  return intake;
 }
 
 // The gap finder: PayPal reads and resends with the demo app's keys, the shop's store, the shop webhook S (the resend target), and the

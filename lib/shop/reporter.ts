@@ -3,7 +3,8 @@
 //
 // Hosted path: the shop is code in the same deployment, so these are plain function calls. No HTTP request is made, nothing here
 // needs authentication, and nobody outside the process can report on the shop's behalf. (The record itself is written to Redis,
-// which is the only network traffic of a report.) The local, bring-your-own-shop path with HMAC is not part of this module.
+// which is the only network traffic of a report.) The bring-your-own-shop path with HMAC is http-reporter.ts (the shop's side) and
+// report-intake.ts (the Doorbell's side); they write the same record.
 //
 // One record per event id (a retry reuses the transmission id; a resend gets a new one; both belong to the same event):
 //   {"k":"rx","tid":...,"a":<attempt>,"at":<ms>}             the delivery reached the handler

@@ -9,6 +9,7 @@
 //   <p>shop:r:<event id>     string NDJSON, one line per report      the reporter's record for an event. TTL 4 days
 //   <p>shop:h:<sid>          hash   _n (resends used), e:<event id> -> heal JSON   Ring again. TTL 24 h
 //   <p>shop:hl:<sid>:<eid>   string 1                                the lock of a resend that is being sent. TTL 20 s
+//   <p>shop:n:<nonce>        string 1                                a nonce the report intake has accepted (report-intake.ts). TTL 10 min
 //
 // <res> is the id of the event's own resource (the capture for COMPLETED, the refund for REFUNDED), which is also what we know
 // when we create the order or the refund, so the screen can ask about an event before it knows the event id.
@@ -59,6 +60,7 @@ export interface ShopStore {
   reserveResend(sid: string, eid: string, cap: number): Promise<ResendReservation>;
   releaseResend(sid: string, eid: string): Promise<void>;
   putHeal(sid: string, record: HealRecord): Promise<void>;
+  claimReportNonce(nonce: string, ttlMs: number): Promise<boolean>; // true the first time a nonce is seen within ttlMs, false on every repeat
 }
 
 const parseJson = <T>(raw: unknown): T | null => {
@@ -204,6 +206,10 @@ export class RedisShopStore implements ShopStore {
   async putHeal(sid: string, record: HealRecord): Promise<void> {
     await this.redis.pipeline().hset(this.key("h", sid), { [`e:${record.eid}`]: JSON.stringify(record) }).pexpire(this.key("h", sid), SESSION_TTL_MS).exec();
   }
+
+  async claimReportNonce(nonce: string, ttlMs: number): Promise<boolean> {
+    return (await this.redis.set(this.key("n", nonce), "1", { nx: true, px: ttlMs })) === "OK";
+  }
 }
 
 // The same behavior in memory (TTLs aside), for tests that must run without Upstash. store.contract.ts holds the tests both pass.
@@ -217,6 +223,7 @@ export class MemoryShopStore implements ShopStore {
   private readonly reportMap = new Map<string, string>();
   private readonly healMap = new Map<string, { resends: number; records: Map<string, HealRecord> }>();
   private readonly locks = new Map<string, number>();
+  private readonly nonces = new Map<string, number>();
 
   constructor(private readonly now: () => number = Date.now) {} // the clock the resend lock expires by; a test can move it
 
@@ -315,5 +322,11 @@ export class MemoryShopStore implements ShopStore {
     const h = this.healMap.get(sid) ?? { resends: 0, records: new Map<string, HealRecord>() };
     h.records.set(record.eid, structuredClone(record));
     this.healMap.set(sid, h);
+  }
+
+  async claimReportNonce(nonce: string, ttlMs: number): Promise<boolean> {
+    if ((this.nonces.get(nonce) ?? 0) > this.now()) return false;
+    this.nonces.set(nonce, this.now() + ttlMs);
+    return true;
   }
 }
